@@ -1,0 +1,41 @@
+body {
+	background: var(--color-blue-40);
+	height: 1000px;
+	font-family: 'Outfit', sans-serif;
+}
+.container {
+	max-width: 1800px;
+	margin: 0 auto;
+	padding: 0 20px;
+	width: 100%;
+}
+.link {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-style: normal;
+	font-weight: 700;
+	color: var(--color-blue-100);
+	transition: 0.3s color;
+	path {
+		transition: all 0.3s;
+	}
+	&:hover {
+		color: var(--color-orange);
+		path {
+			stroke: currentColor;
+		}
+	}
+}
+.relative {
+	position: relative;
+}
+.overflow-hidden {
+	overflow: hidden;
+}
+.mt-20 {
+	margin-top: 120px;
+}
+.box {
+	background: red;
+}
