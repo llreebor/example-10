@@ -1,0 +1,1 @@
+- check header paddings & line-height

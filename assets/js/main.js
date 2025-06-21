@@ -1,3 +1,4 @@
+// GLOBAL
 // Initialize mobile menu functionality
 function initializeMobileMenu() {
 	// Select DOM elements
@@ -68,7 +69,6 @@ function initializeMobileMenu() {
 		})
 	})
 }
-
 // Run initialization
 initializeMobileMenu()
 
@@ -149,3 +149,23 @@ function initializeAccordion() {
 	})
 }
 initializeAccordion()
+
+// HOME PAGE
+// Show more lawyers
+function showMoreLawyers() {
+	const btn = document.querySelector('.lawyer__more-btn')
+	const hiddenBlocks = document.querySelectorAll(
+		'.lawyers__item.lawyers__item-hidden'
+	)
+
+	if (!btn || !hiddenBlocks.length) return
+
+	btn.addEventListener('click', () => {
+		hiddenBlocks.forEach((block) => {
+			block.classList.remove('lawyers__item-hidden')
+		})
+
+		btn.classList.add('hidden')
+	})
+}
+showMoreLawyers()

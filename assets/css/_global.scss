@@ -1,22 +1,82 @@
 body {
-	background: var(--color-blue-40);
-	height: 1000px;
 	font-family: 'Outfit', sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+	text-box-trim: trim-both;
+	text-box-edge: cap alphabetic;
+}
+
 .container {
 	max-width: 1800px;
 	margin: 0 auto;
 	padding: 0 20px;
 	width: 100%;
 }
+.section {
+	padding: 120px 0;
+	@media screen and (width <= 1440px) {
+		padding: 80px 0;
+	}
+	@media screen and (width <= 768px) {
+		padding: 50px 0;
+	}
+}
+
+.title {
+	&__big {
+		color: var(--color-blue-200);
+		font-size: 70px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 120%;
+		@media screen and (width <= 1440px) {
+			font-size: 64px;
+		}
+		@media screen and (width <= 1024px) {
+			font-size: 46px;
+		}
+		@media screen and (width <= 768px) {
+			font-size: 25px;
+		}
+	}
+}
+
 .link {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 7px;
 	font-style: normal;
 	font-weight: 700;
 	color: var(--color-blue-100);
 	transition: 0.3s color;
+	font-size: 21px;
+	@media screen and (width <= 768px) {
+		font-size: 12px;
+		svg {
+			width: 7px;
+		}
+	}
+	&.link-sm {
+		font-size: 12px;
+	}
+	&.link-blue-80 {
+		color: var(--color-blue-80);
+	}
+	&.link-blue-200 {
+		color: var(--color-blue-200);
+	}
+	&.link-white {
+		color: #fff;
+	}
 	path {
 		transition: all 0.3s;
 	}
@@ -27,6 +87,8 @@ body {
 		}
 	}
 }
+
+// Utility classess
 .relative {
 	position: relative;
 }
@@ -36,6 +98,9 @@ body {
 .mt-20 {
 	margin-top: 120px;
 }
-.box {
-	background: red;
+.text-white {
+	color: #fff;
+}
+.hidden {
+	display: none !important;
 }
