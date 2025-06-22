@@ -1,17 +1,11 @@
 // Steps
 .section {
-	&__steps {
-	}
-
-	&__title {
+	&__title-steps {
 		max-width: 911px;
 	}
-	&__title-steps {
-	}
-	&__subtitle {
-		max-width: 1291px;
-	}
+
 	&__subtitle-steps {
+		max-width: 1291px;
 	}
 }
 
@@ -407,5 +401,89 @@
 	@media screen and (width <= 768px) {
 		display: flex;
 		margin-top: 25px;
+	}
+}
+
+// Categories
+.section {
+	&__categories {
+	}
+	&__header {
+	}
+	&__title {
+	}
+	&__title-categories {
+	}
+	&__subtitle {
+	}
+	&__subtitle-categories {
+		color: var(--color-blue-200);
+		max-width: 1274px;
+		margin: 0 auto;
+	}
+	&__categories-link {
+		display: flex;
+		margin: 0 auto;
+		margin-top: 30px;
+		max-width: fit-content;
+		@media screen and (width <= 768px) {
+			margin-top: 20px;
+		}
+	}
+}
+
+.categories {
+	max-width: 1336px;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 40px;
+	justify-content: center;
+	margin: 0 auto;
+	margin-top: 60px;
+	@media screen and (width <= 1440px) {
+		margin-top: 40px;
+	}
+	@media screen and (width <= 768px) {
+		gap: 15px;
+		margin-top: 25px;
+	}
+	&__item {
+		padding: 25px;
+		background: var(--color-blue-20);
+		@media screen and (width <= 768px) {
+			padding: 13px;
+		}
+		&-gray {
+			.categories__item-link {
+				color: var(--color-blue-200);
+				&:hover {
+					color: var(--color-orange);
+				}
+			}
+		}
+		&-blue {
+			background: var(--color-blue-200);
+			.categories__item-link {
+				color: #fff;
+				&:hover {
+					color: var(--color-orange);
+				}
+			}
+		}
+		&-lightblue {
+			background: var(--color-blue-40);
+			.categories__item-link {
+				color: var(--color-blue-200);
+				&:hover {
+					color: var(--color-orange);
+				}
+			}
+		}
+		&-link {
+			@media screen and (width <= 768px) {
+				font-size: 12px;
+			}
+		}
 	}
 }

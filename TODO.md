@@ -1,1 +1,2 @@
 - check header paddings & line-height
+- categories links paddings
