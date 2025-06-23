@@ -1,2 +1,4 @@
 - check header paddings & line-height
 - categories links paddings
+- header hover effects
+- fix mobile menu at 320px

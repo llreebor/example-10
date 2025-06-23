@@ -74,78 +74,84 @@ initializeMobileMenu()
 
 // Initialize accordion functionality
 function initializeAccordion() {
-	// Select the accordion container (assuming items are inside a common parent)
-	const accordion = document.querySelector('.accordion')
-	const accordionItems = document.querySelectorAll('.accordion__item')
+	// Select all accordion containers
+	const accordions = document.querySelectorAll('.accordion')
 
-	// Exit if no accordion container or items are found
-	if (!accordion || !accordionItems.length) return
+	// Exit if no accordions are found
+	if (!accordions.length) return
 
-	// Set initial state for all accordion items
-	accordionItems.forEach((item) => {
-		const content = item.querySelector('.accordion__content')
-		const trigger = item.querySelector('.accordion__trigger')
+	// Process each accordion independently
+	accordions.forEach((accordion) => {
+		const accordionItems = accordion.querySelectorAll('.accordion__item')
 
-		if (!content || !trigger) return
+		// Skip if no items in this accordion
+		if (!accordionItems.length) return
 
-		// Set ARIA attributes for accessibility
-		trigger.setAttribute('aria-expanded', item.classList.contains('active'))
-		content.setAttribute('aria-hidden', !item.classList.contains('active'))
+		// Set initial state for all accordion items in this accordion
+		accordionItems.forEach((item, idx) => {
+			const content = item.querySelector('.accordion__content')
+			const trigger = item.querySelector('.accordion__trigger')
 
-		// Ensure content has active class if item is active
-		if (item.classList.contains('active')) {
-			content.classList.add('active')
-		}
-	})
+			if (!content || !trigger) return
 
-	// Use event delegation for accordion triggers
-	accordion.addEventListener('click', (event) => {
-		const trigger = event.target.closest('.accordion__trigger')
-		if (!trigger) return // Exit if not a trigger
+			// Set ARIA attributes for accessibility
+			trigger.setAttribute('aria-expanded', item.classList.contains('active'))
+			content.setAttribute('aria-hidden', !item.classList.contains('active'))
 
-		const parent = trigger.closest('.accordion__item')
-		if (!parent) return // Exit if no parent item
+			// Ensure content has active class if item is active
+			if (item.classList.contains('active')) {
+				content.classList.add('active')
+			}
+		})
 
-		const content = parent.querySelector('.accordion__content')
-		if (!content) return
-
-		// Toggle active state
-		const isOpening = !parent.classList.contains('active')
-		parent.classList.toggle('active')
-		content.classList.toggle('active')
-
-		// Update ARIA attributes
-		trigger.setAttribute('aria-expanded', isOpening)
-		content.setAttribute('aria-hidden', !isOpening)
-
-		// Optional: Close other items if only one should be open
-		/*
-    if (isOpening) {
-        document.querySelectorAll(".accordion-item").forEach((otherItem) => {
-            if (otherItem !== parent && otherItem.classList.contains("active")) {
-                otherItem.classList.remove("active");
-                const otherContent = otherItem.querySelector(".accordion-content");
-                const otherTrigger = otherItem.querySelector(".accordion-trigger");
-                if (otherContent && otherTrigger) {
-                    otherContent.classList.remove("active");
-                    otherTrigger.setAttribute("aria-expanded", "false");
-                    otherContent.setAttribute("aria-hidden", "true");
-                }
-            }
-        });
-    }
-    */
-	})
-
-	// Add keyboard support for accessibility
-	accordion.addEventListener('keydown', (event) => {
-		if (event.key === 'Enter' || event.key === ' ') {
+		// Use event delegation for accordion triggers within this accordion
+		accordion.addEventListener('click', (event) => {
 			const trigger = event.target.closest('.accordion__trigger')
-			if (!trigger) return
+			if (!trigger) return // Exit if not a trigger
 
-			event.preventDefault() // Prevent default scrolling for spacebar
-			trigger.click() // Simulate click to reuse logic
-		}
+			const parent = trigger.closest('.accordion__item')
+			if (!parent) return // Exit if no parent item
+
+			const content = parent.querySelector('.accordion__content')
+			if (!content) return
+
+			// Toggle active state
+			const isOpening = !parent.classList.contains('active')
+			parent.classList.toggle('active')
+			content.classList.toggle('active')
+			// Update ARIA attributes
+			trigger.setAttribute('aria-expanded', isOpening)
+			content.setAttribute('aria-hidden', !isOpening)
+
+			// Optional: Close other items in this accordion if only one should be open
+			/*
+			if (isOpening) {
+				accordion.querySelectorAll('.accordion__item').forEach((otherItem) => {
+					if (otherItem !== parent && otherItem.classList.contains('active')) {
+						otherItem.classList.remove('active')
+						const otherContent = otherItem.querySelector('.accordion__content')
+						const otherTrigger = otherItem.querySelector('.accordion__trigger')
+						if (otherContent && otherTrigger) {
+							otherContent.classList.remove('active')
+							otherTrigger.setAttribute('aria-expanded', 'false')
+							otherContent.setAttribute('aria-hidden', 'true')
+						}
+					}
+				})
+			}
+			*/
+		})
+
+		// Add keyboard support for accessibility within this accordion
+		accordion.addEventListener('keydown', (event) => {
+			if (event.key === 'Enter' || event.key === ' ') {
+				const trigger = event.target.closest('.accordion__trigger')
+				if (!trigger) return
+
+				event.preventDefault() // Prevent default scrolling for spacebar
+				trigger.click() // Simulate click to reuse logic
+			}
+		})
 	})
 }
 initializeAccordion()

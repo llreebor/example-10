@@ -406,16 +406,6 @@
 
 // Categories
 .section {
-	&__categories {
-	}
-	&__header {
-	}
-	&__title {
-	}
-	&__title-categories {
-	}
-	&__subtitle {
-	}
 	&__subtitle-categories {
 		color: var(--color-blue-200);
 		max-width: 1274px;
@@ -431,7 +421,6 @@
 		}
 	}
 }
-
 .categories {
 	max-width: 1336px;
 	width: 100%;
@@ -484,6 +473,26 @@
 			@media screen and (width <= 768px) {
 				font-size: 12px;
 			}
+		}
+	}
+}
+
+// Faq
+.section {
+	&__faq {
+		background: var(--color-blue-20);
+	}
+	&__header-faq {
+		align-items: start;
+		gap: 40px;
+		@media screen and (width <= 992px) {
+			gap: 25px;
+		}
+	}
+	&__subtitle-faq {
+		max-width: 1388px;
+		&.subtitle-small {
+			max-width: 850px;
 		}
 	}
 }
