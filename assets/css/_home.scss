@@ -496,3 +496,87 @@
 		}
 	}
 }
+
+// Magazine
+.section {
+	&__magazine {
+	}
+	&__magazine-header {
+		max-width: 850px;
+		margin: 0 auto;
+	}
+}
+
+.magazine {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 60px;
+	margin-top: 80px;
+	@media screen and (width <= 1440px) {
+		margin-top: 40px;
+		gap: 40px;
+	}
+	@media screen and (width <= 992px) {
+		gap: 20px;
+	}
+	@media screen and (width <= 768px) {
+		grid-template-columns: repeat(1, 1fr);
+		max-width: 342px;
+		margin: 0 auto;
+		margin-top: 35px;
+	}
+	&__item {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media screen and (width <= 768px) {
+			max-width: fit-content;
+		}
+		&-1 {
+			padding: 52px 54px;
+			@media screen and (width <= 1440px) {
+				padding: 40px;
+			}
+			@media screen and (width <= 768px) {
+				padding: 22px 40px;
+				margin-left: 20px;
+			}
+			@media screen and (width <= 480px) {
+				img {
+					max-width: 117px;
+				}
+			}
+		}
+		&-2 {
+			padding: 52px 54px;
+			@media screen and (width <= 1440px) {
+				padding: 40px;
+			}
+			@media screen and (width <= 768px) {
+				padding: 22px;
+				margin-left: auto;
+				margin-right: 20px;
+			}
+			@media screen and (width <= 480px) {
+				img {
+					max-width: 173px;
+				}
+			}
+		}
+		&-3 {
+			padding: 50px 54px 42px 54px;
+			@media screen and (width <= 1440px) {
+				padding: 34px 40px 42px 40px;
+			}
+			@media screen and (width <= 768px) {
+				padding: 20px 40px 16px 40px;
+				margin-left: 67px;
+			}
+			@media screen and (width <= 480px) {
+				img {
+					max-width: 138px;
+				}
+			}
+		}
+	}
+}

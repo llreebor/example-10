@@ -312,6 +312,14 @@ a {
   align-items: center;
   gap: 60px;
 }
+.section__header.section__header-gap--40 {
+  gap: 40px;
+}
+@media screen and (width <= 768px) {
+  .section__header.section__header-gap--40 {
+    gap: 25px;
+  }
+}
 @media screen and (width <= 1440px) {
   .section__header {
     gap: 40px;
@@ -435,6 +443,22 @@ a {
   background: var(--color-blue-40);
   font-size: 36px;
   font-weight: 700;
+}
+
+.gap-40 {
+  gap: 40px;
+}
+
+.bg-blue-20 {
+  background: var(--color-blue-20);
+}
+
+.bg-blue-40 {
+  background: var(--color-blue-40);
+}
+
+.bg-blue-200 {
+  background: var(--color-blue-200);
 }
 
 .logo {
@@ -1547,4 +1571,104 @@ a {
 }
 .section__subtitle-faq.subtitle-small {
   max-width: 850px;
+}
+
+.section__magazine-header {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.magazine {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  margin-top: 80px;
+}
+@media screen and (width <= 1440px) {
+  .magazine {
+    margin-top: 40px;
+    gap: 40px;
+  }
+}
+@media screen and (width <= 992px) {
+  .magazine {
+    gap: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .magazine {
+    grid-template-columns: repeat(1, 1fr);
+    max-width: 342px;
+    margin: 0 auto;
+    margin-top: 35px;
+  }
+}
+.magazine__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (width <= 768px) {
+  .magazine__item {
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+}
+.magazine__item-1 {
+  padding: 52px 54px;
+}
+@media screen and (width <= 1440px) {
+  .magazine__item-1 {
+    padding: 40px;
+  }
+}
+@media screen and (width <= 768px) {
+  .magazine__item-1 {
+    padding: 22px 40px;
+    margin-left: 20px;
+  }
+}
+@media screen and (width <= 480px) {
+  .magazine__item-1 img {
+    max-width: 117px;
+  }
+}
+.magazine__item-2 {
+  padding: 52px 54px;
+}
+@media screen and (width <= 1440px) {
+  .magazine__item-2 {
+    padding: 40px;
+  }
+}
+@media screen and (width <= 768px) {
+  .magazine__item-2 {
+    padding: 22px;
+    margin-left: auto;
+    margin-right: 20px;
+  }
+}
+@media screen and (width <= 480px) {
+  .magazine__item-2 img {
+    max-width: 173px;
+  }
+}
+.magazine__item-3 {
+  padding: 50px 54px 42px 54px;
+}
+@media screen and (width <= 1440px) {
+  .magazine__item-3 {
+    padding: 34px 40px 42px 40px;
+  }
+}
+@media screen and (width <= 768px) {
+  .magazine__item-3 {
+    padding: 20px 40px 16px 40px;
+    margin-left: 67px;
+  }
+}
+@media screen and (width <= 480px) {
+  .magazine__item-3 img {
+    max-width: 138px;
+  }
 }/*# sourceMappingURL=main.css.map */
