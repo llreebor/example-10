@@ -2,3 +2,4 @@
 - header hover effects
 - fix mobile menu at 320px
 - wrap all links text in span tag
+  -footer

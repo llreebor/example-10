@@ -1,18 +1,31 @@
-footer {
-	display: none;
-}
-
 .footer {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-
-	&__item {
-		display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 5%;
+	&.top__footer {
+		padding: 60px 0;
+		@media screen and (width <= 768px) {
+			padding: 40px 0;
+		}
+	}
+	@media screen and (width <= 1280px) {
 		grid-template-columns: repeat(2, 1fr);
-		max-width: 730px;
+		gap: 60px;
+	}
+	@media screen and (width <= 768px) {
+		gap: 35px 20px;
+	}
+	@media screen and (width <= 320px) {
+		gap: 35px 10px;
+	}
+	&__item {
+		display: flex;
+		flex-direction: column;
 	}
 	&__top {
-		padding: 60px 0;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
 	}
 	&__top-title {
 		font-size: 35px;
@@ -20,15 +33,59 @@ footer {
 		font-weight: 700;
 		line-height: 128%;
 		color: #fff;
+		@media screen and (width <= 768px) {
+			font-size: 20px;
+		}
 	}
 	&__top-list {
 		display: flex;
 		flex-direction: column;
 		gap: 25px;
+		flex: 1;
 		margin-top: 25px;
+		@media screen and (width <= 768px) {
+			gap: 10px;
+			margin-top: 15px;
+		}
 	}
 	&__top-list--item {
 	}
 	&__top-link {
+	}
+
+	&__social {
+		display: flex;
+		align-items: end;
+		gap: 30px;
+		margin-top: auto;
+		padding-top: 45px;
+	}
+	&__social-link {
+		&.x-icon {
+			width: 27px;
+			height: 27px;
+		}
+		&.f-icon {
+			width: 19px;
+			height: 34px;
+		}
+		&.g-icon {
+			width: 27px;
+			height: 27px;
+		}
+		&.y-icon {
+			width: 33px;
+			height: 23px;
+		}
+		&.l-icon {
+			width: 25px;
+			height: 27px;
+		}
+
+		&:hover {
+			path {
+				fill: currentColor;
+			}
+		}
 	}
 }
