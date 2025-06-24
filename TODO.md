@@ -1,6 +1,4 @@
 - check header paddings & line-height
-- categories links paddings ( add paddings to a tag, not li)
 - header hover effects
 - fix mobile menu at 320px
 - wrap all links text in span tag
--
