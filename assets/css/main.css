@@ -262,6 +262,11 @@ a {
   text-box-edge: cap alphabetic;
 }
 
+a {
+  text-box-trim: trim-both !important;
+  text-box-edge: cap alphabetic !important;
+}
+
 .container {
   max-width: 1800px;
   margin: 0 auto;
@@ -425,6 +430,14 @@ a {
 
 .text-white {
   color: #fff;
+}
+
+.text-blue-200 {
+  color: var(--color-blue-200);
+}
+
+.text-blue-100 {
+  color: var(--color-blue-100);
 }
 
 .text-center {
@@ -992,6 +1005,35 @@ a {
   }
 }
 
+footer {
+  display: none;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.footer__item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 730px;
+}
+.footer__top {
+  padding: 60px 0;
+}
+.footer__top-title {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128%;
+  color: #fff;
+}
+.footer__top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 25px;
+}
 .section__title-steps {
   max-width: 911px;
 }
@@ -1473,6 +1515,91 @@ a {
   .lawyer__more-btn {
     display: flex;
     margin-top: 25px;
+  }
+}
+
+.section__help {
+  padding: 80px 0;
+  overflow: hidden;
+}
+@media screen and (width <= 992px) {
+  .section__help {
+    padding: 40px 0;
+  }
+}
+
+.help {
+  background: var(--color-blue-40);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+  z-index: 0;
+}
+@media screen and (width <= 992px) {
+  .help {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+.help__img--mob {
+  display: none;
+}
+@media screen and (width <= 992px) {
+  .help__img--mob {
+    display: block;
+    position: absolute;
+    top: -38px;
+    right: -20px;
+    z-index: -1;
+  }
+}
+.help__img--desktop {
+  position: absolute;
+  top: -80px;
+  right: 173px;
+  z-index: -1;
+}
+@media screen and (width <= 1440px) {
+  .help__img--desktop {
+    right: 120px;
+  }
+}
+@media screen and (width <= 992px) {
+  .help__img--desktop {
+    display: none;
+  }
+}
+.help__info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+@media screen and (width <= 992px) {
+  .help__info {
+    gap: 12px;
+  }
+}
+.help__title {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 133%;
+}
+@media screen and (width <= 1440px) {
+  .help__title {
+    font-size: 36px;
+  }
+}
+@media screen and (width <= 1280px) {
+  .help__title {
+    font-size: 30px;
+  }
+}
+@media screen and (width <= 992px) {
+  .help__title {
+    font-size: 25px;
+    line-height: 120%;
   }
 }
 

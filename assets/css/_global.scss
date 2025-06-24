@@ -14,7 +14,10 @@ a {
 	text-box-trim: trim-both;
 	text-box-edge: cap alphabetic;
 }
-
+a {
+	text-box-trim: trim-both !important;
+	text-box-edge: cap alphabetic !important;
+}
 .container {
 	max-width: 1800px;
 	margin: 0 auto;
@@ -151,6 +154,12 @@ a {
 }
 .text-white {
 	color: #fff;
+}
+.text-blue-200 {
+	color: var(--color-blue-200);
+}
+.text-blue-100 {
+	color: var(--color-blue-100);
 }
 .text-center {
 	text-align: center;

@@ -1,0 +1,34 @@
+footer {
+	display: none;
+}
+
+.footer {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+
+	&__item {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		max-width: 730px;
+	}
+	&__top {
+		padding: 60px 0;
+	}
+	&__top-title {
+		font-size: 35px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 128%;
+		color: #fff;
+	}
+	&__top-list {
+		display: flex;
+		flex-direction: column;
+		gap: 25px;
+		margin-top: 25px;
+	}
+	&__top-list--item {
+	}
+	&__top-link {
+	}
+}
