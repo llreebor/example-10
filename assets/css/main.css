@@ -422,6 +422,45 @@ a {
   stroke: currentColor;
 }
 
+.btn {
+  padding: 22px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 152.381%;
+  cursor: pointer;
+  transition: 0.3s all;
+}
+@media screen and (width <= 1440px) {
+  .btn {
+    padding: 20px 18px;
+    font-size: 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .btn {
+    font-size: 18px;
+    padding: 18px 14px;
+  }
+}
+@media screen and (width <= 768px) {
+  .btn {
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+}
+.btn.btn-primary {
+  background: var(--color-orange);
+  color: #fff;
+}
+.btn.btn-primary:hover {
+  background: var(--color-orange-hovered);
+}
+
 .relative {
   position: relative;
 }
@@ -508,12 +547,17 @@ a {
 .top__menu-wrapper {
   background: #fff;
 }
+@media screen and (width <= 1280px) {
+  .top__menu-wrapper {
+    background: var(--color-blue-80);
+  }
+}
 .top__menu-container {
   display: flex;
   justify-content: space-between;
   max-width: 1800px;
   margin: 0 auto;
-  padding: 24.5px 20px 24.5px 180px;
+  padding: 28px 20px 28px 180px;
   align-items: center;
 }
 @media screen and (width <= 1280px) {
@@ -635,7 +679,6 @@ a {
 }
 .main__menu-list .main__menu-list--item {
   position: relative;
-  padding: 24px 0;
 }
 .main__menu-list .main__menu-list--item:last-child .submenu {
   left: unset;
@@ -652,6 +695,12 @@ a {
   display: flex;
   transition: 0.3s all;
 }
+.main__menu-link span {
+  padding: 28px 0;
+}
+.main__menu-link span:hover {
+  color: var(--color-orange);
+}
 @media screen and (width <= 1520px) {
   .main__menu-link {
     font-size: 16px;
@@ -661,7 +710,7 @@ a {
 .submenu {
   position: absolute;
   left: 0;
-  top: 69px;
+  top: 70px;
   max-width: -moz-fit-content;
   max-width: fit-content;
   padding: 20px;
@@ -771,7 +820,7 @@ a {
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 20px;
 }
 .mobile__menu-title {
   font-size: 20px;
@@ -805,7 +854,7 @@ a {
 .mobile__menu .accordion {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 20px;
   flex: 1;
 }
 .mobile__menu .accordion__content {
@@ -857,7 +906,8 @@ a {
 .mobile__menu .accordion .mobile__menu-list {
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 15px;
+  gap: 20px;
 }
 .mobile__menu .accordion .mobile__menu-link {
   font-size: 15px;
@@ -1104,6 +1154,328 @@ a {
 }
 .footer__social-link:hover path {
   fill: currentColor;
+}
+
+.select__trigger {
+  padding: 28px 30px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+}
+@media screen and (width <= 1440px) {
+  .select__trigger {
+    padding: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .select__trigger {
+    padding: 11px 15px;
+  }
+}
+.select__trigger.active .select__selected-option {
+  color: var(--color-orange);
+}
+.select__trigger.active .select__arrow {
+  transform: rotate(180deg) translate(-50%, 50%);
+}
+.select__trigger.active .select__arrow path {
+  stroke: var(--color-orange);
+}
+.select__selected-option {
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 128.571%;
+  color: var(--color-blue-200);
+  transition: color 0.3s;
+  position: relative;
+}
+@media screen and (width <= 1440px) {
+  .select__selected-option {
+    font-size: 18px;
+  }
+}
+@media screen and (width <= 992px) {
+  .select__selected-option {
+    font-size: 16px;
+  }
+}
+@media screen and (width <= 768px) {
+  .select__selected-option {
+    font-size: 12px;
+  }
+}
+.select__arrow {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  transform: translate(50%, -50%);
+  transition: 0.3s transform;
+}
+@media screen and (width <= 1440px) {
+  .select__arrow {
+    right: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .select__arrow {
+    right: 15px;
+  }
+}
+@media screen and (width <= 992px) {
+  .select__arrow svg {
+    width: 10px;
+  }
+}
+.select__options {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  z-index: 1;
+}
+.select__option {
+  font-size: 18px;
+  width: 100%;
+  text-align: left;
+  color: var(--color-blue-200);
+  transition: 0.3s color;
+  cursor: pointer;
+  padding: 10px 30px;
+}
+.select__option:hover {
+  background: #f8f8f8;
+}
+@media screen and (width <= 1440px) {
+  .select__option {
+    font-size: 16px;
+    padding: 5px 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .select__option {
+    font-size: 12px;
+    padding: 5px 15px;
+  }
+}
+.select__option:hover {
+  color: var(--color-orange);
+}
+.select__options-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.section__hero {
+  overflow: hidden;
+  padding-top: 156px;
+}
+@media screen and (width <= 768px) {
+  .section__hero {
+    padding-top: 150px;
+    padding-bottom: 40px;
+  }
+}
+
+.hero {
+  position: relative;
+  z-index: 0;
+}
+.hero__image {
+  position: absolute;
+  top: -155px;
+  right: 264px;
+  z-index: -1;
+}
+@media screen and (width <= 1440px) {
+  .hero__image {
+    right: 20px;
+    max-width: 520px;
+  }
+}
+@media screen and (width <= 992px) {
+  .hero__image {
+    max-width: 550px;
+    right: 0;
+  }
+}
+@media screen and (width <= 768px) {
+  .hero__image {
+    max-width: 400px;
+    right: -90px;
+  }
+}
+@media screen and (width <= 555px) {
+  .hero__image {
+    max-width: 420px;
+  }
+}
+@media screen and (width <= 480px) {
+  .hero__image {
+    max-width: 430px;
+  }
+}
+@media screen and (width <= 375px) {
+  .hero__image {
+    right: -130px;
+    max-width: 450px;
+  }
+}
+.hero__tabs {
+  margin-top: 80px;
+}
+@media screen and (width <= 1440px) {
+  .hero__tabs {
+    margin-top: 60px;
+  }
+}
+@media screen and (width <= 768px) {
+  .hero__tabs {
+    margin-top: 40px;
+  }
+}
+.hero__tabs-header {
+  display: flex;
+}
+.hero__tab-trigger {
+  cursor: pointer;
+  padding: 28px 30px;
+  background: var(--color-blue-80);
+  color: var(--color-blue-200);
+  transition: 0.3s all;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 152.381%;
+  text-align: left;
+}
+.hero__tab-trigger:hover {
+  color: var(--color-orange);
+}
+@media screen and (width <= 1440px) {
+  .hero__tab-trigger {
+    padding: 20px 18px;
+    font-size: 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .hero__tab-trigger {
+    font-size: 18px;
+    padding: 18px 14px;
+  }
+}
+@media screen and (width <= 768px) {
+  .hero__tab-trigger {
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+}
+.hero__tab-trigger.active {
+  background: var(--color-blue-200);
+  color: #fff;
+}
+.hero__tab-content {
+  padding: 30px;
+  background: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .hero__tab-content {
+    padding: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .hero__tab-content {
+    padding: 15px;
+  }
+}
+
+.hero__title {
+  max-width: 847px;
+}
+.hero__cta {
+  margin-top: 146px;
+  max-width: 759px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (width <= 1440px) {
+  .hero__cta {
+    margin-top: 120px;
+    gap: 15px;
+  }
+}
+.hero__cta-title {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 128.571%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .hero__cta-title {
+    font-size: 28px;
+  }
+}
+@media screen and (width <= 768px) {
+  .hero__cta-title {
+    font-size: 20px;
+  }
+}
+.hero__form {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+@media screen and (width <= 1440px) {
+  .hero__form {
+    gap: 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .hero__form {
+    gap: 15px;
+    flex-direction: column;
+  }
+}
+.hero__form-group {
+  display: flex;
+  max-width: 820px;
+  width: 100%;
+  gap: 30px;
+}
+@media screen and (width <= 1440px) {
+  .hero__form-group {
+    gap: 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .hero__form-group {
+    gap: 15px;
+  }
+}
+.hero__input-item {
+  width: 100%;
+}
+.hero__input-item.legal__item {
+  max-width: 100%;
+}
+.hero__input-item.city__item {
+  max-width: 543px;
+}
+@media screen and (width <= 768px) {
+  .hero__input-item.city__item {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+.hero__input-btn {
+  flex-shrink: 0;
 }
 
 .section__title-steps {

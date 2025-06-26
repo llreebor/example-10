@@ -175,3 +175,123 @@ function showMoreLawyers() {
 	})
 }
 showMoreLawyers()
+
+// Hero Tabs
+// Initializes tab navigation with accessibility features for a given tab container.
+function toggleTabs(tabsId) {
+	// Get the main tab container element
+	const tabs = document.getElementById(tabsId)
+	if (!tabs) return // Exit if the tab container is not found
+
+	// Select all tab triggers and content panels
+	const tabsTriggers = tabs.querySelectorAll('.tab-trigger')
+	const tabsContents = tabs.querySelectorAll('.tab-content')
+
+	// Sets the active tab and updates ARIA attributes and visual states.
+	function setActiveTab(index) {
+		// Update each tab trigger's state
+		tabsTriggers.forEach((trigger, i) => {
+			const isActive = i === index
+			// Set ARIA attribute to indicate the selected tab
+			trigger.setAttribute('aria-selected', isActive)
+			// Set tabindex for keyboard accessibility
+			trigger.setAttribute('tabindex', isActive ? '0' : '-1')
+			// Toggle active class for visual styling
+			trigger.classList.toggle('active', isActive)
+		})
+
+		// Update each content panel's visibility
+		tabsContents.forEach((content, i) => {
+			const isActive = i === index
+			// Toggle hidden class to show only the active content
+			content.classList.toggle('hidden', !isActive)
+			// Set ARIA attribute to indicate visibility for screen readers
+			content.setAttribute('aria-hidden', !isActive)
+		})
+	}
+
+	// Add event listeners to each tab trigger
+	tabsTriggers.forEach((trigger, index) => {
+		// Handle click events to activate the tab
+		trigger.addEventListener('click', () => {
+			setActiveTab(index)
+		})
+
+		// Handle keyboard navigation
+		trigger.addEventListener('keydown', (e) => {
+			if (e.key === 'Enter' || e.key === ' ') {
+				// Activate tab on Enter or Space key press
+				e.preventDefault()
+				setActiveTab(index)
+			} else if (e.key === 'ArrowRight') {
+				// Navigate to the next tab with Arrow Right
+				e.preventDefault()
+				const nextIndex = (index + 1) % tabsTriggers.length
+				setActiveTab(nextIndex)
+				tabsTriggers[nextIndex].focus()
+			} else if (e.key === 'ArrowLeft') {
+				// Navigate to the previous tab with Arrow Left
+				e.preventDefault()
+				const prevIndex = (index - 1 + tabsTriggers.length) % tabsTriggers.length
+				setActiveTab(prevIndex)
+				tabsTriggers[prevIndex].focus()
+			}
+		})
+	})
+
+	// Initialize the first tab as active
+	setActiveTab(0)
+}
+// Initialize tabs with the ID 'tabs'
+toggleTabs('hero__tabs')
+
+function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
+	const customSelect = document.getElementById(selectId)
+	const selectedOption = document.getElementById(selectedOptionId)
+	const customOptions = document.getElementById(optionsId)
+	const options = customOptions.getElementsByClassName('select__option')
+
+	customSelect.addEventListener('click', () => {
+		customSelect.classList.toggle('active')
+		customOptions.classList.toggle('hidden')
+		selectedOption.classList.toggle('active')
+	})
+
+	for (let option of options) {
+		option.addEventListener('click', () => {
+			selectedOption.innerText = option.innerText
+			selectedOption.classList.remove('active')
+			customOptions.classList.add('hidden')
+			customSelect.classList.remove('active')
+		})
+	}
+
+	document.addEventListener('click', (event) => {
+		const target = event.target
+		if (!customSelect.contains(target) && !customOptions.contains(target)) {
+			selectedOption.classList.remove('active')
+			customOptions.classList.add('hidden')
+			customSelect.classList.remove('active')
+		}
+	})
+}
+initializeCustomSelect(
+	'select-legal-1',
+	'options-legal-1',
+	'selected-option-legal-1'
+)
+initializeCustomSelect(
+	'select-city-1',
+	'options-city-1',
+	'selected-option-city-1'
+)
+initializeCustomSelect(
+	'select-legal-2',
+	'options-legal-2',
+	'selected-option-legal-2'
+)
+initializeCustomSelect(
+	'select-city-2',
+	'options-city-2',
+	'selected-option-city-2'
+)
