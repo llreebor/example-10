@@ -662,60 +662,6 @@
 		}
 	}
 }
-.categories {
-	max-width: 1336px;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	gap: 40px;
-	justify-content: center;
-	margin: 0 auto;
-	margin-top: 60px;
-	@media screen and (width <= 1440px) {
-		margin-top: 40px;
-	}
-	@media screen and (width <= 768px) {
-		gap: 15px;
-		margin-top: 25px;
-	}
-	&__item {
-		background: var(--color-blue-20);
-
-		&-gray {
-			.categories__item-link {
-				color: var(--color-blue-200);
-				&:hover {
-					color: var(--color-orange);
-				}
-			}
-		}
-		&-blue {
-			background: var(--color-blue-200);
-			.categories__item-link {
-				color: #fff;
-				&:hover {
-					color: var(--color-orange);
-				}
-			}
-		}
-		&-lightblue {
-			background: var(--color-blue-40);
-			.categories__item-link {
-				color: var(--color-blue-200);
-				&:hover {
-					color: var(--color-orange);
-				}
-			}
-		}
-		&-link {
-			padding: 25px;
-			@media screen and (width <= 768px) {
-				font-size: 12px;
-				padding: 13px;
-			}
-		}
-	}
-}
 
 // Faq
 .section {

@@ -180,6 +180,20 @@ a {
 	}
 }
 
+.input {
+	padding: 28px 30px;
+	background: #fff;
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	@media screen and (width <= 1440px) {
+		padding: 20px;
+	}
+	@media screen and (width <= 768px) {
+		padding: 11px 15px;
+	}
+}
+
 // Utility classess
 .relative {
 	position: relative;
@@ -204,15 +218,6 @@ a {
 }
 .hidden {
 	display: none !important;
-}
-.section__blank {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 400px;
-	background: var(--color-blue-40);
-	font-size: 36px;
-	font-weight: 700;
 }
 .gap-40 {
 	gap: 40px;
