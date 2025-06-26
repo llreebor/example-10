@@ -9,7 +9,6 @@
 		}
 	}
 }
-
 .hero {
 	position: relative;
 	z-index: 0;
@@ -94,9 +93,6 @@
 			padding: 15px;
 		}
 	}
-}
-
-.hero {
 	&__title {
 		max-width: 847px;
 	}
@@ -146,6 +142,7 @@
 		}
 		@media screen and (width <= 992px) {
 			gap: 15px;
+			max-width: 100%;
 		}
 	}
 	&__input-item {
@@ -159,7 +156,7 @@
 			&__item {
 				max-width: 543px;
 
-				@media screen and (width <= 768px) {
+				@media screen and (width <= 992px) {
 					width: 100%;
 					max-width: 100%;
 				}
@@ -403,166 +400,6 @@
 .section {
 	&__lawyers {
 		background: var(--color-blue-200);
-	}
-}
-.lawyers {
-	&__header {
-		display: flex;
-		justify-content: space-between;
-		gap: 20px;
-		align-items: end;
-		@media screen and (width <= 480px) {
-			flex-direction: column;
-			align-items: start;
-		}
-	}
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	margin-top: 80px;
-	gap: 60px;
-	@media screen and (width <= 1440px) {
-		gap: 40px;
-		margin-top: 60px;
-	}
-	@media screen and (width <= 1280px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media screen and (width <= 992px) {
-		gap: 20px;
-		margin-top: 35px;
-	}
-	@media screen and (width <= 768px) {
-		grid-template-columns: repeat(1, 1fr);
-	}
-	&__item {
-		background: #fff;
-		transition: 0.3s all;
-
-		&.lawyers__item-hidden {
-			@media screen and (width <= 768px) {
-				display: none;
-			}
-		}
-	}
-
-	&__item-body {
-		background: var(--color-blue-40);
-		padding: 30px;
-		display: flex;
-		gap: 30px;
-		@media screen and (width <= 1440px) {
-			gap: 20px;
-			padding: 20px;
-		}
-	}
-	&__item-image {
-		max-width: 170px;
-		width: 100%;
-		img {
-			max-width: 100%;
-			width: 100%;
-			height: auto;
-		}
-		@media screen and (width <= 1440px) {
-			max-width: 140px;
-		}
-
-		@media screen and (width <= 480px) {
-			max-width: 110px;
-		}
-	}
-	&__item-link {
-		margin-left: auto;
-		padding-bottom: 15px;
-	}
-	&__item-info {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	&__links {
-		display: flex;
-		flex-direction: column;
-		margin-top: auto;
-		padding-bottom: 20px;
-	}
-	&__item-badge {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 188%;
-		padding: 9px 10px;
-		background: var(--color-blue-200);
-		color: #fff;
-		max-width: fit-content;
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-		}
-	}
-	&__name {
-		font-size: 25px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 120%;
-		margin-top: 15px;
-		color: var(--color-blue-200);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 20px;
-			margin-top: 10px;
-		}
-	}
-	&__position {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 129%;
-		margin-top: 15px;
-		color: var(--color-blue-200);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-			margin-top: 7px;
-		}
-	}
-	&__city {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 129%;
-		margin-top: 10px;
-		color: var(--color-blue-100);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-			margin-top: 7px;
-		}
-	}
-	&__item-footer {
-		display: flex;
-		padding: 0 20px;
-		align-items: center;
-		min-height: 96px;
-	}
-	&__item-footer--text {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 3;
-		overflow: hidden;
-		font-size: 17px;
-		line-height: 129%;
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-		}
 	}
 }
 .lawyer__more-btn {

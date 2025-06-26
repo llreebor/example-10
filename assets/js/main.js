@@ -249,7 +249,14 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	const customSelect = document.getElementById(selectId)
 	const selectedOption = document.getElementById(selectedOptionId)
 	const customOptions = document.getElementById(optionsId)
+
+	if (!customSelect || !selectedOption || !customOptions) return
+
+	// Только после этого безопасно получать .getElementsByClassName
 	const options = customOptions.getElementsByClassName('select__option')
+
+	// Проверяем наличие хотя бы одной опции
+	if (!options || options.length === 0) return
 
 	customSelect.addEventListener('click', () => {
 		customSelect.classList.toggle('active')
@@ -295,3 +302,5 @@ initializeCustomSelect(
 	'options-city-2',
 	'selected-option-city-2'
 )
+initializeCustomSelect('select-type', 'options-type', 'selected-option-type')
+initializeCustomSelect('select-help', 'options-help', 'selected-option-help')

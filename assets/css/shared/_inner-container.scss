@@ -1,0 +1,31 @@
+.section {
+	&__inner {
+	}
+}
+.inner {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		gap: 122px;
+		align-items: start;
+		@media screen and (width <= 1600px) {
+			gap: 60px;
+		}
+		@media screen and (width <= 1440px) {
+			gap: 40px;
+		}
+		@media screen and (width <= 992px) {
+			flex-direction: column;
+		}
+	}
+	&__container-left {
+		max-width: 485px;
+		width: 100%;
+		@media screen and (width <= 992px) {
+			max-width: 100%;
+		}
+	}
+	&__container-right {
+		width: 100%;
+	}
+}

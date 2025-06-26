@@ -857,18 +857,10 @@
 									/>
 								</a>
 							</li>
+
 							<li class="breadcrumbs__list-item">
 								<a href="#" class="breadcrumbs__list-link">
-									<p>Advocaten</p>
-									<img
-										src="./assets/images/icons/breadcrumbs-arrow.svg"
-										alt="arrow icon"
-									/>
-								</a>
-							</li>
-							<li class="breadcrumbs__list-item">
-								<a href="#" class="breadcrumbs__list-link">
-									<p>Ilona Jansse</p>
+									<p>Zoeken op rechtsgebied</p>
 									<img
 										src="./assets/images/icons/breadcrumbs-arrow.svg"
 										alt="arrow icon"
@@ -893,6 +885,556 @@
 							</svg>
 							<p>Terug <span>naar overzicht</span></p>
 						</a>
+					</div>
+				</div>
+			</section>
+
+			<!-- Results -->
+			<section class="section__inner">
+				<div class="container">
+					<div class="inner__container">
+						<!-- Filters -->
+						<div class="inner__container-left">
+							<form action="#" class="filters">
+								<div class="filters__row">
+									<label for="area" class="label">
+										<p>Rechtsgebieden</p>
+										<input class="input" type="text" name="area" id="area" />
+									</label>
+								</div>
+								<div class="filters__row filters__row-columns">
+									<label for="location" class="label">
+										<p>Plaats</p>
+										<input
+											class="input"
+											type="text"
+											name="area"
+											id="area"
+											placeholder="Amsterdam"
+										/>
+									</label>
+									<label for="price" class="label">
+										<p>Prijs per uur</p>
+										<input
+											class="input"
+											type="text"
+											name="price"
+											id="price"
+											placeholder="Geen max."
+										/>
+									</label>
+								</div>
+
+								<div class="filters__row">
+									<label for="#" class="label">
+										<p>Zakelijk/particulier</p>
+										<!-- [START] HTML Select  -->
+										<div class="select relative">
+											<button
+												id="select-type"
+												class="select__trigger select__small input"
+												type="button"
+											>
+												<p id="selected-option-type" class="select__selected-option">
+													Beide
+												</p>
+
+												<div class="select__arrow">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="15"
+														height="15"
+														viewBox="0 0 15 15"
+														fill="none"
+													>
+														<path
+															d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+															stroke="#050A50"
+															stroke-width="2.5"
+														/>
+													</svg>
+												</div>
+											</button>
+											<div id="options-type" class="select__options hidden">
+												<ul class="select__options-list">
+													<li>
+														<button type="button" class="select__option">Value 1</button>
+													</li>
+													<li>
+														<button type="button" class="select__option">Value 2</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- [END] HTML Select  -->
+									</label>
+								</div>
+								<div class="filters__row">
+									<label for="#" class="label">
+										<p>Gefinancieerde rechtsbijstand?</p>
+										<!-- [START] HTML Select  -->
+										<div class="select relative">
+											<button
+												id="select-help"
+												class="select__trigger select__small input"
+												type="button"
+											>
+												<p id="selected-option-help" class="select__selected-option">
+													Beide
+												</p>
+
+												<div class="select__arrow">
+													<svg
+														xmlns="http://www.w3.org/2000/svg"
+														width="15"
+														height="15"
+														viewBox="0 0 15 15"
+														fill="none"
+													>
+														<path
+															d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+															stroke="#050A50"
+															stroke-width="2.5"
+														/>
+													</svg>
+												</div>
+											</button>
+											<div id="options-help" class="select__options hidden">
+												<ul class="select__options-list">
+													<li>
+														<button type="button" class="select__option">Value 1</button>
+													</li>
+													<li>
+														<button type="button" class="select__option">Value 2</button>
+													</li>
+												</ul>
+											</div>
+										</div>
+										<!-- [END] HTML Select  -->
+									</label>
+								</div>
+
+								<button class="filters__btn btn btn-primary">
+									<p>Vind mijn advocaat</p>
+								</button>
+							</form>
+						</div>
+						<div class="inner__container-right">
+							<div class="lawyers lawyers__results">
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-1.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Ilona Jansse</a>
+												<a href="#" class="lawyers__position">Maasstad Advocatuur</a>
+												<a href="#" class="lawyers__city">Rotterdam</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Huurrecht, Arbeidsrecht,
+											Incassorecht, Ondernemingsrecht, Verbintenissenrecht, Procesrecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ 199,00</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-2.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<a href="#" class="lawyers__name">Edwin Slager</a>
+												<a href="#" class="lawyers__position"
+													>Van Emstede & Slager Advocaten</a
+												>
+												<a href="#" class="lawyers__city">Amsterdam</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Maritiem recht, Incassorecht,
+											Procesrecht, Hoger beroep, Verbintenissenrecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ excl.</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-3.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Erik Duinkerke</a>
+												<a href="#" class="lawyers__position">De Kempenaer Advocaten</a>
+												<a href="#" class="lawyers__city">Arnhem</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Ondernemingsrecht,
+											Verbintenissenrecht, Procesrecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ excl.</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-4.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<a href="#" class="lawyers__name">Anastazia Pokrajac</a>
+												<a href="#" class="lawyers__position"
+													>Houben & Van Dijck Advocaten</a
+												>
+												<a href="#" class="lawyers__city">Eindhoven</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Personen- en Familierecht, Civiel
+											recht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ 195,00</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-5.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Marina Maric</a>
+												<a href="#" class="lawyers__position">NIVOX Advocaten</a>
+												<a href="#" class="lawyers__city">Zoetermeer</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Personen- en Familierecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ 230,00</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-6.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Ramon Vastmans</a>
+												<a href="#" class="lawyers__position">Vastmans Advocatuur</a>
+												<a href="#" class="lawyers__city">Gorinchem</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Ondernemingsrecht,
+											Verbintenissenrecht, Procesrecht, Mediation en arbitrage,
+											Arbeidsrecht, Goederen- en zakenrecht, Incassorecht,
+											Faillissementsrecht, Civiel ...
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ 250,00</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-7.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Birgitte Schelvis-Neuteboom</a>
+												<a href="#" class="lawyers__position">RWV Advocaten</a>
+												<a href="#" class="lawyers__city">Leiden</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Personen- en Familierecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ excl.</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-8.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Kerem Canatan</a>
+												<a href="#" class="lawyers__position">Meijers Canatan Advocaten</a>
+												<a href="#" class="lawyers__city">Amsterdam</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Personen- en Familierecht, Civiel
+											recht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ excl.</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+
+								<div class="lawyers__item">
+									<div class="lawyers__item-body">
+										<div class="lawyers__item-image">
+											<img
+												src="./assets/images/home/lawyer-photo-9.png"
+												alt="lawyer photo"
+											/>
+										</div>
+										<div class="lawyers__item-info">
+											<a href="#" class="link link-sm lawyers__item-link link-orange">
+												Bekijk advocaat
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="7"
+													height="8"
+													viewBox="0 0 7 8"
+													fill="none"
+												>
+													<path
+														d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+														stroke="currentColor"
+														stroke-width="1.5"
+													/>
+												</svg>
+											</a>
+											<div class="lawyers__links">
+												<p class="lawyers__item-badge">Specialist</p>
+												<a href="#" class="lawyers__name">Figen Özdemir-Sahin</a>
+												<a href="#" class="lawyers__position">Iustus Advocatuur</a>
+												<a href="#" class="lawyers__city">Amsterdam</a>
+											</div>
+										</div>
+									</div>
+									<div class="lawyers__item-footer">
+										<p class="lawyers__item-footer--text">
+											<strong>Rechtsgebieden:</strong> Personen- en Familierecht,
+											Arbeidsrecht, Verbintenissenrecht Personen- en Familierecht,
+											Arbeidsrecht, VerbintenissenrechtPersonen- en Familierecht,
+											Arbeidsrecht, VerbintenissenrechtPersonen- en Familierecht,
+											Arbeidsrecht, VerbintenissenrechtPersonen- en Familierecht,
+											Arbeidsrecht, Verbintenissenrecht
+										</p>
+										<div class="lawyers__item-price">
+											<p class="lawyers__item-num">€ excl.</p>
+											<p class="lawyers__item-text">per uur</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</section>

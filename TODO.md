@@ -1,5 +1,7 @@
 - check header paddings & line-height
 - header hover effects
 - fix mobile menu at 320px
-- wrap all links text in span tag
 - footer
+- check input & btn size
+- change select dropdown menu
+- lawyers section
