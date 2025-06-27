@@ -7,3 +7,6 @@
 - lawyers section
 - check links & pagination icons
 - add filter mobile accordion
+- add page titles
+- hero form tab 2 just input
+- check selects paddings

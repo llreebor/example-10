@@ -18,9 +18,9 @@
 	&__image {
 		max-width: 485px;
 		width: 100%;
+		flex-shrink: 0;
 		@media screen and (width <= 1440px) {
 			max-width: 400px;
-			flex-shrink: 0;
 		}
 		@media screen and (width <= 992px) {
 			max-width: 100%;

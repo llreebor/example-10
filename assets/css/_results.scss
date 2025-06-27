@@ -1,0 +1,50 @@
+.help {
+	&__desk {
+		padding: 40px;
+		background: var(--color-blue-40);
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+		@media screen and (width <= 992px) {
+			padding: 20px;
+		}
+		@media screen and (width <= 768px) {
+			gap: 15px;
+		}
+	}
+	&__desk-title {
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 144.444%;
+		color: var(--color-blue-200);
+		@media screen and (width <= 1440px) {
+			font-size: 38px;
+		}
+		@media screen and (width <= 992px) {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+		@media screen and (width <= 768px) {
+			span {
+				display: none;
+			}
+		}
+	}
+	&__desk-text {
+		font-size: 21px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 128.571%;
+		color: var(--color-blue-200);
+		@media screen and (width <= 992px) {
+			font-size: 16px;
+		}
+		@media screen and (width <= 768px) {
+			font-size: 12px;
+		}
+	}
+	&__desk-btn {
+		max-width: fit-content;
+	}
+}
