@@ -117,6 +117,7 @@ input {
 	font-size: 21px;
 	line-height: 180.952%;
 	flex-shrink: 0;
+
 	@media screen and (width <= 768px) {
 		font-size: 12px;
 		svg {
@@ -240,7 +241,19 @@ input {
 		gap: 10px;
 	}
 }
-
+.blue__container {
+	padding: 40px;
+	background: var(--color-blue-40);
+	@media screen and (width <= 1440px) {
+		padding: 30px;
+	}
+	@media screen and (width <= 992px) {
+		padding: 20px;
+	}
+	@media screen and (width <= 768px) {
+		gap: 15px;
+	}
+}
 // Utility classess
 .relative {
 	position: relative;

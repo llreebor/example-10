@@ -4,7 +4,7 @@
 	gap: 10px;
 	flex-wrap: wrap;
 	@media screen and (width <= 768px) {
-		gap: 5px;
+		gap: 0px;
 	}
 	&__item {
 		&.active {
@@ -25,7 +25,7 @@
 		color: var(--color-blue-60);
 		cursor: pointer;
 		transition: 0.3s color;
-		padding: 5px;
+		width: 25px;
 		@media screen and (width <= 768px) {
 			font-size: 15px;
 			svg {

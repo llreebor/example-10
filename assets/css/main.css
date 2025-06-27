@@ -536,6 +536,26 @@ input {
   }
 }
 
+.blue__container {
+  padding: 40px;
+  background: var(--color-blue-40);
+}
+@media screen and (width <= 1440px) {
+  .blue__container {
+    padding: 30px;
+  }
+}
+@media screen and (width <= 992px) {
+  .blue__container {
+    padding: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .blue__container {
+    gap: 15px;
+  }
+}
+
 .relative {
   position: relative;
 }
@@ -1513,9 +1533,9 @@ input {
 
 .inner__container {
   display: flex;
-  justify-content: space-between;
   gap: 122px;
   align-items: start;
+  width: 100%;
 }
 @media screen and (width <= 1600px) {
   .inner__container {
@@ -1535,6 +1555,11 @@ input {
 .inner__container-left {
   max-width: 485px;
   width: 100%;
+}
+@media screen and (width <= 1440px) {
+  .inner__container-left {
+    max-width: 430px;
+  }
 }
 @media screen and (width <= 992px) {
   .inner__container-left {
@@ -1616,6 +1641,11 @@ input {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+@media screen and (width <= 1440px) {
+  .filters {
+    padding: 30px;
+  }
 }
 @media screen and (width <= 992px) {
   .filters {
@@ -1934,7 +1964,7 @@ input {
 }
 @media screen and (width <= 768px) {
   .pagination {
-    gap: 5px;
+    gap: 0px;
   }
 }
 .pagination__item.active .pagination__item-btn {
@@ -1954,7 +1984,7 @@ input {
   color: var(--color-blue-60);
   cursor: pointer;
   transition: 0.3s color;
-  padding: 5px;
+  width: 25px;
 }
 @media screen and (width <= 768px) {
   .pagination__item-btn {
@@ -2087,6 +2117,95 @@ input {
   .info__link {
     margin-top: 20px;
   }
+}
+
+.laws {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  width: 100%;
+}
+@media screen and (width <= 992px) {
+  .laws {
+    gap: 20px;
+  }
+}
+.laws__container {
+  width: 100%;
+}
+.laws__item {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+@media screen and (width <= 992px) {
+  .laws__item {
+    gap: 20px;
+  }
+}
+.laws__item-title {
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144.444%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .laws__item-title {
+    font-size: 38px;
+  }
+}
+@media screen and (width <= 992px) {
+  .laws__item-title {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+}
+@media screen and (width <= 768px) {
+  .laws__item-title span {
+    display: none;
+  }
+}
+.laws__item-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  justify-content: space-between;
+  width: 100%;
+}
+@media screen and (width <= 1280px) {
+  .laws__item-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (width <= 992px) {
+  .laws__item-grid {
+    gap: 15px;
+  }
+}
+@media screen and (width <= 374px) {
+  .laws__item-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+.laws__item-link {
+  flex-shrink: 0;
+  display: flex;
+  line-height: 100%;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  justify-content: start;
+}
+.laws__item-link p {
+  display: inline-block;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  overflow: hidden;
+  max-width: fit-content;
 }
 
 .section__hero {
