@@ -1,0 +1,44 @@
+.pagination {
+	display: flex;
+	align-items: end;
+	gap: 10px;
+	flex-wrap: wrap;
+	@media screen and (width <= 768px) {
+		gap: 5px;
+	}
+	&__item {
+		&.active {
+			.pagination__item-btn {
+				font-size: 35px;
+				color: var(--color-blue-200);
+				@media screen and (width <= 768px) {
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	&__item-btn {
+		font-size: 25px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 260%;
+		color: var(--color-blue-60);
+		cursor: pointer;
+		transition: 0.3s color;
+		padding: 5px;
+		@media screen and (width <= 768px) {
+			font-size: 15px;
+			svg {
+				width: 10px;
+				height: 10px;
+			}
+		}
+
+		&:hover {
+			color: var(--color-orange);
+			path {
+				stroke: currentColor;
+			}
+		}
+	}
+}

@@ -868,30 +868,22 @@
 								</a>
 							</li>
 						</ul>
-
-						<a href="#" class="link breadcrumbs__back">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="12"
-								height="12"
-								viewBox="0 0 12 12"
-								fill="none"
-							>
-								<path
-									d="M6.95312 0.999981L2.00338 5.94973M2.00338 5.94973L6.95312 10.8995M2.00338 5.94973L11.9029 5.94973"
-									stroke="currentColor"
-									stroke-width="2.5"
-								/>
-							</svg>
-							<p>Terug <span>naar overzicht</span></p>
-						</a>
 					</div>
 				</div>
 			</section>
 
 			<!-- Results -->
-			<section class="section__inner">
+			<section class="section section__inner">
 				<div class="container">
+					<div class="inner__header">
+						<button class="inner__header-filters">
+							<p>Filteren</p>
+							<img src="./assets/images/icons/filter.svg" alt="filter icon" />
+						</button>
+						<p class="inner__header-text">
+							85 <span>arbeidsstrafrecht</span> resultaten
+						</p>
+					</div>
 					<div class="inner__container">
 						<!-- Filters -->
 						<div class="inner__container-left">
@@ -1019,6 +1011,7 @@
 								</button>
 							</form>
 						</div>
+						<!-- Results Items -->
 						<div class="inner__container-right">
 							<div class="lawyers lawyers__results">
 								<div class="lawyers__item">
@@ -1434,10 +1427,85 @@
 									</div>
 								</div>
 							</div>
+
+							<!-- Pagination -->
+							<ul class="pagination">
+								<li class="pagination__item active">
+									<button class="pagination__item-btn"><p>1</p></button>
+								</li>
+								<li class="pagination__item">
+									<button class="pagination__item-btn"><p>2</p></button>
+								</li>
+								<li class="pagination__item">
+									<button class="pagination__item-btn"><p>3</p></button>
+								</li>
+								<li class="pagination__item">
+									<button class="pagination__item-btn"><p>4</p></button>
+								</li>
+								<li class="pagination__item">
+									<button class="pagination__item-btn"><p>5</p></button>
+								</li>
+								<li class="pagination__item">
+									<button class="pagination__item-btn">
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="18"
+											height="19"
+											viewBox="0 0 18 19"
+											fill="none"
+										>
+											<path
+												d="M7.77734 17.5056L15.5555 9.72739M15.5555 9.72739L7.77734 1.94922M15.5555 9.72739H-0.000830879"
+												stroke="#CFE5FF"
+												stroke-width="3"
+											/>
+										</svg>
+									</button>
+								</li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</section>
+
+			<!-- Info -->
+			<section class="section section__info">
+				<div class="container">
+					<div class="info">
+						<div class="info__image">
+							<img src="./assets/images/global/info-image.png" alt="info image" />
+						</div>
+						<div class="info__texts">
+							<h3 class="info__title">Gespecialiseerde strafrecht advocaten</h3>
+							<p class="info__text">
+								Gespecialiseerde strafrecht advocaten. Zoekt u een advocatenkantoor of
+								gespecialiseerde advocaat strafrecht? Strafzaken kunnen erg complex
+								zijn, waardoor een deskundige strafrecht advocaat vereist is. Bent u
+								gedagvaard, aangehouden, wordt u ergens van verdacht of heeft u een
+								ander soort strafzaak tegen u lopen?
+							</p>
+							<a href="#" class="link link-blue-80 info__link">
+								<p>Lees meer</p>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="12"
+									height="12"
+									viewBox="0 0 12 12"
+									fill="none"
+								>
+									<path
+										d="M0.998943 4.9502L5.94869 9.89994M5.94869 9.89994L10.8984 4.9502M5.94869 9.89994V0.000448097"
+										stroke="currentColor"
+										stroke="#A9CDFF"
+										stroke-width="2.5"
+									/>
+								</svg>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+
 			<!-- FAQ -->
 			<section class="section section__faq bg-blue-20">
 				<div class="container">

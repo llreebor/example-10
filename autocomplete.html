@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="nl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Advocaat Zoeken</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+
+			body {
+				font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+					sans-serif;
+				background-color: #f8f9fa;
+				padding: 20px;
+			}
+
+			.search-container {
+				max-width: 600px;
+				margin: 0 auto;
+				background: #e8f1ff;
+				padding: 30px;
+				border-radius: 20px;
+			}
+
+			.form-group {
+				margin-bottom: 25px;
+			}
+
+			.highlighted-group {
+				background: white;
+				padding: 20px;
+				border-radius: 15px;
+				border: 3px solid #ff4444;
+				margin-bottom: 25px;
+				position: relative;
+			}
+
+			.location-group {
+				background: white;
+				padding: 15px;
+				border-radius: 15px;
+				border: 3px solid #ff4444;
+				display: inline-block;
+				margin-right: 20px;
+				min-width: 200px;
+			}
+
+			label {
+				display: block;
+				font-weight: 600;
+				font-size: 18px;
+				color: #1a365d;
+				margin-bottom: 10px;
+			}
+
+			.sub-label {
+				font-size: 14px;
+				color: #666;
+				font-weight: normal;
+				margin-top: 5px;
+			}
+
+			.price-label {
+				font-size: 18px;
+				color: #1a365d;
+				font-weight: 600;
+				display: inline-block;
+				margin-top: 10px;
+			}
+
+			.price-text {
+				color: #ccc;
+				font-size: 16px;
+				margin-top: 5px;
+			}
+
+			select {
+				width: 100%;
+				padding: 12px 15px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				font-size: 16px;
+				background: white;
+				color: #333;
+				appearance: none;
+				background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
+				background-position: right 12px center;
+				background-repeat: no-repeat;
+				background-size: 16px;
+				cursor: pointer;
+			}
+
+			input[type='text'] {
+				width: 100%;
+				padding: 12px 15px;
+				border: 1px solid #ddd;
+				border-radius: 8px;
+				font-size: 16px;
+				background: white;
+				color: #333;
+			}
+
+			input[type='text']:focus {
+				outline: none;
+				border-color: #3b82f6;
+				box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+			}
+
+			.autocomplete-container {
+				position: relative;
+			}
+
+			.autocomplete-list {
+				position: absolute;
+				top: 100%;
+				left: 0;
+				right: 0;
+				background: white;
+				border: 1px solid #ddd;
+				border-top: none;
+				border-radius: 0 0 8px 8px;
+				max-height: 200px;
+				overflow-y: auto;
+				z-index: 1000;
+				display: none;
+			}
+
+			.autocomplete-item {
+				padding: 12px 15px;
+				cursor: pointer;
+				border-bottom: 1px solid #f0f0f0;
+			}
+
+			.autocomplete-item:hover,
+			.autocomplete-item.active {
+				background-color: #f8f9fa;
+			}
+
+			.autocomplete-item:last-child {
+				border-bottom: none;
+			}
+
+			select:focus {
+				outline: none;
+				border-color: #3b82f6;
+				box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+			}
+
+			.placeholder {
+				color: #999;
+			}
+
+			.search-button {
+				background: #ff8c00;
+				color: white;
+				border: none;
+				padding: 15px 30px;
+				font-size: 18px;
+				font-weight: 600;
+				border-radius: 8px;
+				cursor: pointer;
+				transition: background-color 0.2s;
+				margin-top: 20px;
+			}
+
+			.search-button:hover {
+				background: #e67e00;
+			}
+
+			.form-row {
+				display: flex;
+				align-items: flex-start;
+				gap: 20px;
+				flex-wrap: wrap;
+			}
+
+			.price-section {
+				flex: 1;
+				min-width: 200px;
+			}
+
+			@media (max-width: 768px) {
+				.form-row {
+					flex-direction: column;
+				}
+
+				.location-group {
+					margin-right: 0;
+					margin-bottom: 20px;
+					min-width: auto;
+					width: 100%;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="search-container">
+			<div class="highlighted-group">
+				<label for="rechtsgebieden">Rechtsgebieden</label>
+				<div class="autocomplete-container">
+					<input
+						type="text"
+						id="rechtsgebieden"
+						placeholder="Strafrecht, Arbeidsstrafrecht"
+						autocomplete="off"
+					/>
+					<div class="autocomplete-list" id="rechtsgebieden-list"></div>
+				</div>
+			</div>
+
+			<div class="form-row">
+				<div class="location-group">
+					<label for="plaats">Plaats</label>
+					<select id="plaats" onchange="updatePlaceholder(this)">
+						<option value="" class="placeholder">Amsterdam</option>
+						<option value="amsterdam">Amsterdam</option>
+						<option value="rotterdam">Rotterdam</option>
+						<option value="den-haag">Den Haag</option>
+						<option value="utrecht">Utrecht</option>
+						<option value="eindhoven">Eindhoven</option>
+						<option value="tilburg">Tilburg</option>
+						<option value="groningen">Groningen</option>
+						<option value="almere">Almere</option>
+					</select>
+				</div>
+
+				<div class="price-section">
+					<label class="price-label">Prijs per uur</label>
+					<div class="price-text">Geen max.</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label for="zakelijk">Zakelijk/particulier</label>
+				<select id="zakelijk" onchange="updatePlaceholder(this)">
+					<option value="" class="placeholder">Beide</option>
+					<option value="zakelijk">Zakelijk</option>
+					<option value="particulier">Particulier</option>
+					<option value="beide">Beide</option>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<label for="rechtsbijstand">Gefinancieerde rechtsbijstand?</label>
+				<select id="rechtsbijstand" onchange="updatePlaceholder(this)">
+					<option value="" class="placeholder">Beide</option>
+					<option value="ja">Ja</option>
+					<option value="nee">Nee</option>
+					<option value="beide">Beide</option>
+				</select>
+			</div>
+
+			<button class="search-button" onclick="performSearch()">
+				Vind mijn advocaat
+			</button>
+		</div>
+
+		<script>
+			// Mock data for autocomplete (using city names as example)
+			const rechtsgebiedenData = [
+				'Strafrecht',
+				'Arbeidsstrafrecht',
+				'Amsterdam',
+				'Rotterdam',
+				'Den Haag',
+				'Utrecht',
+				'Eindhoven',
+				'Tilburg',
+				'Groningen',
+				'Almere',
+				'Breda',
+				'Nijmegen',
+				'Apeldoorn',
+				'Haarlem',
+				'Arnhem',
+				'Zaanstad',
+				'Haarlemmermeer',
+				'Amersfoort',
+				'Enschede',
+				'Zwolle',
+			]
+
+			let currentFocus = -1
+
+			function initAutocomplete() {
+				const input = document.getElementById('rechtsgebieden')
+				const list = document.getElementById('rechtsgebieden-list')
+
+				input.addEventListener('input', function () {
+					const value = this.value
+					closeAllLists()
+
+					if (!value) return
+
+					const matches = rechtsgebiedenData.filter((item) =>
+						item.toLowerCase().includes(value.toLowerCase())
+					)
+
+					if (matches.length > 0) {
+						list.style.display = 'block'
+						list.innerHTML = ''
+
+						matches.forEach((match) => {
+							const item = document.createElement('div')
+							item.className = 'autocomplete-item'
+							item.textContent = match
+
+							item.addEventListener('click', function () {
+								input.value = match
+								closeAllLists()
+							})
+
+							list.appendChild(item)
+						})
+					}
+				})
+
+				input.addEventListener('keydown', function (e) {
+					const items = list.querySelectorAll('.autocomplete-item')
+
+					if (e.keyCode === 40) {
+						// Down arrow
+						e.preventDefault()
+						currentFocus++
+						addActive(items)
+					} else if (e.keyCode === 38) {
+						// Up arrow
+						e.preventDefault()
+						currentFocus--
+						addActive(items)
+					} else if (e.keyCode === 13) {
+						// Enter
+						e.preventDefault()
+						if (currentFocus > -1 && items[currentFocus]) {
+							items[currentFocus].click()
+						}
+					} else if (e.keyCode === 27) {
+						// Escape
+						closeAllLists()
+					}
+				})
+
+				// Close list when clicking outside
+				document.addEventListener('click', function (e) {
+					if (!e.target.closest('.autocomplete-container')) {
+						closeAllLists()
+					}
+				})
+			}
+
+			function addActive(items) {
+				if (!items.length) return
+				removeActive(items)
+
+				if (currentFocus >= items.length) currentFocus = 0
+				if (currentFocus < 0) currentFocus = items.length - 1
+
+				items[currentFocus].classList.add('active')
+			}
+
+			function removeActive(items) {
+				items.forEach((item) => item.classList.remove('active'))
+			}
+
+			function closeAllLists() {
+				const list = document.getElementById('rechtsgebieden-list')
+				list.style.display = 'none'
+				currentFocus = -1
+			}
+
+			function updatePlaceholder(select) {
+				if (select.value) {
+					select.style.color = '#333'
+				} else {
+					select.style.color = '#999'
+				}
+			}
+
+			function performSearch() {
+				const rechtsgebieden =
+					document.getElementById('rechtsgebieden').value ||
+					'Strafrecht, Arbeidsstrafrecht'
+				const plaats = document.getElementById('plaats').value || 'Amsterdam'
+				const zakelijk = document.getElementById('zakelijk').value || 'Beide'
+				const rechtsbijstand =
+					document.getElementById('rechtsbijstand').value || 'Beide'
+
+				alert(
+					`Zoeken naar advocaten\nRechtsgebied: ${rechtsgebieden}\nPlaats: ${plaats}\nType: ${zakelijk}\nRechtsbijstand: ${rechtsbijstand}`
+				)
+			}
+
+			// Initialize everything
+			document.addEventListener('DOMContentLoaded', function () {
+				initAutocomplete()
+
+				const selects = document.querySelectorAll('select')
+				selects.forEach((select) => {
+					updatePlaceholder(select)
+				})
+			})
+		</script>
+	</body>
+</html>

@@ -5,3 +5,5 @@
 - check input & btn size
 - change select dropdown menu
 - lawyers section
+- check links & pagination icons
+- add filter mobile accordion

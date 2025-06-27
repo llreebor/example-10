@@ -304,3 +304,27 @@ initializeCustomSelect(
 )
 initializeCustomSelect('select-type', 'options-type', 'selected-option-type')
 initializeCustomSelect('select-help', 'options-help', 'selected-option-help')
+
+function initPagination() {
+	const paginationItems = document.querySelectorAll('.pagination__item')
+
+	if (!paginationItems.length) return
+
+	paginationItems.forEach((item, index) => {
+		// Пропускаем последний элемент (стрелка)
+		const isLast = index === paginationItems.length - 1
+		if (isLast) return
+
+		item.addEventListener('click', function () {
+			// Удаляем класс active у всех (кроме стрелки)
+			paginationItems.forEach((el, idx) => {
+				if (idx !== paginationItems.length - 1) {
+					el.classList.remove('active')
+				}
+			})
+			// Добавляем active на текущий
+			item.classList.add('active')
+		})
+	})
+}
+initPagination()

@@ -1,5 +1,6 @@
 .section {
 	&__inner {
+		padding-top: 0;
 	}
 }
 .inner {
@@ -27,5 +28,61 @@
 	}
 	&__container-right {
 		width: 100%;
+	}
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -90px;
+		margin-bottom: 70px;
+		@media screen and (width <= 1280px) {
+			margin-top: -60px;
+		}
+		@media screen and (width <= 992px) {
+			margin-top: 0;
+			margin-bottom: 30px;
+			align-items: end;
+		}
+	}
+	&__header-filters {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 250%;
+		color: #fff;
+		padding: 11px 20px;
+		background: var(--color-blue-200);
+		cursor: pointer;
+		display: none;
+		&.active {
+			background: var(--color-orange);
+		}
+		@media screen and (width <= 992px) {
+			display: flex;
+			margin-left: -20px;
+		}
+	}
+	&__header-text {
+		font-size: 45px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 144.444%;
+		color: var(--color-blue-200);
+		margin-left: auto;
+		@media screen and (width <= 1440px) {
+			font-size: 38px;
+		}
+		@media screen and (width <= 992px) {
+			font-size: 20px;
+			margin-bottom: 8px;
+		}
+		@media screen and (width <= 768px) {
+			span {
+				display: none;
+			}
+		}
 	}
 }

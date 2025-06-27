@@ -35,8 +35,13 @@
 	&.lawyers__results {
 		grid-template-columns: repeat(2, 1fr);
 		margin-top: 0;
+		margin-bottom: 55px;
 		@media screen and (width <= 1439px) {
 			grid-template-columns: repeat(1, 1fr);
+			margin-bottom: 35px;
+		}
+		@media screen and (width <= 992px) {
+			margin-bottom: 25px;
 		}
 		.lawyers__item-link {
 			font-size: 17px;
@@ -107,9 +112,8 @@
 		}
 	}
 	&__item-link {
-		position: absolute;
-		right: 30px;
-		top: 30px;
+		margin-left: auto;
+		padding-bottom: 5px;
 	}
 	&__item-info {
 		display: flex;
