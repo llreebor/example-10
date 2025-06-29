@@ -278,11 +278,14 @@ input {
 	gap: 40px;
 }
 .bg-blue-20 {
-	background: var(--color-blue-20);
+	background: var(--color-blue-20) !important;
 }
 .bg-blue-40 {
-	background: var(--color-blue-40);
+	background: var(--color-blue-40) !important;
+}
+.bg-blue-60 {
+	background: var(--color-blue-60) !important;
 }
 .bg-blue-200 {
-	background: var(--color-blue-200);
+	background: var(--color-blue-200) !important;
 }
