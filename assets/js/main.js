@@ -292,16 +292,7 @@ initializeCustomSelect(
 	'options-city-1',
 	'selected-option-city-1'
 )
-initializeCustomSelect(
-	'select-legal-2',
-	'options-legal-2',
-	'selected-option-legal-2'
-)
-initializeCustomSelect(
-	'select-city-2',
-	'options-city-2',
-	'selected-option-city-2'
-)
+
 initializeCustomSelect('select-type', 'options-type', 'selected-option-type')
 initializeCustomSelect('select-help', 'options-help', 'selected-option-help')
 
