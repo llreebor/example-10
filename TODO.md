@@ -16,3 +16,5 @@
 - mobile menu z-index
 - если у заголовков есть class, проверить trim (titles на странице profile-bussiness)
 - add links to maps
+- add id & names to form inputs
+- auth top padding

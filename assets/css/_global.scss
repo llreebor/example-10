@@ -239,7 +239,7 @@ input {
 		gap: 10px;
 	}
 }
-.blue__container {
+.inner__container {
 	padding: 40px;
 	background: var(--color-blue-40);
 	@media screen and (width <= 1440px) {
@@ -260,13 +260,13 @@ input {
 	color: #fff !important;
 }
 .text-blue-200 {
-	color: var(--color-blue-200);
+	color: var(--color-blue-200) !important;
 }
 .text-blue-100 {
-	color: var(--color-blue-100);
+	color: var(--color-blue-100) !important;
 }
 .text-blue-80 {
-	color: var(--color-blue-80);
+	color: var(--color-blue-80) !important;
 }
 .text-center {
 	text-align: center;
