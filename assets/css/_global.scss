@@ -196,6 +196,20 @@ input {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 27px;
+	&.input-home {
+		padding: 21.79px 30px;
+		@media screen and (width <= 1440px) {
+			font-size: 18px;
+		}
+		@media screen and (width <= 992px) {
+			font-size: 16px;
+			padding: 4px 15px;
+		}
+		@media screen and (width <= 480px) {
+			font-size: 12px;
+			padding: 1.7px 15px;
+		}
+	}
 	&:focus {
 		outline: 1px solid var(--color-orange);
 	}
@@ -206,7 +220,7 @@ input {
 	@media screen and (width <= 1440px) {
 		font-size: 18px;
 	}
-	@media screen and (width <= 768px) {
+	@media screen and (width <= 992px) {
 		font-size: 16px;
 		padding: 4px 15px;
 	}
@@ -239,7 +253,7 @@ input {
 		gap: 10px;
 	}
 }
-.inner__container {
+.p-inner {
 	padding: 40px;
 	background: var(--color-blue-40);
 	@media screen and (width <= 1440px) {
@@ -288,4 +302,10 @@ input {
 }
 .bg-blue-200 {
 	background: var(--color-blue-200) !important;
+}
+.w-full {
+	width: 100%;
+}
+.max-w-fit {
+	max-width: fit-content !important;
 }

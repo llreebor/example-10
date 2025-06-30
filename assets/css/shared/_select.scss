@@ -7,14 +7,14 @@
 			@media screen and (width <= 1440px) {
 				padding: 20px;
 			}
-			@media screen and (width <= 768px) {
+			@media screen and (width <= 992px) {
 				padding: 11px 15px;
 			}
 		}
 		&.select__small {
 			padding: 23px 20px;
 
-			@media screen and (width <= 768px) {
+			@media screen and (width <= 992px) {
 				padding: 12px 15px;
 				font-size: 16px;
 			}
@@ -24,6 +24,7 @@
 		width: 100%;
 		display: flex;
 		cursor: pointer;
+		position: relative;
 
 		&.active {
 			.select__selected-option {
@@ -45,10 +46,11 @@
 		color: var(--color-blue-200);
 		transition: color 0.3s;
 		position: relative;
+
 		@media screen and (width <= 1440px) {
 			font-size: 18px;
 		}
-		@media screen and (width <= 768px) {
+		@media screen and (width <= 992px) {
 			font-size: 16px;
 		}
 		@media screen and (width <= 480px) {
@@ -64,7 +66,7 @@
 		@media screen and (width <= 1440px) {
 			right: 20px;
 		}
-		@media screen and (width <= 768px) {
+		@media screen and (width <= 992px) {
 			right: 15px;
 		}
 		svg {
@@ -75,29 +77,33 @@
 	}
 	&__options {
 		position: absolute;
-		left: 0;
+		left: 20px;
 		top: 100%;
+		right: 0px;
 		background: #fff;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
-		width: 100%;
 		z-index: 1;
 	}
 	&__option {
-		font-size: 18px;
+		font-size: 21px;
+		font-weight: 600;
+		line-height: 128.571%;
 		width: 100%;
 		text-align: left;
 		color: var(--color-blue-200);
+		background: var(--color-blue-20);
 		transition: 0.3s color;
 		cursor: pointer;
-		padding: 14px 30px;
+		padding: 22px 20px;
+
 		&:hover {
-			background: #f8f8f8;
+			background: #f0f0f0;
 		}
 		@media screen and (width <= 1440px) {
 			font-size: 16px;
-			padding: 12px 20px;
+			padding: 16px 20px;
 		}
 		@media screen and (width <= 480px) {
 			font-size: 12px;
@@ -110,5 +116,10 @@
 	&__options-list {
 		display: flex;
 		flex-direction: column;
+		li {
+			&:not(:first-child) {
+				border-top: 1.5px solid var(--color-gray);
+			}
+		}
 	}
 }

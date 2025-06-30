@@ -43,11 +43,7 @@
 		@media screen and (width <= 992px) {
 			margin-bottom: 25px;
 		}
-		.lawyers__item {
-			@media screen and (width <= 768px) {
-				padding: 15px;
-			}
-		}
+
 		.lawyers__item-link {
 			font-size: 17px;
 			@media screen and (width <= 480px) {
