@@ -28,6 +28,7 @@
 		position: sticky;
 		left: 0;
 		top: 40px;
+		z-index: 1;
 		@media screen and (width <= 1440px) {
 			max-width: 430px;
 		}
@@ -37,7 +38,6 @@
 	}
 	&__container-right {
 		width: 100%;
-		z-index: -1;
 	}
 
 	&__header {
@@ -67,6 +67,7 @@
 		background: var(--color-blue-200);
 		cursor: pointer;
 		display: none;
+		transition: 0.3s all;
 		&.active {
 			background: var(--color-orange);
 		}

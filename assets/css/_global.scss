@@ -11,8 +11,7 @@ h6,
 p,
 span,
 a,
-button,
-input {
+button {
 	text-box-trim: trim-both !important;
 	text-box-edge: cap alphabetic !important;
 }
@@ -185,74 +184,6 @@ input {
 	}
 }
 
-.input {
-	padding: 16.5px 20px;
-	background: #fff;
-	width: 100%;
-	display: flex;
-	cursor: pointer;
-	color: var(--color-blue-200);
-	font-size: 21px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 27px;
-	&.input-home {
-		padding: 21.79px 30px;
-		@media screen and (width <= 1440px) {
-			font-size: 18px;
-		}
-		@media screen and (width <= 992px) {
-			font-size: 16px;
-			padding: 4px 15px;
-		}
-		@media screen and (width <= 480px) {
-			font-size: 12px;
-			padding: 1.7px 15px;
-		}
-	}
-	&:focus {
-		outline: 1px solid var(--color-orange);
-	}
-	::placeholder {
-		color: var(--color-gray);
-	}
-
-	@media screen and (width <= 1440px) {
-		font-size: 18px;
-	}
-	@media screen and (width <= 992px) {
-		font-size: 16px;
-		padding: 4px 15px;
-	}
-	@media screen and (width <= 480px) {
-		font-size: 12px;
-		padding: 2.7px 15px;
-	}
-}
-.label {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	font-size: 25px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 144%;
-	color: var(--color-blue-200);
-	@media screen and (width <= 1440px) {
-		font-size: 22px;
-	}
-	@media screen and (width <= 992px) {
-		font-size: 18px;
-		gap: 15px;
-	}
-	@media screen and (width <= 768px) {
-		font-size: 16px;
-	}
-	@media screen and (width <= 480px) {
-		font-size: 14px;
-		gap: 10px;
-	}
-}
 .p-inner {
 	padding: 40px;
 	background: var(--color-blue-40);

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 ::after,
 ::before,
@@ -258,8 +259,7 @@ h6,
 p,
 span,
 a,
-button,
-input {
+button {
   text-box-trim: trim-both !important;
   text-box-edge: cap alphabetic !important;
 }
@@ -461,98 +461,6 @@ input {
 }
 .btn.btn-primary:hover {
   background: var(--color-orange-hovered);
-}
-
-.input {
-  padding: 16.5px 20px;
-  background: #fff;
-  width: 100%;
-  display: flex;
-  cursor: pointer;
-  color: var(--color-blue-200);
-  font-size: 21px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 27px;
-}
-.input.input-home {
-  padding: 21.79px 30px;
-}
-@media screen and (width <= 1440px) {
-  .input.input-home {
-    font-size: 18px;
-  }
-}
-@media screen and (width <= 992px) {
-  .input.input-home {
-    font-size: 16px;
-    padding: 4px 15px;
-  }
-}
-@media screen and (width <= 480px) {
-  .input.input-home {
-    font-size: 12px;
-    padding: 1.7px 15px;
-  }
-}
-.input:focus {
-  outline: 1px solid var(--color-orange);
-}
-.input ::-moz-placeholder {
-  color: var(--color-gray);
-}
-.input ::placeholder {
-  color: var(--color-gray);
-}
-@media screen and (width <= 1440px) {
-  .input {
-    font-size: 18px;
-  }
-}
-@media screen and (width <= 992px) {
-  .input {
-    font-size: 16px;
-    padding: 4px 15px;
-  }
-}
-@media screen and (width <= 480px) {
-  .input {
-    font-size: 12px;
-    padding: 2.7px 15px;
-  }
-}
-
-.label {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 144%;
-  color: var(--color-blue-200);
-}
-@media screen and (width <= 1440px) {
-  .label {
-    font-size: 22px;
-  }
-}
-@media screen and (width <= 992px) {
-  .label {
-    font-size: 18px;
-    gap: 15px;
-  }
-}
-@media screen and (width <= 768px) {
-  .label {
-    font-size: 16px;
-  }
-}
-@media screen and (width <= 480px) {
-  .label {
-    font-size: 14px;
-    gap: 10px;
-  }
 }
 
 .p-inner {
@@ -1457,6 +1365,9 @@ input {
     font-size: 16px;
   }
 }
+.select__trigger.without-icon .select__arrow {
+  display: none;
+}
 .select__trigger.active .select__selected-option {
   color: var(--color-orange);
 }
@@ -1542,6 +1453,12 @@ input {
   .select__option {
     font-size: 16px;
     padding: 16px 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .select__option {
+    font-size: 14px;
+    padding: 14px 20px;
   }
 }
 @media screen and (width <= 480px) {
@@ -1646,6 +1563,8 @@ input {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
 }
 @media screen and (width <= 768px) {
   .breadcrumbs {
@@ -1731,6 +1650,7 @@ input {
   position: sticky;
   left: 0;
   top: 40px;
+  z-index: 1;
 }
 @media screen and (width <= 1440px) {
   .inner__container-left {
@@ -1744,7 +1664,6 @@ input {
 }
 .inner__container-right {
   width: 100%;
-  z-index: -1;
 }
 .inner__header {
   display: flex;
@@ -1777,6 +1696,7 @@ input {
   background: var(--color-blue-200);
   cursor: pointer;
   display: none;
+  transition: 0.3s all;
 }
 .inner__header-filters.active {
   background: var(--color-orange);
@@ -1819,6 +1739,9 @@ input {
   flex-direction: column;
   gap: 30px;
 }
+.filters__wrapper {
+  position: relative;
+}
 .filters.filters-drawer {
   z-index: 10;
   position: relative;
@@ -1826,7 +1749,7 @@ input {
 @media screen and (width <= 992px) {
   .filters.filters-drawer {
     position: fixed;
-    left: 20px;
+    left: -100%;
     bottom: 20px;
     z-index: 10;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
@@ -1834,6 +1757,10 @@ input {
     width: 100%;
     flex-shrink: 1;
     background: var(--color-blue-60);
+    transition: 0.3s all linear;
+  }
+  .filters.filters-drawer.active {
+    left: 20px;
   }
 }
 @media screen and (width <= 374px) {
@@ -1857,10 +1784,16 @@ input {
     gap: 15px;
   }
 }
-.filters__close {
+.filters-close {
   position: absolute;
   right: 0;
   top: 0;
+  display: none;
+}
+@media screen and (width <= 992px) {
+  .filters-close {
+    display: block;
+  }
 }
 .filters__row-columns {
   display: grid;
@@ -2558,6 +2491,166 @@ input {
   .block__list-item--text {
     font-size: 15px;
   }
+}
+
+.input {
+  padding: 16.5px 20px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+  color: var(--color-blue-200);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+}
+.input.input-home {
+  padding: 21.79px 30px;
+}
+@media screen and (width <= 1440px) {
+  .input.input-home {
+    font-size: 18px;
+  }
+}
+@media screen and (width <= 992px) {
+  .input.input-home {
+    font-size: 16px;
+    padding: 4px 15px;
+  }
+}
+@media screen and (width <= 480px) {
+  .input.input-home {
+    font-size: 12px;
+    padding: 1.7px 15px;
+  }
+}
+.input:focus {
+  outline: 1px solid var(--color-orange);
+}
+.input ::-moz-placeholder {
+  color: var(--color-gray);
+}
+.input ::placeholder {
+  color: var(--color-gray);
+}
+@media screen and (width <= 1440px) {
+  .input {
+    font-size: 18px;
+  }
+}
+@media screen and (width <= 992px) {
+  .input {
+    font-size: 16px;
+    padding: 4px 15px;
+  }
+}
+@media screen and (width <= 480px) {
+  .input {
+    font-size: 12px;
+    padding: 2.7px 15px;
+  }
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .label {
+    font-size: 22px;
+  }
+}
+@media screen and (width <= 992px) {
+  .label {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+@media screen and (width <= 768px) {
+  .label {
+    font-size: 16px;
+  }
+}
+@media screen and (width <= 480px) {
+  .label {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+
+.autocomplete-label {
+  position: relative;
+  width: 100%;
+}
+.autocomplete-label .autocomplete-list {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  right: 0;
+  z-index: 1;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 2px;
+  /* WebKit-браузеры (Chrome, Safari, Edge Chromium) */
+}
+.autocomplete-label .autocomplete-list li {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 128.571%;
+  width: 100%;
+  text-align: left;
+  color: var(--color-blue-200);
+  background: var(--color-blue-20);
+  transition: 0.3s color;
+  cursor: pointer;
+  padding: 22px 20px;
+}
+.autocomplete-label .autocomplete-list li:hover {
+  background: #f0f0f0;
+}
+@media screen and (width <= 1440px) {
+  .autocomplete-label .autocomplete-list li {
+    font-size: 16px;
+    padding: 16px 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .autocomplete-label .autocomplete-list li {
+    font-size: 14px;
+    padding: 14px 20px;
+  }
+}
+@media screen and (width <= 480px) {
+  .autocomplete-label .autocomplete-list li {
+    font-size: 12px;
+    padding: 12px 15px;
+  }
+}
+.autocomplete-label .autocomplete-list li:hover {
+  color: var(--color-orange);
+}
+.autocomplete-label .autocomplete-list::-webkit-scrollbar {
+  width: 4px;
+}
+.autocomplete-label .autocomplete-list::-webkit-scrollbar-track {
+  background: var(--color-blue-20);
+}
+.autocomplete-label .autocomplete-list::-webkit-scrollbar-thumb {
+  background-color: var(--color-blue-200);
+}
+.autocomplete-label .autocomplete-list::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+.autocomplete-label.active .autocomplete-list {
+  display: block;
 }
 
 .section__hero {

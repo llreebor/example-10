@@ -295,6 +295,8 @@ initializeCustomSelect(
 
 initializeCustomSelect('select-type', 'options-type', 'selected-option-type')
 initializeCustomSelect('select-help', 'options-help', 'selected-option-help')
+initializeCustomSelect('select-city', 'options-city', 'selected-option-city')
+initializeCustomSelect('select-price', 'options-price', 'selected-option-price')
 
 function initPagination() {
 	const paginationItems = document.querySelectorAll('.pagination__item')
@@ -302,20 +304,132 @@ function initPagination() {
 	if (!paginationItems.length) return
 
 	paginationItems.forEach((item, index) => {
-		// Пропускаем последний элемент (стрелка)
 		const isLast = index === paginationItems.length - 1
 		if (isLast) return
 
 		item.addEventListener('click', function () {
-			// Удаляем класс active у всех (кроме стрелки)
 			paginationItems.forEach((el, idx) => {
 				if (idx !== paginationItems.length - 1) {
 					el.classList.remove('active')
 				}
 			})
-			// Добавляем active на текущий
 			item.classList.add('active')
 		})
 	})
 }
 initPagination()
+
+// Toggles the visibility of the filters drawer and handles outside clicks to close it
+function toggleFiltersVisibility() {
+	// Select DOM elements for the filters drawer, close button, and trigger button
+	const filters = document.querySelector('.filters-drawer')
+	const filtersCloseBtn = document.querySelector('.filters-close')
+	const filtersTriggerBtn = document.querySelector('.filters-trigger')
+
+	// Exit early if any required elements are missing
+	if (!filters || !filtersCloseBtn || !filtersTriggerBtn) {
+		console.warn('Required elements for filters not found')
+		return
+	}
+
+	// Toggle filters visibility when trigger button is clicked
+	const toggleFilters = () => {
+		filters.classList.toggle('active')
+		filtersTriggerBtn.classList.toggle('active')
+	}
+
+	// Close filters when close button is clicked
+	const closeFilters = () => {
+		filters.classList.remove('active')
+		filtersTriggerBtn.classList.remove('active')
+	}
+
+	// Close filters when clicking outside the filters drawer
+	const handleOutsideClick = (event) => {
+		// Check if the click is outside the filters drawer and trigger button
+		if (
+			!filters.contains(event.target) &&
+			!filtersTriggerBtn.contains(event.target)
+		) {
+			closeFilters()
+		}
+	}
+
+	// Add event listener for the trigger button
+	filtersTriggerBtn.addEventListener('click', toggleFilters)
+
+	// Add event listener for the close button
+	filtersCloseBtn.addEventListener('click', closeFilters)
+
+	// Add event listener for clicks anywhere on the document
+	document.addEventListener('click', handleOutsideClick)
+}
+// Initialize the filters functionality
+toggleFiltersVisibility()
+
+// Autocomplete
+function initializeAutocomplete(selector, suggestions) {
+	const inputs = document.querySelectorAll(selector)
+
+	inputs.forEach((input) => {
+		const label = input.closest('.autocomplete-label')
+		if (!label) return
+
+		let list = label.querySelector('.autocomplete-list')
+
+		// Если списка нет — создаём
+		if (!list) {
+			list = document.createElement('ul')
+			list.className = 'autocomplete-list'
+			label.appendChild(list)
+		}
+
+		input.addEventListener('input', () => {
+			const value = input.value.trim().toLowerCase()
+			list.innerHTML = ''
+
+			if (!value) {
+				label.classList.remove('active')
+				return
+			}
+
+			const filtered = suggestions.filter((item) =>
+				item.toLowerCase().includes(value)
+			)
+
+			if (filtered.length === 0) {
+				label.classList.remove('active')
+				return
+			}
+
+			filtered.forEach((item) => {
+				const li = document.createElement('li')
+				li.textContent = item
+				li.addEventListener('click', () => {
+					input.value = item
+					label.classList.remove('active')
+				})
+				list.appendChild(li)
+			})
+
+			label.classList.add('active')
+		})
+
+		document.addEventListener('click', (e) => {
+			if (!label.contains(e.target)) {
+				label.classList.remove('active')
+			}
+		})
+	})
+}
+const rechtsgebieden = [
+	'Strafrecht',
+	'Arbeidsstrafrecht',
+	'Familierecht',
+	'Ondernemingsrecht',
+	'Fiscaal recht',
+	'Bestuursrecht',
+	'Burgerlijk recht',
+]
+
+initializeAutocomplete('.autocomplete-input', rechtsgebieden)
