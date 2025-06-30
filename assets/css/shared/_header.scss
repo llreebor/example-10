@@ -65,13 +65,19 @@
 		display: flex;
 		align-items: center;
 		gap: 5px;
-
-		img {
+		transition: 0.3s color;
+		&:hover {
+			color: var(--color-orange);
+		}
+		svg {
 			transition: 0.3s transform;
 		}
 		&:hover {
-			> img {
+			> svg {
 				transform: translate(3px, -3px);
+			}
+			path {
+				stroke: currentColor;
 			}
 		}
 	}
@@ -94,6 +100,7 @@
 		line-height: 1;
 		color: var(--color-blue-200);
 		font-weight: 600;
+		transition: 0.3s color;
 		@media screen and (width <= 1520px) {
 			font-size: 18px;
 		}
@@ -105,6 +112,13 @@
 		}
 		&.active {
 			color: var(--color-blue-100);
+			cursor: default;
+			&:hover {
+				color: var(--color-blue-100);
+			}
+		}
+		&:hover {
+			color: var(--color-orange);
 		}
 	}
 }
@@ -147,6 +161,8 @@
 			&:hover {
 				.submenu {
 					display: block;
+					opacity: 1;
+					visibility: visible;
 				}
 				.main__menu-link {
 					// color: var(--color-orange);
@@ -164,6 +180,7 @@
 
 		span {
 			padding: 28px 0;
+			transition: 0.3s all;
 			&:hover {
 				color: var(--color-orange);
 			}
@@ -181,8 +198,11 @@
 	max-width: fit-content;
 	padding: 20px;
 	background: #fff;
-	display: none;
+	// display: none;
+	transition: 0.3s all;
+	visibility: hidden;
 	filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.1));
+	opacity: 0;
 	&__list {
 		li {
 			&:not(:last-child) {
