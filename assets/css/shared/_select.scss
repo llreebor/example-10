@@ -53,6 +53,10 @@
 		transition: color 0.3s;
 		position: relative;
 
+		&.gray-first {
+			color: var(--color-gray);
+		}
+
 		@media screen and (width <= 1440px) {
 			font-size: 18px;
 		}

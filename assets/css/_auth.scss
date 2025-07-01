@@ -1,5 +1,12 @@
 .section {
 	&__auth {
+		@media screen and (width <= 1440px) {
+			padding: 90px 0 80px;
+		}
+
+		@media screen and (width <= 768px) {
+			padding: 90px 0 50px;
+		}
 	}
 }
 

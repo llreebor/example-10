@@ -1379,6 +1379,9 @@ button {
   transition: color 0.3s;
   position: relative;
 }
+.select__selected-option.gray-first {
+  color: var(--color-gray);
+}
 @media screen and (width <= 1440px) {
   .select__selected-option {
     font-size: 18px;
@@ -4962,6 +4965,17 @@ button {
 }
 .method__link:hover {
   color: var(--color-orange);
+}
+
+@media screen and (width <= 1440px) {
+  .section__auth {
+    padding: 90px 0 80px;
+  }
+}
+@media screen and (width <= 768px) {
+  .section__auth {
+    padding: 90px 0 50px;
+  }
 }
 
 .auth__header {

@@ -1,4 +1,3 @@
-// GLOBAL
 // Initialize mobile menu functionality
 function initializeMobileMenu() {
 	// Select DOM elements
@@ -156,7 +155,6 @@ function initializeAccordion() {
 }
 initializeAccordion()
 
-// HOME PAGE
 // Show more lawyers
 function showMoreLawyers() {
 	const btn = document.querySelector('.lawyer__more-btn')
@@ -177,7 +175,6 @@ function showMoreLawyers() {
 showMoreLawyers()
 
 // Hero Tabs
-// Initializes tab navigation with accessibility features for a given tab container.
 function toggleTabs(tabsId) {
 	// Get the main tab container element
 	const tabs = document.getElementById(tabsId)
@@ -245,6 +242,7 @@ function toggleTabs(tabsId) {
 // Initialize tabs with the ID 'tabs'
 toggleTabs('hero__tabs')
 
+// Custom Select
 function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 	const customSelect = document.getElementById(selectId)
 	const selectedOption = document.getElementById(selectedOptionId)
@@ -270,6 +268,7 @@ function initializeCustomSelect(selectId, optionsId, selectedOptionId) {
 			selectedOption.classList.remove('active')
 			customOptions.classList.add('hidden')
 			customSelect.classList.remove('active')
+			selectedOption.classList.add('text-blue-200')
 		})
 	}
 
@@ -292,12 +291,12 @@ initializeCustomSelect(
 	'options-city-1',
 	'selected-option-city-1'
 )
-
 initializeCustomSelect('select-type', 'options-type', 'selected-option-type')
 initializeCustomSelect('select-help', 'options-help', 'selected-option-help')
 initializeCustomSelect('select-city', 'options-city', 'selected-option-city')
 initializeCustomSelect('select-price', 'options-price', 'selected-option-price')
 
+// Pagination
 function initPagination() {
 	const paginationItems = document.querySelectorAll('.pagination__item')
 
@@ -470,7 +469,6 @@ function initializeAutocomplete(selector, suggestions) {
 
 		let list = label.querySelector('.autocomplete-list')
 
-		// Если списка нет — создаём
 		if (!list) {
 			list = document.createElement('ul')
 			list.className = 'autocomplete-list'
@@ -528,6 +526,7 @@ const rechtsgebieden = [
 initializeAutocomplete('.autocomplete-input-area', rechtsgebieden)
 initializeAutocomplete('.autocomplete-input-name', rechtsgebieden)
 
+// Modal
 function toggleModal(btnId, modalId, closeBtnId) {
 	// Select DOM elements
 	const modal = document.getElementById(modalId)
@@ -598,5 +597,4 @@ function toggleModal(btnId, modalId, closeBtnId) {
 	// Ensure modal is closed on page load
 	toggleModalState(false)
 }
-
 toggleModal('modal-btn', 'modal', 'modal-close-btn')
