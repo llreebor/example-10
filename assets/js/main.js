@@ -526,3 +526,4 @@ const rechtsgebieden = [
 ]
 
 initializeAutocomplete('.autocomplete-input-area', rechtsgebieden)
+initializeAutocomplete('.autocomplete-input-name', rechtsgebieden)
