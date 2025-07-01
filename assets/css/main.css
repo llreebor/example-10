@@ -2544,7 +2544,6 @@ button {
   background: #fff;
   width: 100%;
   display: flex;
-  cursor: pointer;
   color: var(--color-blue-200);
   font-size: 21px;
   font-style: normal;
@@ -2596,6 +2595,12 @@ button {
     font-size: 12px;
     padding: 2.7px 15px;
   }
+}
+.input.readonly-input::-moz-placeholder {
+  color: var(--color-blue-100);
+}
+.input.readonly-input::placeholder {
+  color: var(--color-blue-100);
 }
 
 .label {
@@ -2697,6 +2702,124 @@ button {
 }
 .autocomplete-label.active .autocomplete-list {
   display: block;
+}
+
+.modal {
+  max-width: 1154px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+}
+.modal__wrapper {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 10, 80, 0.7);
+  z-index: 20;
+  padding: 0;
+  margin: 0;
+  padding-top: 80px;
+}
+.modal__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  cursor: pointer;
+  padding: 20px;
+  transition: 0.3s background;
+}
+.modal__close:hover path {
+  fill: var(--color-orange);
+}
+.modal__title {
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 90%;
+  color: var(--color-blue-200);
+  margin-bottom: 40px;
+}
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+.modal__form .auth__form-text {
+  margin-top: 20px;
+}
+.modal__form .auth__form-title {
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .modal__form .auth__form-title {
+    font-size: 22px;
+  }
+}
+@media screen and (width <= 992px) {
+  .modal__form .auth__form-title {
+    font-size: 18px;
+    gap: 15px;
+  }
+}
+@media screen and (width <= 768px) {
+  .modal__form .auth__form-title {
+    font-size: 16px;
+  }
+}
+@media screen and (width <= 480px) {
+  .modal__form .auth__form-title {
+    font-size: 14px;
+    gap: 10px;
+  }
+}
+.modal__form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.modal__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.modal__form-text {
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 141.176%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 992px) {
+  .modal__form-text {
+    font-size: 14px;
+  }
+}
+@media screen and (width <= 768px) {
+  .modal__form-text {
+    font-size: 10px;
+  }
+}
+.modal__form-text a {
+  color: var(--color-blue-200);
+  font-weight: 700;
+  transition: 0.3s color;
+}
+.modal__form-text a:hover {
+  color: var(--color-orange);
+}
+.modal__form-link {
+  color: var(--color-blue-200);
+  font-weight: 700;
+  transition: 0.3s color;
+}
+.modal__form-link:hover {
+  color: var(--color-orange);
 }
 
 .section__hero {

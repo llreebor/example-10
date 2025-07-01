@@ -1845,6 +1845,272 @@
 			</div>
 		</footer>
 
+		<!-- Modal -->
+		<div id="modal" role="dialog" aria-modal="true" class="modal__wrapper">
+			<!-- Modal -->
+			<div class="modal p-inner bg-blue-40">
+				<!-- Close Btn -->
+				<button id="modal-close-btn" class="modal__close" aria-label="Close modal">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="30"
+						height="30"
+						viewBox="0 0 30 30"
+						fill="none"
+					>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M27.6494 29.9997L0.00254472 2.35292L2.35547 0L30.0023 27.6468L27.6494 29.9997Z"
+							fill="#050A50"
+						/>
+						<path
+							fill-rule="evenodd"
+							clip-rule="evenodd"
+							d="M29.9998 2.35285L2.35292 29.9996L0 27.6467L27.6469 -6.81902e-05L29.9998 2.35285Z"
+							fill="#050A50"
+						/>
+					</svg>
+				</button>
+
+				<h3 class="modal__title">Contact opnemen met Ilona Jansse</h3>
+				<form action="#" class="modal__form">
+					<div class="modal__form-item">
+						<div class="modal__grid">
+							<div class="modal__grid-item">
+								<label for="city" class="label">
+									<p>Kies uw rechtsgebied *</p>
+									<!-- [START] HTML Select  -->
+									<div class="select relative">
+										<button
+											id="select-city"
+											class="select__trigger select__small input"
+											type="button"
+										>
+											<p id="selected-option-city" class="select__selected-option">
+												Amsterdam
+											</p>
+
+											<div class="select__arrow">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="15"
+													height="15"
+													viewBox="0 0 15 15"
+													fill="none"
+												>
+													<path
+														d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+														stroke="#050A50"
+														stroke-width="2.5"
+													/>
+												</svg>
+											</div>
+										</button>
+										<div id="options-city" class="select__options hidden">
+											<ul class="select__options-list">
+												<li>
+													<button type="button" class="select__option">Amsterdam</button>
+												</li>
+												<li>
+													<button type="button" class="select__option">Rotterdam</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- [END] HTML Select  -->
+								</label>
+							</div>
+							<div class="modal__grid-item">
+								<label for="type" class="label">
+									<p>Zakelijk/particulier</p>
+									<!-- [START] HTML Select  -->
+									<div class="select relative">
+										<button
+											id="select-type"
+											class="select__trigger select__small input"
+											type="button"
+										>
+											<p id="selected-option-type" class="select__selected-option">
+												Beide
+											</p>
+
+											<div class="select__arrow">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="15"
+													height="15"
+													viewBox="0 0 15 15"
+													fill="none"
+												>
+													<path
+														d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+														stroke="#050A50"
+														stroke-width="2.5"
+													/>
+												</svg>
+											</div>
+										</button>
+										<div id="options-type" class="select__options hidden">
+											<ul class="select__options-list">
+												<li>
+													<button type="button" class="select__option">Beide</button>
+												</li>
+												<li>
+													<button type="button" class="select__option">Zakelijk</button>
+												</li>
+												<li>
+													<button type="button" class="select__option">Particulier</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- [END] HTML Select  -->
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="modal__form-item">
+						<div class="modal__form-row">
+							<div class="auth__form">
+								<p class="auth__form-title">Uw gegevens</p>
+								<div class="auth__form-inputs">
+									<input
+										type="text"
+										class="input auth__form-input"
+										placeholder="Voornaam *"
+									/>
+									<input
+										type="text"
+										class="input auth__form-input"
+										placeholder="Achternaam *"
+									/>
+									<input
+										type="text"
+										class="input auth__form-input"
+										placeholder="Plaats *"
+									/>
+									<input
+										type="text"
+										class="input auth__form-input"
+										placeholder="Telefoonnummer *"
+									/>
+									<input
+										type="text"
+										class="input auth__form-input"
+										placeholder="E-mail *"
+									/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal__form-item">
+						<div class="modal__grid">
+							<div class="modal__grid-item">
+								<label for="#" class="label">
+									<p>Heeft u een rechts-bijstandverzekering? *</p>
+									<!-- [START] HTML Select  -->
+									<div class="select relative">
+										<button
+											id="select-help"
+											class="select__trigger select__small input"
+											type="button"
+										>
+											<p id="selected-option-help" class="select__selected-option">Ja*</p>
+
+											<div class="select__arrow">
+												<svg
+													xmlns="http://www.w3.org/2000/svg"
+													width="15"
+													height="15"
+													viewBox="0 0 15 15"
+													fill="none"
+												>
+													<path
+														d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+														stroke="#050A50"
+														stroke-width="2.5"
+													/>
+												</svg>
+											</div>
+										</button>
+										<div id="options-help" class="select__options hidden">
+											<ul class="select__options-list">
+												<li>
+													<button type="button" class="select__option">Ja</button>
+												</li>
+												<li>
+													<button type="button" class="select__option">Nee</button>
+												</li>
+											</ul>
+										</div>
+									</div>
+									<!-- [END] HTML Select  -->
+								</label>
+							</div>
+							<div class="modal__grid-item">
+								<label for="area" class="label">
+									<p>Naam rechtsbijstandverzekeraar</p>
+									<input
+										placeholder="Naam verzekeraar"
+										class="input"
+										type="text"
+										name="area"
+										id="area"
+										autocomplete="off"
+									/>
+								</label>
+							</div>
+						</div>
+						<p class="modal__form-text">
+							Als u beschikt over een rechtsbijstandverzekering raden wij u aan om uw
+							casus eerst voor te leggen bij uw rechtsbijstandverzekeraar. Indien u
+							casus onder de dekking valt heeft u recht op vrije advocaatkeuze en
+							worden de kosten van de advocaat vergoed. Mocht dit niet het geval zijn
+							dan zijn de kosten voor eigen rekening.
+						</p>
+					</div>
+					<div class="modal__form-item">
+						<label for="area" class="label">
+							<p>Verwacht u in aanmerking te komen voor een toevoeging? *</p>
+							<input
+								placeholder="Deze advocaat werkt niet o.b.v. gefinancierde rechtsbijstand!"
+								class="input readonly-input"
+								type="text"
+								readonly
+							/>
+						</label>
+						<p class="modal__form-text">
+							U heeft geen recht op gefinancierde rechtsbijstand indien uw fiscaal
+							jaarinkomen in het peiljaar hoger is dan € 30.000 (alleenstaand) of hoger
+							is dan € 42.400 (gehuwd, samenwonend of eenoudergezin). Of als het
+							vermogen in het peiljaar hoger is dan € 31.340.
+							<br />
+							<b>Zie voor meer informatie:</b>
+							<a href="#">advocatenkantoren.nl/rechtsbijstand/</a>
+						</p>
+					</div>
+					<div class="modal__form-item">
+						<input type="text" class="input" />
+						<textarea class="input textarea"></textarea>
+					</div>
+					<div class="modal__form-item">
+						<div class="auth__form-buttons">
+							<button class="btn btn-primary"><p>Aanvraag versturen</p></button>
+							<a href="#" class="modal__form-link">
+								<p>Velden met een * zijn verplicht</p>
+							</a>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<!-- Open Modal Button -->
+		<button id="modal__btn-trigger" aria-controls="modal" class="modal-btn">
+			Open Modal
+		</button>
+
 		<!-- Scripts -->
 		<script src="./assets/js/main.js"></script>
 	</body>

@@ -3,7 +3,6 @@
 	background: #fff;
 	width: 100%;
 	display: flex;
-	cursor: pointer;
 	color: var(--color-blue-200);
 	font-size: 21px;
 	font-style: normal;
@@ -40,6 +39,12 @@
 	@media screen and (width <= 480px) {
 		font-size: 12px;
 		padding: 2.7px 15px;
+	}
+
+	&.readonly-input {
+		&::placeholder {
+			color: var(--color-blue-100);
+		}
 	}
 }
 .label {

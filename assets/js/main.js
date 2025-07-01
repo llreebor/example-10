@@ -527,3 +527,74 @@ const rechtsgebieden = [
 
 initializeAutocomplete('.autocomplete-input-area', rechtsgebieden)
 initializeAutocomplete('.autocomplete-input-name', rechtsgebieden)
+
+function toggleModal(btnId, modalId, closeBtnId) {
+	// Select DOM elements
+	const modal = document.getElementById(modalId)
+	const btn = document.getElementById(btnId)
+	const close = document.getElementById(closeBtnId)
+	const body = document.querySelector('body')
+
+	// Exit if any required element is missing
+	if (!modal || !btn || !close || !body) return
+
+	// Get focusable elements for focus trapping
+	const focusableElements = modal.querySelectorAll(
+		'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+	)
+	const firstFocusable = focusableElements[0]
+	const lastFocusable = focusableElements[focusableElements.length - 1]
+
+	const toggleModalState = (isOpen) => {
+		modal.classList.toggle('opacity-0', !isOpen)
+		modal.classList.toggle('invisible', !isOpen)
+		body.classList.toggle('overflow-hidden', isOpen)
+		btn.setAttribute('aria-expanded', isOpen)
+	}
+
+	// Closes the modal and returns focus to the open button
+	const closeModal = () => {
+		toggleModalState(false)
+		btn.focus() // Restore focus to the open button
+	}
+
+	// Handle open button click
+	btn.addEventListener('click', () => {
+		toggleModalState(true)
+		if (firstFocusable) firstFocusable.focus() // Set focus to first focusable element
+	})
+
+	// Handle close button click
+	close.addEventListener('click', closeModal)
+
+	// Handle click on modal backdrop to close
+	modal.addEventListener('click', (e) => {
+		if (e.target === modal) {
+			closeModal()
+		}
+	})
+
+	// Handle Escape key to close modal
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+			closeModal()
+		}
+	})
+
+	// Implement focus trap for accessibility
+	modal.addEventListener('keydown', (e) => {
+		if (e.key === 'Tab' && !modal.classList.contains('hidden')) {
+			if (e.shiftKey && document.activeElement === firstFocusable) {
+				e.preventDefault()
+				lastFocusable.focus() // Move to last focusable element
+			} else if (!e.shiftKey && document.activeElement === lastFocusable) {
+				e.preventDefault()
+				firstFocusable.focus() // Move to first focusable element
+			}
+		}
+	})
+
+	// Ensure modal is closed on page load
+	toggleModalState(false)
+}
+toggleModal('modal-btn', 'modal', 'modal-close-btn')
