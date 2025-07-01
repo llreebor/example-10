@@ -897,129 +897,254 @@
 				<div class="container">
 					<div class="inner__container">
 						<!-- Filters -->
-						<div class="inner__container-left">
-							<form action="#" class="filters">
+						<div class="inner__container-left laws-container">
+							<form action="#" class="filters filters__laws">
+								<!-- Close Filters -->
+								<button class="filters-close" type="button">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="30"
+										height="30"
+										viewBox="0 0 30 30"
+										fill="none"
+									>
+										<rect width="30" height="30" fill="#CFE5FF" />
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M18.3064 19.3692L9.99793 11.0607L11.0586 10L19.3671 18.3085L18.3064 19.3692Z"
+											fill="#050A50"
+										/>
+										<path
+											fill-rule="evenodd"
+											clip-rule="evenodd"
+											d="M19.7207 11.0607L11.4122 19.3693L10.3516 18.3086L18.6601 10.0001L19.7207 11.0607Z"
+											fill="#050A50"
+										/>
+									</svg>
+								</button>
 								<div class="filters__row">
-									<label for="area" class="label">
+									<label for="area" class="label autocomplete-label">
 										<p>Rechtsgebieden</p>
-										<input class="input" type="text" name="area" id="area" />
-									</label>
-								</div>
-								<div class="filters__row filters__row-columns">
-									<label for="location" class="label">
-										<p>Plaats</p>
 										<input
-											class="input"
+											placeholder="Strafrecht, Arbeidsstrafrecht"
+											class="input autocomplete-input autocomplete-input-area"
 											type="text"
 											name="area"
 											id="area"
-											placeholder="Amsterdam"
+											autocomplete="off"
 										/>
-									</label>
-									<label for="price" class="label">
-										<p>Prijs per uur</p>
-										<input
-											class="input"
-											type="text"
-											name="price"
-											id="price"
-											placeholder="Geen max."
-										/>
+										<ul class="autocomplete-list"></ul>
 									</label>
 								</div>
+								<div class="filters__group">
+									<div class="filters__row filters__row-columns">
+										<label for="city" class="label">
+											<p>Plaats</p>
+											<!-- [START] HTML Select  -->
+											<div class="select relative">
+												<button
+													id="select-city"
+													class="select__trigger without-icon select__small input"
+													type="button"
+												>
+													<p id="selected-option-city" class="select__selected-option">
+														Amsterdam
+													</p>
 
-								<div class="filters__row">
-									<label for="#" class="label">
-										<p>Zakelijk/particulier</p>
-										<!-- [START] HTML Select  -->
-										<div class="select relative">
-											<button
-												id="select-type"
-												class="select__trigger select__small input"
-												type="button"
-											>
-												<p id="selected-option-type" class="select__selected-option">
-													Beide
-												</p>
-
-												<div class="select__arrow">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														width="15"
-														height="15"
-														viewBox="0 0 15 15"
-														fill="none"
-													>
-														<path
-															d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
-															stroke="#050A50"
-															stroke-width="2.5"
-														/>
-													</svg>
+													<div class="select__arrow">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="15"
+															height="15"
+															viewBox="0 0 15 15"
+															fill="none"
+														>
+															<path
+																d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+																stroke="#050A50"
+																stroke-width="2.5"
+															/>
+														</svg>
+													</div>
+												</button>
+												<div id="options-city" class="select__options hidden">
+													<ul class="select__options-list">
+														<li>
+															<button type="button" class="select__option">Amsterdam</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Rotterdam</button>
+														</li>
+													</ul>
 												</div>
-											</button>
-											<div id="options-type" class="select__options hidden">
-												<ul class="select__options-list">
-													<li>
-														<button type="button" class="select__option">Value 1</button>
-													</li>
-													<li>
-														<button type="button" class="select__option">Value 2</button>
-													</li>
-												</ul>
 											</div>
-										</div>
-										<!-- [END] HTML Select  -->
-									</label>
-								</div>
-								<div class="filters__row">
-									<label for="#" class="label">
-										<p>Gefinancieerde rechtsbijstand?</p>
-										<!-- [START] HTML Select  -->
-										<div class="select relative">
-											<button
-												id="select-help"
-												class="select__trigger select__small input"
-												type="button"
-											>
-												<p id="selected-option-help" class="select__selected-option">
-													Beide
-												</p>
+											<!-- [END] HTML Select  -->
+										</label>
+										<label for="price" class="label">
+											<p>Prijs per uur</p>
+											<!-- [START] HTML Select  -->
+											<div class="select relative">
+												<button
+													id="select-price"
+													class="select__trigger without-icon select__small input"
+													type="button"
+												>
+													<p id="selected-option-price" class="select__selected-option">
+														Geen max.
+													</p>
 
-												<div class="select__arrow">
-													<svg
-														xmlns="http://www.w3.org/2000/svg"
-														width="15"
-														height="15"
-														viewBox="0 0 15 15"
-														fill="none"
-													>
-														<path
-															d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
-															stroke="#050A50"
-															stroke-width="2.5"
-														/>
-													</svg>
+													<div class="select__arrow">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="15"
+															height="15"
+															viewBox="0 0 15 15"
+															fill="none"
+														>
+															<path
+																d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+																stroke="#050A50"
+																stroke-width="2.5"
+															/>
+														</svg>
+													</div>
+												</button>
+												<div id="options-price" class="select__options hidden">
+													<ul class="select__options-list">
+														<li>
+															<button type="button" class="select__option">Geen max.</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Tot € 200</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Tot € 300</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Tot € 400</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Tot € 500</button>
+														</li>
+													</ul>
 												</div>
-											</button>
-											<div id="options-help" class="select__options hidden">
-												<ul class="select__options-list">
-													<li>
-														<button type="button" class="select__option">Value 1</button>
-													</li>
-													<li>
-														<button type="button" class="select__option">Value 2</button>
-													</li>
-												</ul>
 											</div>
-										</div>
-										<!-- [END] HTML Select  -->
-									</label>
-								</div>
+											<!-- [END] HTML Select  -->
+										</label>
+									</div>
 
-								<button class="filters__btn btn btn-primary">
-									<p>Vind mijn advocaat</p>
-								</button>
+									<div class="filters__row">
+										<label for="#" class="label">
+											<p>Zakelijk/particulier</p>
+											<!-- [START] HTML Select  -->
+											<div class="select relative">
+												<button
+													id="select-type"
+													class="select__trigger select__small input"
+													type="button"
+												>
+													<p id="selected-option-type" class="select__selected-option">
+														Beide
+													</p>
+
+													<div class="select__arrow">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="15"
+															height="15"
+															viewBox="0 0 15 15"
+															fill="none"
+														>
+															<path
+																d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+																stroke="#050A50"
+																stroke-width="2.5"
+															/>
+														</svg>
+													</div>
+												</button>
+												<div id="options-type" class="select__options hidden">
+													<ul class="select__options-list">
+														<li>
+															<button type="button" class="select__option">Beide</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Zakelijk</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Particulier</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<!-- [END] HTML Select  -->
+										</label>
+									</div>
+									<div class="filters__row">
+										<label for="#" class="label">
+											<p>Gefinancieerde rechtsbijstand?</p>
+											<!-- [START] HTML Select  -->
+											<div class="select relative">
+												<button
+													id="select-help"
+													class="select__trigger select__small input"
+													type="button"
+												>
+													<p id="selected-option-help" class="select__selected-option">Ja</p>
+
+													<div class="select__arrow">
+														<svg
+															xmlns="http://www.w3.org/2000/svg"
+															width="15"
+															height="15"
+															viewBox="0 0 15 15"
+															fill="none"
+														>
+															<path
+																d="M1.00059 6.36401L7.36455 12.728M7.36455 12.728L13.7285 6.36401M7.36455 12.728V5.27501e-05"
+																stroke="#050A50"
+																stroke-width="2.5"
+															/>
+														</svg>
+													</div>
+												</button>
+												<div id="options-help" class="select__options hidden">
+													<ul class="select__options-list">
+														<li>
+															<button type="button" class="select__option">Ja</button>
+														</li>
+														<li>
+															<button type="button" class="select__option">Nee</button>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<!-- [END] HTML Select  -->
+										</label>
+									</div>
+								</div>
+								<div class="filters__buttons">
+									<button class="filters__btn btn btn-primary">
+										<p>Vind mijn advocaat</p>
+									</button>
+									<button class="filters__more-btn" type="button">
+										<p>Meer filters</p>
+										<svg
+											xmlns="http://www.w3.org/2000/svg"
+											width="12"
+											height="12"
+											viewBox="0 0 12 12"
+											fill="none"
+										>
+											<path
+												d="M1.24113 5.07111L6.19088 10.0209M6.19088 10.0209L11.1406 5.07111M6.19088 10.0209V0.121359"
+												stroke="#050A50"
+												stroke-width="1.5"
+											/>
+										</svg>
+									</button>
+								</div>
 							</form>
 						</div>
 

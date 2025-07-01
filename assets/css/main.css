@@ -445,12 +445,6 @@ button {
 }
 @media screen and (width <= 992px) {
   .btn {
-    font-size: 18px;
-    padding: 18px 14px;
-  }
-}
-@media screen and (width <= 768px) {
-  .btn {
     padding: 11px 15px;
     font-size: 12px;
   }
@@ -1651,6 +1645,11 @@ button {
   left: 0;
   top: 40px;
   z-index: 1;
+  flex-shrink: 0;
+}
+.inner__container-left.laws-container {
+  position: static;
+  margin-bottom: 20px;
 }
 @media screen and (width <= 1440px) {
   .inner__container-left {
@@ -1768,6 +1767,9 @@ button {
     max-width: 280px;
   }
 }
+.filters.filters__laws .filters-close {
+  display: none;
+}
 @media screen and (width <= 1440px) {
   .filters {
     padding: 30px;
@@ -1795,19 +1797,63 @@ button {
     display: block;
   }
 }
+.filters__group {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+@media screen and (width <= 992px) {
+  .filters__group {
+    gap: 20px;
+    display: none;
+  }
+}
 .filters__row-columns {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
-@media screen and (width <= 992px) {
+@media screen and (width <= 1024px) {
   .filters__row-columns {
     grid-template-columns: repeat(1, 1fr);
     gap: 15px;
   }
 }
-.filters__btn {
+.filters__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 10px;
+}
+.filters__more-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 316.667%;
+  color: var(--color-blue-200);
+  display: none;
+}
+@media screen and (width <= 992px) {
+  .filters__more-btn {
+    display: flex;
+  }
+}
+.filters__more-btn svg {
+  transition: 0.3s all;
+}
+.filters__more-btn.active {
+  color: var(--color-orange);
+}
+.filters__more-btn.active svg {
+  rotate: 180deg;
+}
+.filters__more-btn.active path {
+  stroke: var(--color-orange);
+}
+.filters__btn {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }

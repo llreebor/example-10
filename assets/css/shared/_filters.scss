@@ -10,6 +10,7 @@
 	&.filters-drawer {
 		z-index: 10;
 		position: relative;
+
 		@media screen and (width <= 992px) {
 			position: fixed;
 			left: -100%;
@@ -27,6 +28,11 @@
 		}
 		@media screen and (width <= 374px) {
 			max-width: 280px;
+		}
+	}
+	&.filters__laws {
+		.filters-close {
+			display: none;
 		}
 	}
 	@media screen and (width <= 1440px) {
@@ -48,17 +54,58 @@
 			display: block;
 		}
 	}
+	&__group {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+
+		@media screen and (width <= 992px) {
+			gap: 20px;
+			display: none;
+		}
+	}
 	&__row-columns {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
-		@media screen and (width <= 992px) {
+		@media screen and (width <= 1024px) {
 			grid-template-columns: repeat(1, 1fr);
 			gap: 15px;
 		}
 	}
-	&__btn {
+	&__buttons {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 		margin-top: 10px;
+	}
+	&__more-btn {
+		display: flex;
+		align-items: center;
+		gap: 5px;
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 500;
+		line-height: 316.667%;
+		color: var(--color-blue-200);
+		display: none;
+		@media screen and (width <= 992px) {
+			display: flex;
+		}
+		svg {
+			transition: 0.3s all;
+		}
+		&.active {
+			color: var(--color-orange);
+			svg {
+				rotate: 180deg;
+			}
+			path {
+				stroke: var(--color-orange);
+			}
+		}
+	}
+	&__btn {
 		max-width: fit-content;
 	}
 }

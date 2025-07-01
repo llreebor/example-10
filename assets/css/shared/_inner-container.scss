@@ -29,6 +29,11 @@
 		left: 0;
 		top: 40px;
 		z-index: 1;
+		flex-shrink: 0;
+		&.laws-container {
+			position: static;
+			margin-bottom: 20px;
+		}
 		@media screen and (width <= 1440px) {
 			max-width: 430px;
 		}
