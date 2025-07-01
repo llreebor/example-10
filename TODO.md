@@ -4,3 +4,4 @@
 - add page titles
 - add id & names to form inputs
 - auth top padding
+- сделать select серым пока не был выбран

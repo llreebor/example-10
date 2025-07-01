@@ -546,21 +546,22 @@ function toggleModal(btnId, modalId, closeBtnId) {
 	const lastFocusable = focusableElements[focusableElements.length - 1]
 
 	const toggleModalState = (isOpen) => {
-		modal.classList.toggle('opacity-0', !isOpen)
-		modal.classList.toggle('invisible', !isOpen)
-		body.classList.toggle('overflow-hidden', isOpen)
+		modal.classList.toggle('active', isOpen)
 		btn.setAttribute('aria-expanded', isOpen)
+		body.classList.toggle('overflow-hidden', isOpen)
 	}
 
 	// Closes the modal and returns focus to the open button
 	const closeModal = () => {
 		toggleModalState(false)
+		body.classList.remove('overflow-hidden')
 		btn.focus() // Restore focus to the open button
 	}
 
 	// Handle open button click
 	btn.addEventListener('click', () => {
 		toggleModalState(true)
+		body.classList.add('overflow-hidden')
 		if (firstFocusable) firstFocusable.focus() // Set focus to first focusable element
 	})
 
@@ -576,14 +577,14 @@ function toggleModal(btnId, modalId, closeBtnId) {
 
 	// Handle Escape key to close modal
 	document.addEventListener('keydown', (e) => {
-		if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+		if (e.key === 'Escape' && modal.classList.contains('active')) {
 			closeModal()
 		}
 	})
 
 	// Implement focus trap for accessibility
 	modal.addEventListener('keydown', (e) => {
-		if (e.key === 'Tab' && !modal.classList.contains('hidden')) {
+		if (e.key === 'Tab' && modal.classList.contains('active')) {
 			if (e.shiftKey && document.activeElement === firstFocusable) {
 				e.preventDefault()
 				lastFocusable.focus() // Move to last focusable element
@@ -597,4 +598,5 @@ function toggleModal(btnId, modalId, closeBtnId) {
 	// Ensure modal is closed on page load
 	toggleModalState(false)
 }
+
 toggleModal('modal-btn', 'modal', 'modal-close-btn')

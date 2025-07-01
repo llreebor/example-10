@@ -956,12 +956,15 @@
 
 										<ul class="profile__list">
 											<li class="profile__list-item">
-												<a href="#" class="profile__list-link link-1 btn btn-primary">
+												<button
+													class="profile__list-link link-1 btn btn-primary"
+													id="modal-btn"
+												>
 													<p>
 														Contact
 														<span>formulier</span>
 													</p>
-												</a>
+												</button>
 											</li>
 											<li class="profile__list-item">
 												<a
@@ -2091,8 +2094,18 @@
 						</p>
 					</div>
 					<div class="modal__form-item">
-						<input type="text" class="input" />
-						<textarea class="input textarea"></textarea>
+						<label for="area" class="label">
+							<p>Uw bericht</p>
+							<input
+								placeholder="Onderwerp *"
+								class="input"
+								type="text"
+								name="area"
+								id="area"
+								autocomplete="off"
+							/>
+						</label>
+						<textarea class="input textarea" placeholder="Bericht"></textarea>
 					</div>
 					<div class="modal__form-item">
 						<div class="auth__form-buttons">
@@ -2105,11 +2118,6 @@
 				</form>
 			</div>
 		</div>
-
-		<!-- Open Modal Button -->
-		<button id="modal__btn-trigger" aria-controls="modal" class="modal-btn">
-			Open Modal
-		</button>
 
 		<!-- Scripts -->
 		<script src="./assets/js/main.js"></script>

@@ -3,9 +3,12 @@
 	margin: 0 auto;
 	width: 100%;
 	position: relative;
-
+	animation: 0.3s fade linear;
+	@media screen and (width <= 992px) {
+		padding: 40px 20px;
+	}
 	&__wrapper {
-		position: absolute;
+		position: fixed;
 		left: 0;
 		top: 0;
 		width: 100%;
@@ -14,7 +17,33 @@
 		z-index: 20;
 		padding: 0;
 		margin: 0;
-		padding-top: 80px;
+		padding: 80px 20px;
+		overflow: auto;
+		visibility: hidden;
+		opacity: 0;
+		transition: 0.3s all;
+		display: none;
+
+		&.active {
+			visibility: visible;
+			opacity: 1;
+			display: block;
+		}
+		&::-webkit-scrollbar {
+			width: 4px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background: rgba(5, 10, 80, 0.7);
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: var(--color-blue-200);
+
+			&:hover {
+				background-color: #999;
+			}
+		}
 	}
 	&__close {
 		position: absolute;
@@ -23,6 +52,19 @@
 		cursor: pointer;
 		padding: 20px;
 		transition: 0.3s background;
+		@media screen and (width <= 992px) {
+			right: 0;
+			top: 0;
+			padding: 10px;
+			svg {
+				width: 20px;
+			}
+		}
+		@media screen and (width <= 768px) {
+			svg {
+				width: 16px;
+			}
+		}
 		&:hover {
 			path {
 				fill: var(--color-orange);
@@ -37,11 +79,28 @@
 		line-height: 90%;
 		color: var(--color-blue-200);
 		margin-bottom: 40px;
+		@media screen and (width <= 992px) {
+			font-size: 28px;
+		}
 	}
 	&__form {
 		display: flex;
 		flex-direction: column;
 		gap: 60px;
+		@media screen and (width <= 992px) {
+			gap: 30px;
+		}
+		@media screen and (width <= 768px) {
+			gap: 20px;
+			.auth__form-inputs {
+				gap: 20px;
+			}
+		}
+		@media screen and (width <= 480px) {
+			.auth__form-inputs {
+				grid-template-columns: repeat(1, 1fr);
+			}
+		}
 		.auth__form-text {
 			margin-top: 20px;
 		}
@@ -66,6 +125,13 @@
 				gap: 10px;
 			}
 		}
+		.auth__form-buttons {
+			margin-top: 0;
+			@media screen and (width <= 480px) {
+				flex-direction: column;
+				align-items: start;
+			}
+		}
 	}
 	&__form-item {
 		display: flex;
@@ -76,6 +142,10 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 30px;
+		@media screen and (width <= 768px) {
+			grid-template-columns: repeat(1, 1fr);
+			gap: 20px;
+		}
 	}
 	&__grid-item {
 	}
@@ -110,5 +180,17 @@
 		&:hover {
 			color: var(--color-orange);
 		}
+		@media screen and (width <= 768px) {
+			font-size: 12px;
+		}
+	}
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
 	}
 }

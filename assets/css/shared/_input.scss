@@ -42,6 +42,7 @@
 	}
 
 	&.readonly-input {
+		outline: none;
 		&::placeholder {
 			color: var(--color-blue-100);
 		}
@@ -117,7 +118,6 @@
 			}
 		}
 
-		/* WebKit-браузеры (Chrome, Safari, Edge Chromium) */
 		&::-webkit-scrollbar {
 			width: 4px;
 		}
@@ -137,5 +137,13 @@
 
 	&.active .autocomplete-list {
 		display: block;
+	}
+}
+.textarea {
+	min-height: 240px;
+	resize: vertical;
+	margin-top: 10px;
+	@media screen and (width <= 992px) {
+		min-height: 160px;
 	}
 }
