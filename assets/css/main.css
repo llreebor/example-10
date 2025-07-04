@@ -1665,9 +1665,11 @@ button {
   flex-shrink: 0;
   z-index: 1;
 }
-.inner__container-left.laws-container {
-  position: static;
-  margin-bottom: 20px;
+@media screen and (width <= 992px) {
+  .inner__container-left.laws-container {
+    position: static;
+    margin-bottom: 20px;
+  }
 }
 @media screen and (width <= 1440px) {
   .inner__container-left {
