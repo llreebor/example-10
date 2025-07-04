@@ -16,855 +16,1686 @@
 		/>
 	</head>
 	<body>
-		<!-- Header -->
-		<header class="header">
+		   <!-- Header -->
+		   <header class="header">
 			<div class="header__container">
-				<!-- Logo -->
-				<div class="container relative">
-					<a href="#" class="logo">
-						<img src="./assets/images/global/logo.svg" alt="logo" />
+			  <!-- Logo -->
+			  <div class="container relative">
+				<a href="#" class="logo">
+				  <img src="./assets/images/global/logo.svg" alt="logo" />
+				</a>
+			  </div>
+	  
+			  <!-- [DESKTOP] Top Menu & Main Menu -->
+			  <div class="header__menus">
+				<!-- Top Menu Container -->
+				<div class="top__menu-wrapper">
+				  <div class="top__menu-container">
+					<!-- Bussiness Type -->
+					<nav role="menu" class="bussiness__type">
+					  <ul class="bussiness__type-list">
+						<li>
+						  <button
+							class="bussiness__type-link active"
+							data-target="private"
+						  >
+							<p>Particulier</p>
+						  </button>
+						</li>
+						<li>
+						  <button
+							class="bussiness__type-link"
+							data-target="bussiness"
+						  >
+							<p>Zakelijk</p>
+						  </button>
+						</li>
+					  </ul>
+					</nav>
+					<nav role="menu" class="top__menu">
+					  <ul class="top__menu-list">
+						<li>
+						  <a href="#" class="top__menu-link">
+							<p>Home</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="10"
+							  height="10"
+							  viewBox="0 0 10 10"
+							  fill="none"
+							>
+							  <path
+								d="M1 9L9 1"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1H9V9"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" class="top__menu-link">
+							<p>Kantoor aanmelden</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="10"
+							  height="10"
+							  viewBox="0 0 10 10"
+							  fill="none"
+							>
+							  <path
+								d="M1 9L9 1"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1H9V9"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" class="top__menu-link">
+							<p>Over ons</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="10"
+							  height="10"
+							  viewBox="0 0 10 10"
+							  fill="none"
+							>
+							  <path
+								d="M1 9L9 1"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1H9V9"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" class="top__menu-link">
+							<p>Veelgestelde vragen</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="10"
+							  height="10"
+							  viewBox="0 0 10 10"
+							  fill="none"
+							>
+							  <path
+								d="M1 9L9 1"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1H9V9"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+	  
+					<button class="burger__btn">
+					  <div class="burger__icon">
+						<span></span>
+					  </div>
+					</button>
+				  </div>
+				</div>
+	  
+				<!-- Main Menu Container -->
+				<div class="main__menu-wrapper">
+				  <div class="main__menu-container">
+					<nav role="menu" class="main__menu main__menu-private">
+					  <ul class="main__menu-list">
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Arbeidsrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+	  
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Bestuursrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+	  
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Contractenrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Echtscheiding</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Erfrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Huurrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Letselschade</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Personen- & Familierecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Strafrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+	  
+					<nav role="menu" class="main__menu main__menu-bussiness hidden">
+					  <ul class="main__menu-list">
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Arbeidsrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+	  
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Belastingrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+	  
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Faillissementsrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>ICT recht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Intellectueel Eigendomsrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Ondernemingsrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Vastgoedrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+						<li class="main__menu-list--item">
+						  <a href="#" class="main__menu-link">
+							<span>Verbintenissenrecht</span>
+	  
+							<nav class="submenu">
+							  <ul class="submenu__list">
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsconflict</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsongeschiktheid</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsovereenkomst</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Arbeidsvoorwaarden</span>
+								  </a>
+								</li>
+								<li>
+								  <a href="#" class="submenu__link">
+									<span>Ontslagrecht</span>
+								  </a>
+								</li>
+							  </ul>
+							</nav>
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+				  </div>
+				</div>
+			  </div>
+	  
+			  <!-- [MOBILE] Mobile Menu -->
+			  <div class="mobile__menu">
+				<div class="mobile__menu-wrapper">
+				  <!-- Menu Accordion -->
+				  <div
+					class="accordion mobile__menu-accordion mobile__menu-accordion-private"
+				  >
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Arbeidsrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Bestuursrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Contractenrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Echtscheiding</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Erfrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Huurrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Letselschade</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">
+						  Personen- & Familierecht
+						</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Strafrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+				  </div>
+	  
+				  <!-- Menu Accordion -->
+				  <div
+					class="accordion mobile__menu-accordion mobile__menu-accordion-bussiness hidden"
+				  >
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Arbeidsrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Belastingrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Faillissementsrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">ICT recht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">
+						  Intellectueel Eigendomsrecht
+						</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Ondernemingsrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Vastgoedrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+					<!-- Menu Item -->
+					<div class="accordion__item">
+					  <!-- Accrodion Trigger -->
+					  <button class="accordion__trigger">
+						<p class="accordion__trigger-text">Verbintenissenrecht</p>
+						<!-- Icon -->
+						<div class="accordion__trigger-icon">
+						  <span class="accordion__trigger-icon--line1"></span>
+						  <span class="accordion__trigger-icon--line2"></span>
+						</div>
+					  </button>
+	  
+					  <!-- Accrodion Content -->
+					  <div class="accordion__content">
+						<div class="overflow-hidden">
+						  <nav role="menu">
+							<ul class="mobile__menu-list">
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsconflict</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsongeschiktheid</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsovereenkomst</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Arbeidsvoorwaarden</p>
+								</a>
+							  </li>
+							  <li>
+								<a href="#" class="mobile__menu-link">
+								  <p>Ontslagrecht</p>
+								</a>
+							  </li>
+							</ul>
+						  </nav>
+						</div>
+					  </div>
+					</div>
+				  </div>
+	  
+				  <!-- Submenu -->
+				  <div class="mobile__submenu-container">
+					<p class="mobile__menu-title">Meer</p>
+	  
+					<nav role="menu">
+					  <ul class="mobile__submenu">
+						<li>
+						  <a href="/index.html" class="mobile__submenu-link">
+							<p>Home</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="9"
+							  height="9"
+							  viewBox="0 0 9 9"
+							  fill="none"
+							>
+							  <path
+								d="M1 8L7.5 1.5"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1.5H7.5V8"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" class="mobile__submenu-link">
+							<p>Over ons</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="9"
+							  height="9"
+							  viewBox="0 0 9 9"
+							  fill="none"
+							>
+							  <path
+								d="M1 8L7.5 1.5"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1.5H7.5V8"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+						<li>
+						  <a href="#" class="mobile__submenu-link">
+							<p>Veelgestelde vragen</p>
+							<svg
+							  xmlns="http://www.w3.org/2000/svg"
+							  width="9"
+							  height="9"
+							  viewBox="0 0 9 9"
+							  fill="none"
+							>
+							  <path
+								d="M1 8L7.5 1.5"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							  <path
+								d="M1 1.5H7.5V8"
+								stroke="#050A50"
+								stroke-width="1.5"
+							  />
+							</svg>
+						  </a>
+						</li>
+					  </ul>
+					</nav>
+				  </div>
+	  
+				  <!-- CTA -->
+				  <div class="mobile__cta">
+					<p class="mobile__menu-title">
+					  Staat uw kantoor nog niet op onze website? Word lid als
+					  advocaat, kantoor of ambassadeur
+					</p>
+					<a href="#" class="mobile__cta-link link">
+					  <p>Kantoor aanmelden</p>
+					  <svg
+						xmlns="http://www.w3.org/2000/svg"
+						width="7"
+						height="8"
+						viewBox="0 0 7 8"
+						fill="none"
+					  >
+						<path
+						  d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
+						  stroke="#0014B4"
+						  stroke-width="1.5"
+						/>
+					  </svg>
 					</a>
+				  </div>
 				</div>
-
-				<!-- [DESKTOP] Top Menu & Main Menu -->
-				<div class="header__menus">
-					<!-- Top Menu Container -->
-					<div class="top__menu-wrapper">
-						<div class="top__menu-container">
-							<!-- Bussiness Type -->
-							<nav role="menu" class="bussiness__type">
-								<ul class="bussiness__type-list">
-									<li>
-										<a href="" class="bussiness__type-link active"><p>Particulier</p></a>
-									</li>
-									<li>
-										<a href="" class="bussiness__type-link"><p>Zakelijk</p></a>
-									</li>
-								</ul>
-							</nav>
-							<nav role="menu" class="top__menu">
-								<ul class="top__menu-list">
-									<li>
-										<a href="#" class="top__menu-link">
-											<p>Home</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="10"
-												height="10"
-												viewBox="0 0 10 10"
-												fill="none"
-											>
-												<path d="M1 9L9 1" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1H9V9" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="top__menu-link">
-											<p>Kantoor aanmelden</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="10"
-												height="10"
-												viewBox="0 0 10 10"
-												fill="none"
-											>
-												<path d="M1 9L9 1" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1H9V9" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="top__menu-link">
-											<p>Over ons</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="10"
-												height="10"
-												viewBox="0 0 10 10"
-												fill="none"
-											>
-												<path d="M1 9L9 1" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1H9V9" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="top__menu-link">
-											<p>Veelgestelde vragen</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="10"
-												height="10"
-												viewBox="0 0 10 10"
-												fill="none"
-											>
-												<path d="M1 9L9 1" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1H9V9" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-								</ul>
-							</nav>
-
-							<button class="burger__btn">
-								<div class="burger__icon">
-									<span></span>
-								</div>
-							</button>
-						</div>
-					</div>
-
-					<!-- Main Menu Container -->
-					<div class="main__menu-wrapper">
-						<div class="main__menu-container">
-							<nav role="menu" class="main__menu">
-								<ul class="main__menu-list">
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Arbeidsrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Bestuursrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Contractenrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Echtscheiding</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Erfrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Huurrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Letselschade</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Personen- & Familierecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-									<li class="main__menu-list--item">
-										<a href="#" class="main__menu-link">
-											<span>Strafrecht</span>
-
-											<nav class="submenu">
-												<ul class="submenu__list">
-													<li>
-														<a href="#" class="submenu__link"><span>Arbeidsconflict</span></a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsongeschiktheid</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsovereenkomst</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link">
-															<span>Arbeidsvoorwaarden</span>
-														</a>
-													</li>
-													<li>
-														<a href="#" class="submenu__link"><span>Ontslagrecht</span></a>
-													</li>
-												</ul>
-											</nav>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-
-				<!-- [MOBILE] Mobile Menu -->
-				<div class="mobile__menu">
-					<div class="mobile__menu-wrapper">
-						<!-- Menu Accordion -->
-						<div class="accordion mobile__menu-accordion">
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Arbeidsrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Bestuursrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Contractenrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Echtscheiding</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Erfrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Huurrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Letselschade</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Personen- & Familierecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-							<!-- Menu Item -->
-							<div class="accordion__item">
-								<!-- Accrodion Trigger -->
-								<button class="accordion__trigger">
-									<p class="accordion__trigger-text">Strafrecht</p>
-									<!-- Icon -->
-									<div class="accordion__trigger-icon">
-										<span class="accordion__trigger-icon--line1"></span>
-										<span class="accordion__trigger-icon--line2"></span>
-									</div>
-								</button>
-
-								<!-- Accrodion Content -->
-								<div class="accordion__content">
-									<div class="overflow-hidden">
-										<nav role="menu">
-											<ul class="mobile__menu-list">
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsconflict</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsongeschiktheid</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link">
-														<p>Arbeidsovereenkomst</p>
-													</a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Arbeidsvoorwaarden</p></a>
-												</li>
-												<li>
-													<a href="#" class="mobile__menu-link"><p>Ontslagrecht</p></a>
-												</li>
-											</ul>
-										</nav>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<!-- Submenu -->
-						<div class="mobile__submenu-container">
-							<p class="mobile__menu-title">Meer</p>
-
-							<nav role="menu">
-								<ul class="mobile__submenu">
-									<li>
-										<a href="/index.html" class="mobile__submenu-link">
-											<p>Home</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="9"
-												height="9"
-												viewBox="0 0 9 9"
-												fill="none"
-											>
-												<path d="M1 8L7.5 1.5" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1.5H7.5V8" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="mobile__submenu-link">
-											<p>Over ons</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="9"
-												height="9"
-												viewBox="0 0 9 9"
-												fill="none"
-											>
-												<path d="M1 8L7.5 1.5" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1.5H7.5V8" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-									<li>
-										<a href="#" class="mobile__submenu-link">
-											<p>Veelgestelde vragen</p>
-											<svg
-												xmlns="http://www.w3.org/2000/svg"
-												width="9"
-												height="9"
-												viewBox="0 0 9 9"
-												fill="none"
-											>
-												<path d="M1 8L7.5 1.5" stroke="#050A50" stroke-width="1.5" />
-												<path d="M1 1.5H7.5V8" stroke="#050A50" stroke-width="1.5" />
-											</svg>
-										</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-
-						<!-- CTA -->
-						<div class="mobile__cta">
-							<p class="mobile__menu-title">
-								Staat uw kantoor nog niet op onze website? Word lid als advocaat,
-								kantoor of ambassadeur
-							</p>
-							<a href="#" class="mobile__cta-link link">
-								<p>Kantoor aanmelden</p>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									width="7"
-									height="8"
-									viewBox="0 0 7 8"
-									fill="none"
-								>
-									<path
-										d="M2.82812 6.99688L5.65655 4.16845M5.65655 4.16845L2.82812 1.34003M5.65655 4.16845H-0.000302161"
-										stroke="#0014B4"
-										stroke-width="1.5"
-									/>
-								</svg>
-							</a>
-						</div>
-					</div>
-				</div>
+			  </div>
 			</div>
-		</header>
+		  </header>
 
 		<main>
 			<!-- Breadcrumbs -->

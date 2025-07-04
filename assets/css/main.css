@@ -2175,6 +2175,9 @@ button {
     font-size: 12px;
   }
 }
+.lawyers__item-footer--text strong {
+  padding-right: 4px;
+}
 .lawyers__item-footer--link {
   transition: 0.3s color;
 }
@@ -2960,16 +2963,12 @@ button {
 .modal__form-text a:hover {
   color: var(--color-orange);
 }
-.modal__form-link {
+.modal__form-copy {
   color: var(--color-blue-200);
   font-weight: 700;
-  transition: 0.3s color;
-}
-.modal__form-link:hover {
-  color: var(--color-orange);
 }
 @media screen and (width <= 768px) {
-  .modal__form-link {
+  .modal__form-copy {
     font-size: 12px;
   }
 }

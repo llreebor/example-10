@@ -323,8 +323,23 @@ initializeCustomSelect(
   "selected-option-city-1"
 );
 initializeCustomSelect("select-type", "options-type", "selected-option-type");
+initializeCustomSelect(
+  "select-type-modal",
+  "options-type-modal",
+  "selected-option-type-modal"
+);
 initializeCustomSelect("select-help", "options-help", "selected-option-help");
+initializeCustomSelect(
+  "select-help-modal",
+  "options-help-modal",
+  "selected-option-help-modal"
+);
 initializeCustomSelect("select-city", "options-city", "selected-option-city");
+initializeCustomSelect(
+  "select-city-modal",
+  "options-city-modal",
+  "selected-option-city-modal"
+);
 initializeCustomSelect(
   "select-price",
   "options-price",

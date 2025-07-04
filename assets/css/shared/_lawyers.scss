@@ -241,6 +241,9 @@
     @media screen and (width <= 768px) {
       font-size: 12px;
     }
+    strong {
+      padding-right: 4px;
+    }
   }
   &__item-footer--link {
     transition: 0.3s color;
