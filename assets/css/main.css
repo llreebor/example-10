@@ -4893,10 +4893,6 @@ button {
   gap: 30px;
 }
 .vacancies__item-footer--text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
   font-size: 17px;
   color: var(--color-blue-200);
   line-height: 129%;
