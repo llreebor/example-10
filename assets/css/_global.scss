@@ -1,5 +1,5 @@
 body {
-	font-family: 'Outfit', sans-serif;
+  font-family: "Outfit", sans-serif;
 }
 
 h1,
@@ -12,227 +12,239 @@ p,
 span,
 a,
 button {
-	text-box-trim: trim-both !important;
-	text-box-edge: cap alphabetic !important;
+  text-box-trim: trim-both !important;
+  text-box-edge: cap alphabetic !important;
 }
 
 .container {
-	max-width: 1800px;
-	margin: 0 auto;
-	padding: 0 20px;
-	width: 100%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
 }
 .section {
-	padding: 120px 0;
-	@media screen and (width <= 1440px) {
-		padding: 80px 0;
-	}
-	@media screen and (width <= 768px) {
-		padding: 50px 0;
-	}
+  padding: 120px 0;
+  @media screen and (width <= 1440px) {
+    padding: 80px 0;
+  }
+  @media screen and (width <= 768px) {
+    padding: 50px 0;
+  }
 }
 
 .title {
-	&__big {
-		color: var(--color-blue-200);
-		font-size: 70px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 120%;
-		@media screen and (width <= 1440px) {
-			font-size: 54px;
-		}
-		@media screen and (width <= 1024px) {
-			font-size: 46px;
-		}
-		@media screen and (width <= 768px) {
-			font-size: 25px;
-		}
-	}
+  &__big {
+    color: var(--color-blue-200);
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    @media screen and (width <= 1440px) {
+      font-size: 54px;
+    }
+    @media screen and (width <= 1024px) {
+      font-size: 46px;
+    }
+    @media screen and (width <= 768px) {
+      font-size: 25px;
+    }
+  }
 }
 .section {
-	&__header {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		gap: 60px;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
 
-		&.section__header-gap--40 {
-			gap: 40px;
-			@media screen and (width <= 768px) {
-				gap: 25px;
-			}
-		}
-		@media screen and (width <= 1440px) {
-			gap: 40px;
-		}
-		@media screen and (width <= 768px) {
-			gap: 25px;
-		}
-	}
-	&__title {
-		font-size: 55px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 118%;
-		color: var(--color-blue-200);
+    &.section__header-gap--40 {
+      gap: 40px;
+      @media screen and (width <= 768px) {
+        gap: 25px;
+      }
+    }
+    @media screen and (width <= 1440px) {
+      gap: 40px;
+    }
+    @media screen and (width <= 768px) {
+      gap: 25px;
+    }
+  }
+  &__title {
+    font-size: 55px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 118%;
+    color: var(--color-blue-200);
 
-		@media screen and (width <= 1440px) {
-			font-size: 44px;
-		}
-		@media screen and (width <= 1024px) {
-			font-size: 36px;
-		}
-		@media screen and (width <= 768px) {
-			font-size: 25px;
-		}
-	}
-	&__subtitle {
-		font-size: 26px;
-		font-style: normal;
-		font-weight: 500;
-		line-height: 123%;
-		color: var(--color-blue-100);
-		@media screen and (width <= 1440px) {
-			font-size: 22px;
-		}
-		@media screen and (width <= 768px) {
-			font-size: 18px;
-		}
-		@media screen and (width <= 480px) {
-			font-size: 12px;
-		}
-	}
+    @media screen and (width <= 1440px) {
+      font-size: 44px;
+    }
+    @media screen and (width <= 1024px) {
+      font-size: 36px;
+    }
+    @media screen and (width <= 768px) {
+      font-size: 25px;
+    }
+  }
+  &__subtitle {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 123%;
+    color: var(--color-blue-100);
+    @media screen and (width <= 1440px) {
+      font-size: 22px;
+    }
+    @media screen and (width <= 768px) {
+      font-size: 18px;
+    }
+    @media screen and (width <= 480px) {
+      font-size: 12px;
+    }
+  }
 }
 .link {
-	display: flex;
-	align-items: center;
-	gap: 7px;
-	font-style: normal;
-	font-weight: 700;
-	color: var(--color-blue-100);
-	transition: 0.3s color;
-	font-size: 21px;
-	line-height: 180.952%;
-	flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-blue-100);
+  transition: 0.3s color;
+  font-size: 21px;
+  line-height: 180.952%;
+  flex-shrink: 0;
 
-	@media screen and (width <= 768px) {
-		font-size: 12px;
-		svg {
-			width: 7px;
-		}
-	}
-	&.link-sm {
-		font-size: 12px;
-	}
-	&.link-blue-80 {
-		color: var(--color-blue-80);
-	}
-	&.link-blue-200 {
-		color: var(--color-blue-200);
-	}
-	&.link-orange {
-		color: var(--color-orange);
-		&:hover {
-			color: var(--color-blue-200);
-		}
-	}
-	&.link-white {
-		color: #fff;
-	}
-	path {
-		transition: all 0.3s;
-	}
-	&:hover {
-		color: var(--color-orange);
-		path {
-			stroke: currentColor;
-		}
-	}
+  @media screen and (width <= 768px) {
+    font-size: 12px;
+    svg {
+      width: 7px;
+    }
+  }
+  &.link-sm {
+    font-size: 12px;
+  }
+  &.link-blue-80 {
+    color: var(--color-blue-80);
+  }
+  &.link-blue-200 {
+    color: var(--color-blue-200);
+  }
+  &.link-orange {
+    color: var(--color-orange);
+    &:hover {
+      color: var(--color-blue-200);
+    }
+  }
+  &.link-white {
+    color: #fff;
+  }
+  path {
+    transition: all 0.3s;
+  }
+  &:hover {
+    color: var(--color-orange);
+    path {
+      stroke: currentColor;
+    }
+  }
 }
 
 .btn {
-	padding: 22.6px 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-size: 21px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 152.381%;
-	cursor: pointer;
-	transition: 0.3s all;
+  padding: 22.6px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 152.381%;
+  cursor: pointer;
+  transition: 0.3s all;
 
-	@media screen and (width <= 1440px) {
-		padding: 20px 18px;
-		font-size: 20px;
-	}
-	@media screen and (width <= 992px) {
-		padding: 11px 15px;
-		font-size: 12px;
-	}
-	&.btn-primary {
-		background: var(--color-orange);
-		color: #fff;
-		&:hover {
-			background: var(--color-orange-hovered);
-		}
-	}
+  @media screen and (width <= 1440px) {
+    padding: 20px 18px;
+    font-size: 20px;
+  }
+  @media screen and (width <= 992px) {
+    padding: 11px 15px;
+    font-size: 12px;
+  }
+  &.btn-primary {
+    background: var(--color-orange);
+    color: #fff;
+    &:hover {
+      background: var(--color-orange-hovered);
+    }
+  }
 }
 
 .p-inner {
-	padding: 40px;
-	background: var(--color-blue-40);
-	@media screen and (width <= 1440px) {
-		padding: 30px;
-	}
-	@media screen and (width <= 992px) {
-		padding: 20px;
-	}
+  padding: 40px;
+  background: var(--color-blue-40);
+  @media screen and (width <= 1440px) {
+    padding: 30px;
+  }
+  @media screen and (width <= 992px) {
+    padding: 20px;
+  }
 }
 // Utility classess
 .relative {
-	position: relative;
+  position: relative;
 }
 .overflow-hidden {
-	overflow: hidden;
+  overflow: hidden;
 }
 .text-white {
-	color: #fff !important;
+  color: #fff !important;
 }
 .text-blue-200 {
-	color: var(--color-blue-200) !important;
+  color: var(--color-blue-200) !important;
 }
 .text-blue-100 {
-	color: var(--color-blue-100) !important;
+  color: var(--color-blue-100) !important;
 }
 .text-blue-80 {
-	color: var(--color-blue-80) !important;
+  color: var(--color-blue-80) !important;
 }
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 .hidden {
-	display: none !important;
+  display: none !important;
 }
 .gap-40 {
-	gap: 40px;
+  gap: 40px;
 }
 .bg-blue-20 {
-	background: var(--color-blue-20) !important;
+  background: var(--color-blue-20) !important;
 }
 .bg-blue-40 {
-	background: var(--color-blue-40) !important;
+  background: var(--color-blue-40) !important;
 }
 .bg-blue-60 {
-	background: var(--color-blue-60) !important;
+  background: var(--color-blue-60) !important;
 }
 .bg-blue-200 {
-	background: var(--color-blue-200) !important;
+  background: var(--color-blue-200) !important;
 }
 .w-full {
-	width: 100%;
+  width: 100%;
 }
 .max-w-fit {
-	max-width: fit-content !important;
+  max-width: fit-content !important;
+}
+.underline {
+  text-decoration: underline;
+}
+.space-y-10 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mb-10 {
+  margin-bottom: 40px;
 }

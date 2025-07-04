@@ -28,8 +28,8 @@
 		position: sticky;
 		left: 0;
 		top: 40px;
-		z-index: 1;
 		flex-shrink: 0;
+		z-index: 1;
 		&.laws-container {
 			position: static;
 			margin-bottom: 20px;
@@ -50,6 +50,8 @@
 		justify-content: space-between;
 		margin-top: -90px;
 		margin-bottom: 70px;
+		position: relative;
+
 		@media screen and (width <= 1280px) {
 			margin-top: -60px;
 		}
@@ -88,6 +90,7 @@
 		line-height: 144.444%;
 		color: var(--color-blue-200);
 		margin-left: auto;
+		pointer-events: none !important;
 		@media screen and (width <= 1440px) {
 			font-size: 38px;
 		}

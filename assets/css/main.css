@@ -532,6 +532,20 @@ button {
   max-width: fit-content !important;
 }
 
+.underline {
+  text-decoration: underline;
+}
+
+.space-y-10 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mb-10 {
+  margin-bottom: 40px;
+}
+
 .logo {
   position: absolute;
   left: 20px;
@@ -648,6 +662,7 @@ button {
   color: var(--color-blue-200);
   font-weight: 600;
   transition: 0.3s color;
+  cursor: pointer;
 }
 @media screen and (width <= 1520px) {
   .bussiness__type-link {
@@ -697,6 +712,7 @@ button {
 }
 .main__menu {
   width: 100%;
+  transition: 0.3s all;
 }
 .main__menu-list {
   display: flex;
@@ -1541,6 +1557,8 @@ button {
 .section__breadcrumbs {
   padding-top: 80px;
   padding-bottom: 60px;
+  position: relative;
+  z-index: 1;
 }
 @media screen and (width <= 1280px) {
   .section__breadcrumbs {
@@ -1559,8 +1577,6 @@ button {
   justify-content: space-between;
   gap: 20px;
   flex-wrap: wrap;
-  z-index: 1;
-  position: relative;
 }
 @media screen and (width <= 768px) {
   .breadcrumbs {
@@ -1646,8 +1662,8 @@ button {
   position: sticky;
   left: 0;
   top: 40px;
-  z-index: 1;
   flex-shrink: 0;
+  z-index: 1;
 }
 .inner__container-left.laws-container {
   position: static;
@@ -1671,6 +1687,7 @@ button {
   justify-content: space-between;
   margin-top: -90px;
   margin-bottom: 70px;
+  position: relative;
 }
 @media screen and (width <= 1280px) {
   .inner__header {
@@ -1715,6 +1732,7 @@ button {
   line-height: 144.444%;
   color: var(--color-blue-200);
   margin-left: auto;
+  pointer-events: none !important;
 }
 @media screen and (width <= 1440px) {
   .inner__header-text {
@@ -1752,7 +1770,6 @@ button {
     position: fixed;
     left: -100%;
     bottom: 20px;
-    z-index: 10;
     box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
     max-width: 339px;
     width: 100%;
@@ -1993,16 +2010,26 @@ button {
   padding: 30px;
   display: flex;
   gap: 30px;
+  height: 100%;
+  max-height: 235px;
 }
 @media screen and (width <= 1440px) {
   .lawyers__item-body {
     gap: 20px;
     padding: 20px;
+    max-height: 200px;
   }
 }
 @media screen and (width <= 992px) {
   .lawyers__item-body {
     padding: 15px;
+    max-height: 170px;
+  }
+}
+@media screen and (width <= 768px) {
+  .lawyers__item-body {
+    max-height: 100%;
+    height: auto;
   }
 }
 .lawyers__item-image {
@@ -2017,6 +2044,11 @@ button {
 @media screen and (width <= 1440px) {
   .lawyers__item-image {
     max-width: 140px;
+  }
+}
+@media screen and (width <= 992px) {
+  .lawyers__item-image {
+    max-width: 120px;
   }
 }
 @media screen and (width <= 480px) {
@@ -2050,6 +2082,11 @@ button {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+@media screen and (width <= 992px) {
+  .lawyers__item-badge {
+    font-size: 14px;
+  }
+}
 @media screen and (width <= 768px) {
   .lawyers__item-badge {
     font-size: 12px;
@@ -2067,7 +2104,7 @@ button {
 .lawyers__name:hover {
   color: var(--color-orange);
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 992px) {
   .lawyers__name {
     font-size: 20px;
     margin-top: 10px;
@@ -2085,10 +2122,15 @@ button {
 .lawyers__position:hover {
   color: var(--color-orange);
 }
+@media screen and (width <= 992px) {
+  .lawyers__position {
+    font-size: 14px;
+    margin-top: 7px;
+  }
+}
 @media screen and (width <= 768px) {
   .lawyers__position {
     font-size: 12px;
-    margin-top: 7px;
   }
 }
 .lawyers__city {
@@ -2113,14 +2155,17 @@ button {
   display: flex;
   padding: 0 20px;
   align-items: center;
-  min-height: 96px;
-  gap: 30px;
+  height: 96px;
+  gap: 20px;
+}
+@media screen and (width <= 768px) {
+  .lawyers__item-footer {
+    height: auto;
+    min-height: 64px;
+  }
 }
 .lawyers__item-footer--text {
   display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
   font-size: 17px;
   color: var(--color-blue-200);
   line-height: 129%;
@@ -2129,6 +2174,12 @@ button {
   .lawyers__item-footer--text {
     font-size: 12px;
   }
+}
+.lawyers__item-footer--link {
+  transition: 0.3s color;
+}
+.lawyers__item-footer--link:hover {
+  color: var(--color-orange);
 }
 .lawyers__item-price {
   display: flex;
@@ -4181,7 +4232,7 @@ button {
     gap: 40px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__container {
     flex-direction: column;
   }
@@ -4191,7 +4242,7 @@ button {
     gap: 20px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__container.profile__container--bussiness {
     flex-direction: column-reverse;
   }
@@ -4208,7 +4259,7 @@ button {
     gap: 40px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__container-left {
     max-width: 100%;
   }
@@ -4234,7 +4285,7 @@ button {
     gap: 40px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__container-right {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -4251,7 +4302,7 @@ button {
     gap: 20px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__container-right.profile__container-right--bussiness {
     grid-template-columns: repeat(1, 1fr);
     max-width: 100%;
@@ -4284,6 +4335,7 @@ button {
 .profile__info {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 .profile__badge {
   background: var(--color-blue-100);
@@ -4316,7 +4368,7 @@ button {
     margin-top: 0;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .profile__name {
     margin-top: 0;
   }
@@ -4411,17 +4463,6 @@ button {
   max-width: fit-content;
   display: flex;
 }
-@media screen and (width <= 768px) {
-  .profile__list-item:nth-child(1) {
-    order: 1;
-  }
-  .profile__list-item:nth-child(2) {
-    order: 3;
-  }
-  .profile__list-item:nth-child(3) {
-    order: 2;
-  }
-}
 .profile__list-link {
   max-width: -moz-fit-content;
   max-width: fit-content;
@@ -4468,7 +4509,7 @@ button {
   z-index: -1;
   height: 308px;
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .quote__img {
     height: 330px;
   }
@@ -4516,7 +4557,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .block__more {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4555,7 +4596,7 @@ button {
   margin-top: -15px;
 }
 
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .advocatuur__container {
     max-width: 100%;
     grid-template-columns: repeat(1, 1fr);
@@ -4593,7 +4634,7 @@ button {
   width: 100%;
   height: auto;
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .map {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -4627,7 +4668,7 @@ button {
     font-size: 54px;
   }
 }
-@media screen and (width <= 1280px) {
+@media screen and (width <= 1320px) {
   .title__lawyers-profile {
     font-size: 48px;
   }
@@ -4896,75 +4937,145 @@ button {
   }
 }
 
-.method__title {
+.method h1 {
   font-size: 45px;
   font-style: normal;
   font-weight: 700;
-  line-height: 144.444%;
+  line-height: 150%;
   color: var(--color-blue-200);
 }
 @media screen and (width <= 1440px) {
-  .method__title {
+  .method h1 {
     font-size: 38px;
   }
 }
 @media screen and (width <= 992px) {
-  .method__title {
+  .method h1 {
     font-size: 20px;
-    margin-bottom: 8px;
   }
 }
-.method__text {
-  margin-top: 40px;
+.method h2 {
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .method h2 {
+    font-size: 28px;
+  }
+}
+@media screen and (width <= 768px) {
+  .method h2 {
+    font-size: 15px;
+  }
+}
+.method h3 {
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .method h3 {
+    font-size: 26px;
+  }
+}
+@media screen and (width <= 768px) {
+  .method h3 {
+    font-size: 14px;
+  }
+}
+.method h4 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .method h4 {
+    font-size: 24px;
+  }
+}
+@media screen and (width <= 768px) {
+  .method h4 {
+    font-size: 14px;
+  }
+}
+.method h5 {
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .method h5 {
+    font-size: 22px;
+  }
+}
+@media screen and (width <= 768px) {
+  .method h5 {
+    font-size: 13px;
+  }
+}
+.method h6 {
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: var(--color-blue-200);
+}
+@media screen and (width <= 1440px) {
+  .method h6 {
+    font-size: 20px;
+  }
+}
+@media screen and (width <= 768px) {
+  .method h6 {
+    font-size: 13px;
+  }
+}
+.method p {
   font-size: 21px;
   font-style: normal;
   font-weight: 400;
-  line-height: 128.571%;
+  line-height: 125%;
   color: var(--color-blue-200);
 }
 @media screen and (width <= 992px) {
-  .method__text {
-    margin-top: 25px;
+  .method p {
     font-size: 18px;
   }
 }
 @media screen and (width <= 768px) {
-  .method__text {
+  .method p {
     font-size: 12px;
   }
 }
-.method__subtitle {
-  margin-top: 60px;
-  font-size: 35px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 185.714%;
-  color: var(--color-blue-200);
-  margin-bottom: -15px;
-}
-@media screen and (width <= 1440px) {
-  .method__subtitle {
-    font-size: 28px;
-    margin-top: 40px;
-  }
-}
-@media screen and (width <= 992px) {
-  .method__subtitle {
-    margin-top: 30px;
-    margin-bottom: -5px;
-  }
-}
-@media screen and (width <= 768px) {
-  .method__subtitle {
-    font-size: 15px;
-  }
-}
-.method__link {
+.method a {
   font-weight: 700;
   transition: 0.3s color;
 }
-.method__link:hover {
+.method a:hover {
   color: var(--color-orange);
+}
+.method ul {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: disc;
+  padding-left: 20px;
+}
+.method ol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: decimal;
+  padding-left: 20px;
 }
 
 @media screen and (width <= 1440px) {
@@ -5159,29 +5270,25 @@ button {
     gap: 14px;
   }
 }
-.auth__form-link {
+.auth__form-copy {
   font-size: 21px;
   font-style: normal;
   font-weight: 700;
   line-height: 1;
   color: var(--color-blue-200);
-  transition: 0.3s color;
-}
-.auth__form-link:hover {
-  color: var(--color-orange);
 }
 @media screen and (width <= 1440px) {
-  .auth__form-link {
+  .auth__form-copy {
     font-size: 20px;
   }
 }
 @media screen and (width <= 992px) {
-  .auth__form-link {
+  .auth__form-copy {
     font-size: 18px;
   }
 }
 @media screen and (width <= 768px) {
-  .auth__form-link {
+  .auth__form-copy {
     font-size: 12px;
   }
 }

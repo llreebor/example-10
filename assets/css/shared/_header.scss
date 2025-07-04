@@ -101,6 +101,7 @@
 		color: var(--color-blue-200);
 		font-weight: 600;
 		transition: 0.3s color;
+		cursor: pointer;
 		@media screen and (width <= 1520px) {
 			font-size: 18px;
 		}
@@ -141,6 +142,7 @@
 	}
 	&__menu {
 		width: 100%;
+		transition: 0.3s all;
 	}
 	&__menu-list {
 		display: flex;

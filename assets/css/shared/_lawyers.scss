@@ -1,255 +1,278 @@
 .lawyers {
-	&__header {
-		display: flex;
-		justify-content: space-between;
-		gap: 20px;
-		align-items: end;
-		@media screen and (width <= 480px) {
-			flex-direction: column;
-			align-items: start;
-		}
-	}
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: end;
+    @media screen and (width <= 480px) {
+      flex-direction: column;
+      align-items: start;
+    }
+  }
 
-	display: grid;
-	gap: 60px;
+  display: grid;
+  gap: 60px;
 
-	&.lawyers__home {
-		grid-template-columns: repeat(3, 1fr);
-		margin-top: 80px;
-		@media screen and (width <= 1440px) {
-			gap: 40px;
-			margin-top: 60px;
-		}
-		@media screen and (width <= 1280px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media screen and (width <= 992px) {
-			gap: 20px;
-			margin-top: 35px;
-		}
-		@media screen and (width <= 768px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
+  &.lawyers__home {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 80px;
+    @media screen and (width <= 1440px) {
+      gap: 40px;
+      margin-top: 60px;
+    }
+    @media screen and (width <= 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (width <= 992px) {
+      gap: 20px;
+      margin-top: 35px;
+    }
+    @media screen and (width <= 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
-	&.lawyers__results {
-		grid-template-columns: repeat(2, 1fr);
-		margin-top: 0;
-		margin-bottom: 55px;
-		@media screen and (width <= 1439px) {
-			grid-template-columns: repeat(1, 1fr);
-			margin-bottom: 35px;
-		}
-		@media screen and (width <= 992px) {
-			margin-bottom: 25px;
-		}
+  &.lawyers__results {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 0;
+    margin-bottom: 55px;
+    @media screen and (width <= 1439px) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: 35px;
+    }
+    @media screen and (width <= 992px) {
+      margin-bottom: 25px;
+    }
 
-		.lawyers__item-link {
-			font-size: 17px;
-			@media screen and (width <= 480px) {
-				font-size: 12px;
-			}
-		}
-		.lawyers__item-footer {
-			background: var(--color-blue-60);
-			@media screen and (width <= 992px) {
-				min-height: auto;
-				padding: 12px 15px;
-			}
-		}
-	}
+    .lawyers__item-link {
+      font-size: 17px;
+      @media screen and (width <= 480px) {
+        font-size: 12px;
+      }
+    }
+    .lawyers__item-footer {
+      background: var(--color-blue-60);
+      @media screen and (width <= 992px) {
+        min-height: auto;
+        padding: 12px 15px;
+      }
+    }
+  }
 
-	&.lawyers__profile {
-		margin-top: 40px;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 40px;
-		@media screen and (width <= 1280px) {
-			grid-template-columns: repeat(2, 1fr);
-		}
-		@media screen and (width <= 992px) {
-			gap: 20px;
-			margin-top: 35px;
-		}
-		@media screen and (width <= 768px) {
-			grid-template-columns: repeat(1, 1fr);
-		}
-	}
+  &.lawyers__profile {
+    margin-top: 40px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    @media screen and (width <= 1280px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (width <= 992px) {
+      gap: 20px;
+      margin-top: 35px;
+    }
+    @media screen and (width <= 768px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
 
-	@media screen and (width <= 1440px) {
-		gap: 40px;
-		margin-top: 60px;
-	}
-	@media screen and (width <= 1280px) {
-		grid-template-columns: repeat(2, 1fr);
-	}
-	@media screen and (width <= 992px) {
-		gap: 20px;
-		margin-top: 35px;
-	}
-	@media screen and (width <= 768px) {
-		grid-template-columns: repeat(1, 1fr);
-	}
-	&__item {
-		background: #fff;
-		transition: 0.3s all;
-		position: relative;
-		&.lawyers__item-hidden {
-			@media screen and (width <= 768px) {
-				display: none;
-			}
-		}
-	}
+  @media screen and (width <= 1440px) {
+    gap: 40px;
+    margin-top: 60px;
+  }
+  @media screen and (width <= 1280px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (width <= 992px) {
+    gap: 20px;
+    margin-top: 35px;
+  }
+  @media screen and (width <= 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  &__item {
+    background: #fff;
+    transition: 0.3s all;
+    position: relative;
+    &.lawyers__item-hidden {
+      @media screen and (width <= 768px) {
+        display: none;
+      }
+    }
+  }
 
-	&__item-body {
-		background: var(--color-blue-40);
-		padding: 30px;
-		display: flex;
-		gap: 30px;
-		@media screen and (width <= 1440px) {
-			gap: 20px;
-			padding: 20px;
-		}
-		@media screen and (width <= 992px) {
-			padding: 15px;
-		}
-	}
-	&__item-image {
-		max-width: 170px;
-		width: 100%;
-		img {
-			max-width: 100%;
-			width: 100%;
-			height: auto;
-		}
-		@media screen and (width <= 1440px) {
-			max-width: 140px;
-		}
+  &__item-body {
+    background: var(--color-blue-40);
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    height: 100%;
+    max-height: 235px;
+    @media screen and (width <= 1440px) {
+      gap: 20px;
+      padding: 20px;
+      max-height: 200px;
+    }
+    @media screen and (width <= 992px) {
+      padding: 15px;
+      max-height: 170px;
+    }
+    @media screen and (width <= 768px) {
+      max-height: 100%;
+      height: auto;
+    }
+  }
+  &__item-image {
+    max-width: 170px;
+    width: 100%;
+    img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+    }
+    @media screen and (width <= 1440px) {
+      max-width: 140px;
+    }
+    @media screen and (width <= 992px) {
+      max-width: 120px;
+    }
 
-		@media screen and (width <= 480px) {
-			max-width: 110px;
-		}
-	}
-	&__item-link {
-		margin-left: auto;
-		padding-bottom: 5px;
-	}
-	&__item-info {
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-	}
-	&__links {
-		display: flex;
-		flex-direction: column;
-		margin-top: auto;
-		padding-bottom: 20px;
-	}
-	&__item-badge {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 188%;
-		padding: 9px 10px;
-		background: var(--color-blue-100);
-		color: #fff;
-		max-width: fit-content;
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-		}
-	}
-	&__name {
-		font-size: 25px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 120%;
-		margin-top: 15px;
-		color: var(--color-blue-200);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 20px;
-			margin-top: 10px;
-		}
-	}
-	&__position {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 129%;
-		margin-top: 15px;
-		color: var(--color-blue-200);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-			margin-top: 7px;
-		}
-	}
-	&__city {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 129%;
-		margin-top: 10px;
-		color: var(--color-blue-100);
-		transition: 0.3s color;
-		&:hover {
-			color: var(--color-orange);
-		}
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-			margin-top: 7px;
-		}
-	}
-	&__item-footer {
-		display: flex;
-		padding: 0 20px;
-		align-items: center;
-		min-height: 96px;
-		gap: 30px;
-	}
-	&__item-footer--text {
-		display: -webkit-box;
-		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 3;
-		overflow: hidden;
-		font-size: 17px;
-		color: var(--color-blue-200);
-		line-height: 129%;
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-		}
-	}
-
-	&__item-price {
-		display: flex;
-		flex-direction: column;
-		flex-shrink: 0;
-		gap: 4px;
-		align-items: end;
-	}
-	&__item-num {
-		font-size: 25px;
-		font-style: normal;
-		font-weight: 700;
-		line-height: 72%;
-		color: var(--color-blue-200);
-		@media screen and (width <= 768px) {
-			font-size: 15px;
-		}
-	}
-	&__item-text {
-		font-size: 17px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 18px;
-		color: var(--color-blue-200);
-		@media screen and (width <= 768px) {
-			font-size: 12px;
-		}
-	}
+    @media screen and (width <= 480px) {
+      max-width: 110px;
+    }
+  }
+  &__item-link {
+    margin-left: auto;
+    padding-bottom: 5px;
+  }
+  &__item-info {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  &__links {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    padding-bottom: 20px;
+  }
+  &__item-badge {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 188%;
+    padding: 9px 10px;
+    background: var(--color-blue-100);
+    color: #fff;
+    max-width: fit-content;
+    @media screen and (width <= 992px) {
+      font-size: 14px;
+    }
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+    }
+  }
+  &__name {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    margin-top: 15px;
+    color: var(--color-blue-200);
+    transition: 0.3s color;
+    &:hover {
+      color: var(--color-orange);
+    }
+    @media screen and (width <= 992px) {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  &__position {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 129%;
+    margin-top: 15px;
+    color: var(--color-blue-200);
+    transition: 0.3s color;
+    &:hover {
+      color: var(--color-orange);
+    }
+    @media screen and (width <= 992px) {
+      font-size: 14px;
+      margin-top: 7px;
+    }
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+    }
+  }
+  &__city {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 129%;
+    margin-top: 10px;
+    color: var(--color-blue-100);
+    transition: 0.3s color;
+    &:hover {
+      color: var(--color-orange);
+    }
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+      margin-top: 7px;
+    }
+  }
+  &__item-footer {
+    display: flex;
+    padding: 0 20px;
+    align-items: center;
+    height: 96px;
+    gap: 20px;
+    @media screen and (width <= 768px) {
+      height: auto;
+      min-height: 64px;
+    }
+  }
+  &__item-footer--text {
+    display: -webkit-box;
+    font-size: 17px;
+    color: var(--color-blue-200);
+    line-height: 129%;
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+    }
+  }
+  &__item-footer--link {
+    transition: 0.3s color;
+    &:hover {
+      color: var(--color-orange);
+    }
+  }
+  &__item-price {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: 4px;
+    align-items: end;
+  }
+  &__item-num {
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 72%;
+    color: var(--color-blue-200);
+    @media screen and (width <= 768px) {
+      font-size: 15px;
+    }
+  }
+  &__item-text {
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    color: var(--color-blue-200);
+    @media screen and (width <= 768px) {
+      font-size: 12px;
+    }
+  }
 }
