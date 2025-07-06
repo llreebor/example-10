@@ -1,149 +1,153 @@
 .input {
-	padding: 16.5px 20px;
-	background: #fff;
-	width: 100%;
-	display: flex;
-	color: var(--color-blue-200);
-	font-size: 21px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 27px;
-	&.input-home {
-		padding: 21.79px 30px;
-		@media screen and (width <= 1440px) {
-			font-size: 18px;
-		}
-		@media screen and (width <= 992px) {
-			font-size: 16px;
-			padding: 4px 15px;
-		}
-		@media screen and (width <= 480px) {
-			font-size: 12px;
-			padding: 1.7px 15px;
-		}
-	}
-	&:focus {
-		outline: 1px solid var(--color-orange);
-	}
-	::placeholder {
-		color: var(--color-gray);
-	}
+  padding: 16.5px 20px;
+  background: #fff;
+  width: 100%;
+  display: flex;
+  color: var(--color-blue-200);
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 27px;
+  &.input-home {
+    padding: 21.79px 30px;
+    @media screen and (width <= 1440px) {
+      font-size: 18px;
+    }
+    @media screen and (width <= 992px) {
+      font-size: 16px;
+      padding: 4px 15px;
+    }
+    @media screen and (width <= 480px) {
+      font-size: 12px;
+      padding: 1.7px 15px;
+    }
+  }
+  &:focus {
+    outline: 1px solid var(--color-orange);
+  }
+  ::placeholder {
+    color: var(--color-gray);
+  }
 
-	@media screen and (width <= 1440px) {
-		font-size: 18px;
-	}
-	@media screen and (width <= 992px) {
-		font-size: 16px;
-		padding: 4px 15px;
-	}
-	@media screen and (width <= 480px) {
-		font-size: 12px;
-		padding: 2.7px 15px;
-	}
+  @media screen and (width <= 1440px) {
+    font-size: 18px;
+  }
+  @media screen and (width <= 992px) {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+  @media screen and (width <= 768px) {
+    font-size: 16px;
+    padding: 4px 15px;
+  }
+  @media screen and (width <= 480px) {
+    font-size: 12px;
+    padding: 2.7px 15px;
+  }
 
-	&.readonly-input {
-		outline: none;
-		&::placeholder {
-			color: var(--color-blue-100);
-		}
-	}
+  &.readonly-input {
+    outline: none;
+    &::placeholder {
+      color: var(--color-blue-100);
+    }
+  }
 }
 .label {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	font-size: 25px;
-	font-style: normal;
-	font-weight: 700;
-	line-height: 144%;
-	color: var(--color-blue-200);
-	@media screen and (width <= 1440px) {
-		font-size: 22px;
-	}
-	@media screen and (width <= 992px) {
-		font-size: 18px;
-		gap: 15px;
-	}
-	@media screen and (width <= 768px) {
-		font-size: 16px;
-	}
-	@media screen and (width <= 480px) {
-		font-size: 14px;
-		gap: 10px;
-	}
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 144%;
+  color: var(--color-blue-200);
+  @media screen and (width <= 1440px) {
+    font-size: 22px;
+  }
+  @media screen and (width <= 992px) {
+    // font-size: 18px;
+    gap: 15px;
+  }
+  @media screen and (width <= 768px) {
+    font-size: 16px;
+  }
+  @media screen and (width <= 480px) {
+    font-size: 14px;
+    gap: 10px;
+  }
 }
 .autocomplete-label {
-	position: relative;
-	width: 100%;
+  position: relative;
+  width: 100%;
 
-	.autocomplete-list {
-		display: none;
-		position: absolute;
-		top: 100%;
-		left: 20px;
-		right: 0;
-		z-index: 1;
-		max-height: 200px;
-		overflow-y: auto;
-		margin-top: 2px;
-		li {
-			font-size: 21px;
-			font-weight: 600;
-			line-height: 128.571%;
-			width: 100%;
-			text-align: left;
-			color: var(--color-blue-200);
-			background: var(--color-blue-20);
-			transition: 0.3s color;
-			cursor: pointer;
-			padding: 22px 20px;
+  .autocomplete-list {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    right: 0;
+    z-index: 1;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 2px;
+    li {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 128.571%;
+      width: 100%;
+      text-align: left;
+      color: var(--color-blue-200);
+      background: var(--color-blue-20);
+      transition: 0.3s color;
+      cursor: pointer;
+      padding: 22px 20px;
 
-			&:hover {
-				background: #f0f0f0;
-			}
-			@media screen and (width <= 1440px) {
-				font-size: 16px;
-				padding: 16px 20px;
-			}
-			@media screen and (width <= 992px) {
-				font-size: 14px;
-				padding: 14px 20px;
-			}
-			@media screen and (width <= 480px) {
-				font-size: 12px;
-				padding: 12px 15px;
-			}
-			&:hover {
-				color: var(--color-orange);
-			}
-		}
+      &:hover {
+        background: #f0f0f0;
+      }
+      @media screen and (width <= 1440px) {
+        font-size: 16px;
+        padding: 16px 20px;
+      }
+      @media screen and (width <= 992px) {
+        font-size: 14px;
+        padding: 14px 20px;
+      }
+      @media screen and (width <= 480px) {
+        font-size: 12px;
+        padding: 12px 15px;
+      }
+      &:hover {
+        color: var(--color-orange);
+      }
+    }
 
-		&::-webkit-scrollbar {
-			width: 4px;
-		}
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
 
-		&::-webkit-scrollbar-track {
-			background: var(--color-blue-20);
-		}
+    &::-webkit-scrollbar-track {
+      background: var(--color-blue-20);
+    }
 
-		&::-webkit-scrollbar-thumb {
-			background-color: var(--color-blue-200);
+    &::-webkit-scrollbar-thumb {
+      background-color: var(--color-blue-200);
 
-			&:hover {
-				background-color: #999;
-			}
-		}
-	}
+      &:hover {
+        background-color: #999;
+      }
+    }
+  }
 
-	&.active .autocomplete-list {
-		display: block;
-	}
+  &.active .autocomplete-list {
+    display: block;
+  }
 }
 .textarea {
-	min-height: 240px;
-	resize: vertical;
-	margin-top: 10px;
-	@media screen and (width <= 992px) {
-		min-height: 160px;
-	}
+  min-height: 240px;
+  resize: vertical;
+  margin-top: 10px;
+  @media screen and (width <= 992px) {
+    min-height: 160px;
+  }
 }

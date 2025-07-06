@@ -344,6 +344,24 @@
     max-width: 100%;
     grid-template-columns: repeat(1, 1fr);
   }
+  .advocatuur__link {
+    transition: 0.3s color;
+    svg {
+      transition: transform 0.3s;
+      path {
+        transition: stroke 0.3s;
+      }
+    }
+    &:hover {
+      color: var(--color-orange);
+      svg {
+        transform: translate(2px, -2px);
+      }
+      path {
+        stroke: currentColor;
+      }
+    }
+  }
 }
 // Map
 .block__map {

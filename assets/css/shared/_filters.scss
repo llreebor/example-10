@@ -1,110 +1,113 @@
 .filters {
-	background: var(--color-blue-40);
-	padding: 40px;
-	display: flex;
-	flex-direction: column;
-	gap: 30px;
-	&__wrapper {
-		position: relative;
-	}
-	&.filters-drawer {
-		z-index: 10;
-		position: relative;
+  background: var(--color-blue-40);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__wrapper {
+    position: relative;
+  }
+  &.filters-drawer {
+    z-index: 10;
+    position: relative;
 
-		@media screen and (width <= 992px) {
-			position: fixed;
-			left: -100%;
-			bottom: 20px;
-			box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
-			max-width: 339px;
-			width: 100%;
-			flex-shrink: 1;
-			background: var(--color-blue-60);
-			transition: 0.3s all linear;
-			&.active {
-				left: 20px;
-			}
-		}
-		@media screen and (width <= 374px) {
-			max-width: 280px;
-		}
-	}
-	&.filters__laws {
-		.filters-close {
-			display: none;
-		}
-	}
-	@media screen and (width <= 1440px) {
-		padding: 30px;
-	}
-	@media screen and (width <= 992px) {
-		padding: 20px;
-		gap: 20px;
-	}
-	@media screen and (width <= 768px) {
-		gap: 15px;
-	}
-	&-close {
-		position: absolute;
-		right: 0;
-		top: 0;
-		display: none;
-		@media screen and (width <= 992px) {
-			display: block;
-		}
-	}
-	&__group {
-		display: flex;
-		flex-direction: column;
-		gap: 30px;
+    @media screen and (width <= 992px) {
+      position: fixed;
+      left: -100%;
+      bottom: 20px;
+      box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+      max-width: 440px;
+      width: 100%;
+      flex-shrink: 1;
+      background: var(--color-blue-60);
+      transition: 0.3s all linear;
+      &.active {
+        left: 20px;
+      }
+    }
+    @media screen and (width <= 768px) {
+      max-width: 339px;
+    }
+    @media screen and (width <= 374px) {
+      max-width: 280px;
+    }
+  }
+  &.filters__laws {
+    .filters-close {
+      display: none;
+    }
+  }
+  @media screen and (width <= 1440px) {
+    padding: 30px;
+  }
+  @media screen and (width <= 992px) {
+    gap: 20px;
+  }
+  @media screen and (width <= 768px) {
+    gap: 15px;
+    padding: 20px;
+  }
+  &-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: none;
+    @media screen and (width <= 992px) {
+      display: block;
+    }
+  }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 
-		@media screen and (width <= 992px) {
-			gap: 20px;
-			display: none;
-		}
-	}
-	&__row-columns {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: 20px;
-		@media screen and (width <= 1024px) {
-			grid-template-columns: repeat(1, 1fr);
-			gap: 15px;
-		}
-	}
-	&__buttons {
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		margin-top: 10px;
-	}
-	&__more-btn {
-		display: flex;
-		align-items: center;
-		gap: 5px;
-		font-size: 12px;
-		font-style: normal;
-		font-weight: 500;
-		line-height: 316.667%;
-		color: var(--color-blue-200);
-		display: none;
-		@media screen and (width <= 992px) {
-			display: flex;
-		}
-		svg {
-			transition: 0.3s all;
-		}
-		&.active {
-			color: var(--color-orange);
-			svg {
-				rotate: 180deg;
-			}
-			path {
-				stroke: var(--color-orange);
-			}
-		}
-	}
-	&__btn {
-		max-width: fit-content;
-	}
+    @media screen and (width <= 992px) {
+      gap: 20px;
+      display: none;
+    }
+  }
+  &__row-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    @media screen and (width <= 1024px) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 15px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  &__more-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 316.667%;
+    color: var(--color-blue-200);
+    display: none;
+    @media screen and (width <= 992px) {
+      display: flex;
+    }
+    svg {
+      transition: 0.3s all;
+    }
+    &.active {
+      color: var(--color-orange);
+      svg {
+        rotate: 180deg;
+      }
+      path {
+        stroke: var(--color-orange);
+      }
+    }
+  }
+  &__btn {
+    max-width: fit-content;
+  }
 }
