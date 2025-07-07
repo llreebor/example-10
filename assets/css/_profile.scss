@@ -2,7 +2,11 @@
   &__profile {
     padding-top: 0;
     padding-bottom: 80px;
-    @media screen and (width <= 992px) {
+    // @media screen and (width <= 992px) {
+    //   padding-bottom: 50px;
+    // }
+    // New
+    @media screen and (width <= 768px) {
       padding-bottom: 50px;
     }
   }
@@ -40,7 +44,9 @@
     }
     @media screen and (width <= 1320px) {
       flex-direction: column;
+      gap: 20px;
     }
+    // Old
     @media screen and (width <= 768px) {
       gap: 20px;
     }
@@ -62,7 +68,7 @@
     @media screen and (width <= 1320px) {
       max-width: 100%;
     }
-    @media screen and (width <= 768px) {
+    @media screen and (width <= 992px) {
       gap: 20px;
     }
     &.profile__container-left--bussiness {
@@ -86,7 +92,9 @@
     }
     @media screen and (width <= 992px) {
       grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
     }
+    // Old
     @media screen and (width <= 768px) {
       gap: 20px;
     }
@@ -104,6 +112,9 @@
     width: 100%;
     @media screen and (width <= 1440px) {
       max-width: 200px;
+    }
+    @media screen and (width <= 992px) {
+      max-width: 140px;
     }
     @media screen and (width <= 768px) {
       max-width: 110px;
@@ -128,7 +139,7 @@
     max-width: fit-content;
     margin-left: auto;
     cursor: default;
-    @media screen and (width <= 768px) {
+    @media screen and (width <= 992px) {
       position: absolute;
       left: 0;
       top: 113px;
@@ -151,7 +162,7 @@
       margin-top: 0;
     }
     @media screen and (width <= 992px) {
-      font-size: 34px;
+      font-size: 32px;
     }
     @media screen and (width <= 768px) {
       font-size: 20px;
@@ -167,6 +178,9 @@
     @media screen and (width <= 1440px) {
       font-size: 22px;
       margin-top: 15px;
+    }
+    @media screen and (width <= 992px) {
+      font-size: 16px;
     }
     @media screen and (width <= 768px) {
       font-size: 12px;
@@ -184,6 +198,10 @@
     @media screen and (width <= 1440px) {
       font-size: 18px;
       margin-top: 20px;
+    }
+    @media screen and (width <= 992px) {
+      font-size: 16px;
+      margin-top: 15px;
     }
     @media screen and (width <= 768px) {
       display: none;
@@ -213,10 +231,15 @@
     @media screen and (width <= 1440px) {
       gap: 20px;
     }
-    @media screen and (width <= 768px) {
+    @media screen and (width <= 992px) {
       margin-top: 15px;
       gap: 11px;
     }
+    // Old
+    // @media screen and (width <= 768px) {
+    //   margin-top: 15px;
+    //   gap: 11px;
+    // }
   }
   &__list-item {
     max-width: fit-content;
@@ -226,6 +249,7 @@
     max-width: fit-content;
     @media screen and (width <= 768px) {
       padding: 11px;
+      font-size: 14px;
     }
     span {
       display: inline-block;

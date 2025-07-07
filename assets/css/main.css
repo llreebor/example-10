@@ -4211,7 +4211,7 @@ button {
   padding-top: 0;
   padding-bottom: 80px;
 }
-@media screen and (width <= 992px) {
+@media screen and (width <= 768px) {
   .section__profile {
     padding-bottom: 50px;
   }
@@ -4264,6 +4264,7 @@ button {
 @media screen and (width <= 1320px) {
   .profile__container {
     flex-direction: column;
+    gap: 20px;
   }
 }
 @media screen and (width <= 768px) {
@@ -4293,7 +4294,7 @@ button {
     max-width: 100%;
   }
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 992px) {
   .profile__container-left {
     gap: 20px;
   }
@@ -4324,6 +4325,7 @@ button {
 @media screen and (width <= 992px) {
   .profile__container-right {
     grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
   }
 }
 @media screen and (width <= 768px) {
@@ -4344,6 +4346,11 @@ button {
 @media screen and (width <= 1440px) {
   .profile_image {
     max-width: 200px;
+  }
+}
+@media screen and (width <= 992px) {
+  .profile_image {
+    max-width: 140px;
   }
 }
 @media screen and (width <= 768px) {
@@ -4374,7 +4381,7 @@ button {
   margin-left: auto;
   cursor: default;
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 992px) {
   .profile__badge {
     position: absolute;
     left: 0;
@@ -4404,7 +4411,7 @@ button {
 }
 @media screen and (width <= 992px) {
   .profile__name {
-    font-size: 34px;
+    font-size: 32px;
   }
 }
 @media screen and (width <= 768px) {
@@ -4426,6 +4433,11 @@ button {
     margin-top: 15px;
   }
 }
+@media screen and (width <= 992px) {
+  .profile__position {
+    font-size: 16px;
+  }
+}
 @media screen and (width <= 768px) {
   .profile__position {
     font-size: 12px;
@@ -4445,6 +4457,12 @@ button {
   .profile__text {
     font-size: 18px;
     margin-top: 20px;
+  }
+}
+@media screen and (width <= 992px) {
+  .profile__text {
+    font-size: 16px;
+    margin-top: 15px;
   }
 }
 @media screen and (width <= 768px) {
@@ -4481,7 +4499,7 @@ button {
     gap: 20px;
   }
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 992px) {
   .profile__list {
     margin-top: 15px;
     gap: 11px;
@@ -4499,6 +4517,7 @@ button {
 @media screen and (width <= 768px) {
   .profile__list-link {
     padding: 11px;
+    font-size: 14px;
   }
 }
 .profile__list-link span {
