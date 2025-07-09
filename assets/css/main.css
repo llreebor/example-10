@@ -1363,12 +1363,18 @@ button {
 }
 @media screen and (width <= 1440px) {
   .select__trigger.select__large {
-    padding: 20px;
+    padding: 21px 20px;
   }
 }
 @media screen and (width <= 992px) {
   .select__trigger.select__large {
-    padding: 11px 15px;
+    padding: 16px 18px;
+    font-size: 16px;
+  }
+}
+@media screen and (width <= 768px) {
+  .select__trigger.select__large {
+    padding: 12px 18px;
   }
 }
 .select__trigger.select__small {
@@ -2637,9 +2643,16 @@ button {
 @media screen and (width <= 1440px) {
   .input.input-home {
     font-size: 18px;
+    padding: 13.75px 20px;
   }
 }
 @media screen and (width <= 992px) {
+  .input.input-home {
+    font-size: 16px;
+    padding: 8px 18px;
+  }
+}
+@media screen and (width <= 768px) {
   .input.input-home {
     font-size: 16px;
     padding: 4px 15px;
@@ -4222,7 +4235,7 @@ button {
   flex-direction: column;
   gap: 60px;
 }
-@media screen and (width <= 1440px) {
+@media screen and (width <= 1700px) {
   .profile__container-wrapper {
     gap: 30px;
   }
@@ -4238,7 +4251,7 @@ button {
   gap: 60px;
   position: relative;
 }
-@media screen and (width <= 1440px) {
+@media screen and (width <= 1700px) {
   .profile {
     gap: 30px;
   }
@@ -4342,6 +4355,8 @@ button {
 .profile_image {
   max-width: 320px;
   width: 100%;
+  position: relative;
+  height: 100%;
 }
 @media screen and (width <= 1440px) {
   .profile_image {
@@ -4368,25 +4383,31 @@ button {
     height: 123px;
   }
 }
-.profile__info {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-.profile__badge {
+.profile_image .profile__badge {
   background: var(--color-blue-100);
   color: #fff;
   max-width: -moz-fit-content;
   max-width: fit-content;
   margin-left: auto;
   cursor: default;
+  position: absolute;
+  left: -40px;
+  bottom: 0;
+}
+@media screen and (width <= 1440px) {
+  .profile_image .profile__badge {
+    left: -30px;
+  }
 }
 @media screen and (width <= 992px) {
-  .profile__badge {
-    position: absolute;
-    left: 0;
-    top: 113px;
+  .profile_image .profile__badge {
+    left: -20px;
   }
+}
+.profile__info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .profile__name {
   margin-top: 2px;
@@ -4398,7 +4419,6 @@ button {
 @media screen and (width <= 1440px) {
   .profile__name {
     font-size: 46px;
-    margin-top: -30px;
   }
   .profile__name.no-margin {
     margin-top: 0;
@@ -4463,10 +4483,6 @@ button {
   .profile__text {
     font-size: 16px;
     margin-top: 15px;
-  }
-}
-@media screen and (width <= 768px) {
-  .profile__text {
     display: none;
   }
 }
@@ -4480,7 +4496,7 @@ button {
   background: var(--color-blue-40);
   color: var(--color-blue-200);
 }
-@media screen and (width <= 768px) {
+@media screen and (width <= 992px) {
   .profile__text-mob {
     display: block;
     padding-top: 0;
@@ -4494,15 +4510,32 @@ button {
   flex-wrap: wrap;
   row-gap: 20px;
 }
-@media screen and (width <= 1440px) {
+@media screen and (width <= 1700px) {
   .profile__list {
     gap: 20px;
   }
 }
 @media screen and (width <= 992px) {
   .profile__list {
+    display: none;
+  }
+}
+@media screen and (width <= 992px) {
+  .profile__list {
     margin-top: 15px;
     gap: 11px;
+  }
+}
+.profile__list.profile__list-mob {
+  display: none;
+}
+@media screen and (width <= 992px) {
+  .profile__list.profile__list-mob {
+    display: flex;
+    background: var(--color-blue-40);
+    margin-top: 0px;
+    padding-left: 20px;
+    padding-bottom: 20px;
   }
 }
 .profile__list-item {
@@ -4514,19 +4547,28 @@ button {
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
+@media screen and (width <= 1280px) {
+  .profile__list-link .profile__list-link--phone {
+    display: none;
+  }
+}
+@media screen and (width <= 1440px) {
+  .profile__list-link .profile__list-link--contact {
+    display: none;
+  }
+}
+.profile__list-link .profile__list-link--text {
+  display: none;
+}
+@media screen and (width <= 1280px) {
+  .profile__list-link .profile__list-link--text {
+    display: block;
+  }
+}
 @media screen and (width <= 768px) {
   .profile__list-link {
     padding: 11px;
     font-size: 14px;
-  }
-}
-.profile__list-link span {
-  display: inline-block;
-  margin-left: -2px;
-}
-@media screen and (width <= 768px) {
-  .profile__list-link span {
-    display: none;
   }
 }
 

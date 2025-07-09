@@ -1805,12 +1805,14 @@
                     <ul class="profile__list">
                       <li class="profile__list-item">
                         <button
-                          id="modal-btn"
                           class="profile__list-link link-1 btn btn-primary"
+                          id="modal-btn"
                         >
                           <p>
                             Contact
-                            <span>formulier</span>
+                            <span class="profile__list-link--contact">
+                              formulier
+                            </span>
                           </p>
                         </button>
                       </li>
@@ -1819,7 +1821,12 @@
                           href="tel:0613147501"
                           class="profile__list-link link-2 btn btn-primary"
                         >
-                          <p>06 - 13 14 75 01</p>
+                          <p>
+                            <span class="profile__list-link--phone">
+                              06 - 13 14 75 01
+                            </span>
+                            <span class="profile__list-link--text">Bel Nu</span>
+                          </p>
                         </a>
                       </li>
                       <li class="profile__list-item">
@@ -1836,9 +1843,61 @@
                 </div>
                 <p class="profile__text-mob">
                   <strong>Rechtsgebieden:</strong>
-                  Huurrecht, Arbeidsrecht, Incassorecht, Ondernemingsrecht,
-                  Verbintenissenrecht Procesrecht
+                  <a href="#" class="lawyers__item-footer--link">Huurrecht,</a>
+
+                  <a href="#" class="lawyers__item-footer--link">
+                    Arbeidsrecht,
+                  </a>
+
+                  <a href="#" class="lawyers__item-footer--link">
+                    Incassorecht,
+                  </a>
+
+                  <a href="#" class="lawyers__item-footer--link">
+                    Ondernemingsrecht,
+                  </a>
+
+                  <a href="#" class="lawyers__item-footer--link">
+                    Verbintenissenrecht
+                  </a>
                 </p>
+
+                <!-- Profile Buttons Mob -->
+                <ul class="profile__list profile__list-mob">
+                  <li class="profile__list-item">
+                    <button
+                      class="profile__list-link link-1 btn btn-primary"
+                      id="modal-btn"
+                    >
+                      <p>
+                        Contact
+                        <span class="profile__list-link--phone">formulier</span>
+                      </p>
+                    </button>
+                  </li>
+                  <li class="profile__list-item">
+                    <a
+                      href="tel:0613147501"
+                      class="profile__list-link link-2 btn btn-primary"
+                    >
+                      <p>
+                        <span class="profile__list-link--phone">
+                          06 - 13 14 75 01
+                        </span>
+                        <span class="profile__list-link--text">Bel Nu</span>
+                      </p>
+                    </a>
+                  </li>
+                  <li class="profile__list-item">
+                    <a
+                      href="#"
+                      target="_blank"
+                      class="profile__list-link btn btn-primary link-3"
+                    >
+                      <p>Website</p>
+                    </a>
+                  </li>
+                </ul>
               </div>
 
               <!-- More about -->

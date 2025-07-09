@@ -5,10 +5,14 @@
     &.select__large {
       padding: 28px 30px;
       @media screen and (width <= 1440px) {
-        padding: 20px;
+        padding: 21px 20px;
       }
       @media screen and (width <= 992px) {
-        padding: 11px 15px;
+        padding: 16px 18px;
+        font-size: 16px;
+      }
+      @media screen and (width <= 768px) {
+        padding: 12px 18px;
       }
     }
     &.select__small {
