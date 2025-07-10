@@ -649,3 +649,4 @@ function toggleModal(btnId, modalId, closeBtnId) {
   toggleModalState(false);
 }
 toggleModal("modal-btn", "modal", "modal-close-btn");
+toggleModal("modal-btn-mobile", "modal", "modal-close-btn");

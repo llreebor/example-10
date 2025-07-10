@@ -3709,8 +3709,6 @@ button {
     padding: 22px 40px;
     margin-left: 20px;
   }
-}
-@media screen and (width <= 480px) {
   .magazine__item-1 img {
     max-width: 117px;
   }
@@ -3729,8 +3727,6 @@ button {
     margin-left: auto;
     margin-right: 20px;
   }
-}
-@media screen and (width <= 480px) {
   .magazine__item-2 img {
     max-width: 173px;
   }
@@ -3748,13 +3744,10 @@ button {
     padding: 20px 40px 16px 40px;
     margin-left: 67px;
   }
-}
-@media screen and (width <= 480px) {
   .magazine__item-3 img {
     max-width: 138px;
   }
 }
-
 .section__news {
   background: var(--color-blue-20);
 }
@@ -4610,12 +4603,17 @@ button {
     height: auto;
   }
 }
+@media screen and (width <= 768px) {
+  .quote__img {
+    max-width: 203px;
+  }
+}
 .quote__title {
   color: #fff;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
-  line-height: 126%;
+  line-height: 116%;
   letter-spacing: -0.6px;
 }
 @media screen and (width <= 1440px) {

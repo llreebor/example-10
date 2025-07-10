@@ -317,13 +317,16 @@
       max-width: 194px;
       height: auto;
     }
+    @media screen and (width <= 768px) {
+      max-width: 203px;
+    }
   }
   &__title {
     color: #fff;
     font-size: 60px;
     font-style: normal;
     font-weight: 700;
-    line-height: 126%;
+    line-height: 116%;
     letter-spacing: -0.6px;
     @media screen and (width <= 1440px) {
       font-size: 54px;
